@@ -1,10 +1,12 @@
 "use client"
 import Title from '@/components/title/title'
-import { API_URL } from '@/services'
+import { getHomPage } from '@/services'
 import { BlocksRenderer } from '@strapi/blocks-react-renderer'
 import React from 'react'
 
-const HowItWorks = ({ data }) => {
+const HowItWorks = async () => {
+  const data = await getHomPage()
+
   return (
     <section className='container mx-auto px-4 lg:px-0 mb-[75px]'>
       <Title

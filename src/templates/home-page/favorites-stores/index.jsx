@@ -1,8 +1,10 @@
 import StoresCard from '@/components/card/stores-card'
 import Title from '@/components/title/title'
+import { getStores } from '@/services'
 import React from 'react'
 
-const FavoriteStores = ({data}) => {
+const FavoriteStores = async () => {
+  const data = await getStores()
   return (
     <section className='bg-primary py-8 md:py-16 my-8 md:my-10'>
       <div className='container mx-auto px-4 lg:px-0 '>
@@ -17,7 +19,6 @@ const FavoriteStores = ({data}) => {
           className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-5'
         >
           {
-            data && 
             data?.map((item, idx) => (
               <StoresCard key={idx} data={item} />
             ))
