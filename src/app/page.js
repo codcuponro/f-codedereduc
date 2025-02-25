@@ -1,7 +1,7 @@
 // import LandingPageSlider from "@/components/main/landing-page-slider";
 import { getFavoritesCoupon, getHomPage } from "@/services";
 // import CouponsAndDeals from "@/templates/home-page/coupons-and-deals";
-// import FavoritesCoupons from "@/templates/home-page/favorites-coupons";
+import FavoritesCoupons from "@/templates/home-page/favorites-coupons";
 // import FavoriteStores from "@/templates/home-page/favorites-stores";
 import HowItWorks from "@/templates/home-page/how-it-works";
 // import TopCategories from "@/templates/home-page/top-categories";
