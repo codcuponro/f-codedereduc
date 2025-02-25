@@ -104,10 +104,40 @@ async function getFooter() {
   return footerRes?.data
 }
 
-
 async function getHeader() {
   const headerRes = await Request(`/header?populate=*`);
   return headerRes?.data
+}
+
+async function getFavorites50Coupon() {
+  const params = qs.stringify({
+    populate: [
+      'Icon', "categories.Icon", "store.Icon"
+    ],
+    filters: {
+      FavoritesCoupon: {
+        $eq: true
+      }
+    },
+    pagination: {
+      limit: 50
+    }
+  })
+  const favoritesCoupon = await Request(`/coupons-and-deals?${params}`);
+  return  favoritesCoupon?.data
+}
+
+async function getAllStore() {
+  const params = qs.stringify({
+      populate: [
+          'Icon', "coupons_and_deals",
+      ],
+      pagination: {
+          limit: 500
+      }
+  })
+  const stores = await Request(`/stores?${params}`);
+  return stores?.data
 }
 
 export {
@@ -118,5 +148,7 @@ export {
   getFavoritesCoupon,
   getExclusiveCoupon,
   getFooter,
-  getHeader
+  getHeader,
+  getFavorites50Coupon,
+  getAllStore
 }

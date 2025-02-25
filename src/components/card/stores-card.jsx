@@ -1,4 +1,3 @@
-import { API_URL } from '@/services'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -8,7 +7,7 @@ const StoresCard = ({data}) => {
         <div className='border bg-pure rounded-lg overflow-hidden flex flex-col justify-between'>
             <figure className='overflow-hidden'>
                 <Link href={`/stores/${data.Slug}`}>                
-                    <Image src={`${API_URL}${data?.Icon?.url}`} alt="" width="218" height="130" className='w-full scale-105' />
+                    <Image src={`${data?.Icon?.url}`} alt="" width="218" height="130" className='w-full scale-105' />
                 </Link>
             </figure>
             <div className='p-[15px] flex justify-center'>

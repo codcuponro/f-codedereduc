@@ -4,10 +4,7 @@ import StoresCard from '@/components/card/stores-card'
 import StoreList from './StoreList'
 import Breadcrumb from '@/components/breadcrumb'
 
-
-
-
-const StoresTemp = async ({stores}) => {
+const StoresTemp = async ({stores, favStores}) => {
     return (
         <>
             <section className='mt-6 mb-10'>
@@ -19,7 +16,7 @@ const StoresTemp = async ({stores}) => {
                         className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-5'
                     >
                         {
-                            stores?.map((item, idx) => (
+                            favStores?.map((item, idx) => (
                                 <StoresCard key={idx} data={item} />
                             ))
                         }
