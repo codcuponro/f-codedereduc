@@ -1,5 +1,5 @@
 import LandingPageSlider from "@/components/main/landing-page-slider";
-import { getExclusiveCoupon, getFavoritesCoupon, getHomPage } from "@/services";
+import { getExclusiveCoupon, getFavoritesCoupon } from "@/services";
 import CouponsAndDeals from "@/templates/home-page/coupons-and-deals";
 import FavoritesCoupons from "@/templates/home-page/favorites-coupons";
 import FavoriteStores from "@/templates/home-page/favorites-stores";
