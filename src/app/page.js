@@ -11,7 +11,7 @@
 
 export default async function Home() {
   
-  const pageData = await getHomPage()
+  // const pageData = await getHomPage()
   // const stores = await getStores()
   // const categories = await getCategories()
   // const couponAndDeals = await getCouponAndDeals()
