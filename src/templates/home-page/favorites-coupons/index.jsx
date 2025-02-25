@@ -16,7 +16,6 @@ const FavoritesCoupons = ({data}) => {
         className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-5'
       >
         {
-          data && 
           data?.map((item, idx) => (
             <CouponCard key={idx} data={item} />
           ))

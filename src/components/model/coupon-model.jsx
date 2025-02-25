@@ -1,5 +1,4 @@
 import useToast from '@/hooks/useToast';
-import { API_URL } from '@/services';
 import { removeProtocol } from '@/utils';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -18,7 +17,7 @@ const CouponModel = ({data}) => {
     return (
         <div>
             <div className='flex flex-col md:flex-row items-center text-center md:text-left md:items-start gap-2'>
-                <Image src={`${API_URL}${data?.Icon?.url}`} alt='Coupon Icon' width={75} height={75} className='rounded-lg' />
+                <Image src={data?.Icon?.url || "/images/fallback.png"} alt='Coupon Icon' width={75} height={75} className='rounded-lg' />
                 <h5 className='font-semibold text-[22px]'>{data?.Title}</h5>
             </div>
             <div className='flex lg:flex-row flex-col gap-4 items-start mt-8'>

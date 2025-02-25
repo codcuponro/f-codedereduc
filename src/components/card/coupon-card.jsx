@@ -1,13 +1,12 @@
 import React from 'react'
 import CouponButton from './coupon-button'
-import { API_URL } from '@/services'
 
 const CouponCard = ({ data }) => {
   return (
     <div className='border rounded-lg flex flex-col justify-between'>
       <div>
         <figure className='border-b'>
-          <img src={`${API_URL}${data?.Icon?.url}`} alt="" width="218" height="130" className='w-full' />
+          <img src={data?.Icon?.url || "/images/fallback.png"} alt="" width="218" height="130" className='w-full' />
         </figure>
         <h6 className='font-medium p-[15px] pb-0 text-dark'>{data?.Title}</h6>
       </div>

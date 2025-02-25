@@ -157,6 +157,55 @@ async function getSingleStore(params) {
   return stores?.data?.[0]
 }
 
+async function getAllCategories() {
+  const params = qs.stringify({
+    populate: [
+      'Icon', "coupons_and_deals.Icon", "coupons_and_deals.categories", "coupons_and_deals.store"
+    ],
+    pagination: {
+      limit: 400
+    }
+  })
+  const categories = await Request(`/categories?${params}`);
+  return categories?.data
+}
+
+
+
+async function getSingleCategory(param) {
+  const cparams = qs.stringify({
+    populate: [
+      'Icon', "coupons_and_deals.Icon", "coupons_and_deals.categories", "coupons_and_deals.store"
+    ],
+    filters: {
+      Slug: {
+        $eq: param
+      }
+    },
+  })
+  const category = await Request(`/categories?${cparams}`);
+
+  const params = qs.stringify({
+    filters: {
+      Top: {
+        $eq: true
+      }
+    },
+    pagination: {
+      limit: 12
+    }
+  })
+  const categories = await Request(`/categories?${params}`);
+  return {
+    category: category?.data?.[0],
+    categories: categories?.data
+  }
+}
+
+async function getAboutPage() {
+  const pageResponse = await Request(`/about-page?populate=*`);
+  return  pageResponse?.data
+}
 
 export {
   getHomPage,
@@ -169,5 +218,8 @@ export {
   getHeader,
   getFavorites50Coupon,
   getAllStore,
-  getSingleStore
+  getSingleStore,
+  getAllCategories,
+  getSingleCategory,
+  getAboutPage
 }
