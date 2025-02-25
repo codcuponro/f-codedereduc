@@ -2,7 +2,7 @@
 import { getFavoritesCoupon, getHomPage } from "@/services";
 // import CouponsAndDeals from "@/templates/home-page/coupons-and-deals";
 import FavoritesCoupons from "@/templates/home-page/favorites-coupons";
-// import FavoriteStores from "@/templates/home-page/favorites-stores";
+import FavoriteStores from "@/templates/home-page/favorites-stores";
 import HowItWorks from "@/templates/home-page/how-it-works";
 // import TopCategories from "@/templates/home-page/top-categories";
 import {  getStores } from "../services";
