@@ -140,6 +140,24 @@ async function getAllStore() {
   return stores?.data
 }
 
+
+async function getSingleStore(params) {
+  const qParams = qs.stringify({
+    populate: [
+      'Icon', "users_permissions_user", "Social", "coupons_and_deals",
+      'coupons_and_deals.Icon', "coupons_and_deals.categories.Icon", "coupons_and_deals.store.Icon"
+    ],
+    filters: {
+      Slug: {
+        $eq: params
+      }
+    }
+  })
+  const stores = await Request(`/stores?${qParams}`);
+  return stores?.data?.[0]
+}
+
+
 export {
   getHomPage,
   getStores,
@@ -150,5 +168,6 @@ export {
   getFooter,
   getHeader,
   getFavorites50Coupon,
-  getAllStore
+  getAllStore,
+  getSingleStore
 }
