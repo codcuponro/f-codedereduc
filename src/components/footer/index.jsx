@@ -6,7 +6,6 @@ import { getFooter } from '../../services';
 
 const Footer = async () => {
   const footerRes = await getFooter()
-  console.log("🚀 ~ Footer ~ footerRes:", footerRes)
   
   return (
     <footer className='bg-primary pt-[68px] pb-6 md:pb-[91px] relative'>

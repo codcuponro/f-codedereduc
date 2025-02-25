@@ -6,6 +6,7 @@ export const Request = async (endpoint, options = {}) => {
     headers: {
       'Content-Type': 'application/json',
     },
+    signal: AbortSignal.timeout(60 * 1000),
     ...options
   };
 
