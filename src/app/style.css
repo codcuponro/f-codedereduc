@@ -1,0 +1,60 @@
+.oc_content h2 {
+    font-size: 40px;
+    line-height: 49px;
+}
+
+.oc_content h3 {
+    font-size: 20px;
+}
+
+.oc_content p {
+    margin-top: 24px;
+    font-size: 16px;
+    color: #3E3E3E;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.page_navigation_gradient {
+    background: linear-gradient(85deg, rgba(178, 182, 224, 1) 0%, rgba(46, 54, 143, 1) 100%);
+}
+
+.ship_supply_content h2 {
+    font-size: 40px;
+    font-weight: 400;
+    font-family: "Franklin_Gothic_Regular";
+    margin-bottom: 1rem;
+}
+
+.ship_supply_content p {
+    font-weight: 300;
+    font-size: 18px;
+    font-family: 'calibri';
+    margin-bottom: 1rem;
+}
+
+.ship_supply_content ul {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+}
+
+.ship_supply_content ul li {
+    font-weight: 300;
+    font-size: 18px;
+    font-family: 'calibri';
+    margin-bottom: 1rem;
+}
+
+.ship_supply_content_one_column ul li {
+    margin-bottom: 0rem !important;
+}
+
+.privacy_content .content p {
+    font-size: 18px;
+}
+
+.footer_gradient {
+    background: linear-gradient(180deg, rgba(244, 245, 247, 0.9669117647058824) 0%, rgba(200, 203, 224, .19) 25%, rgba(175, 179, 211, .19) 39%, rgba(154, 159, 200, .19) 55%, rgba(46, 54, 143, .19) 100%);
+}
