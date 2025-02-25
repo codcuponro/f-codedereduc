@@ -2,10 +2,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { FaFacebookF, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
-import { getHomPage } from '../../services';
+import { getFooter } from '../../services';
 
 const Footer = async () => {
-  const footerRes = await getHomPage()
+  const footerRes = await getFooter()
+  console.log("🚀 ~ Footer ~ footerRes:", footerRes)
   
   return (
     <footer className='bg-primary pt-[68px] pb-6 md:pb-[91px] relative'>

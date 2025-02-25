@@ -21,7 +21,7 @@ const Header = async () => {
                     <div className='flex items-center gap-10 text-white'>
                         <nav className='flex items-center gap-10'>
                             {
-                                headerRes?.data?.Navigation?.map((item,idx)=>(
+                                headerRes?.Navigation?.map((item,idx)=>(
                                     <Link href={item?.Href || "#"} key={idx}>{item?.Label}</Link>
                                 ))
                             }
