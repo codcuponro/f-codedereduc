@@ -1,6 +1,6 @@
 export const Request = async (endpoint, options = {}) => {
   const url = `${process.env.NEXT_PUBLIC_BACKEND_PUBLIC_BASE_URL}/api${endpoint}`;
-  const controller = new AbortController();
+  // const controller = new AbortController();
   // const timeout = setTimeout(() => controller.abort(), 30000);
 
   try {
@@ -10,7 +10,7 @@ export const Request = async (endpoint, options = {}) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      signal: controller.signal,
+      // signal: controller.signal,
       ...options
     });
 
