@@ -6,7 +6,7 @@ export const Request = async (endpoint, options = {}) => {
   try {
     const response = await fetch(url, {
       method: 'GET',
-      cache: "no-store",
+      next: { revalidate: 0 },
       headers: {
         'Content-Type': 'application/json',
       },
