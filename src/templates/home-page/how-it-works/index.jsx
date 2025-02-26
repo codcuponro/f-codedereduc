@@ -1,4 +1,3 @@
-"use client"
 import Title from '@/components/title/title'
 import { getHomPage } from '@/services'
 import { BlocksRenderer } from '@strapi/blocks-react-renderer'

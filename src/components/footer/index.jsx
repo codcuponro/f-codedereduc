@@ -30,12 +30,12 @@ const Footer = async () => {
           </Link>
           <p className='mt-5 max-w-[270px] mb-[22px] text-white/70'>{footerRes?.Caption}
           </p>
-          <Link href="#" className='text-pure gap-2.5 text-sx flex items-center'>
+          <button className='text-pure gap-2.5 text-sx flex items-center'>
             <Image src="/svg/phone-ring.svg" alt='' className='' width={20} height={20} />
             <a href={`${footerRes?.MobileNumber?.Href}`} target='_blank'>
               {footerRes?.MobileNumber?.Label}
             </a>
-          </Link>
+          </button>
         </div>
         {/* resources nav  */}
         <div>

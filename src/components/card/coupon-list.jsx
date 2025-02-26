@@ -2,7 +2,6 @@ import React from 'react'
 import CouponButton from './coupon-button'
 import Image from 'next/image'
 import { isExpired } from '@/utils';
-import { API_URL } from '@/services';
 
 const CouponList = ({ logo, item }) => {
     const disabled = isExpired(item?.ExpireDate);
