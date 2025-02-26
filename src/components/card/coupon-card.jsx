@@ -8,7 +8,7 @@ const CouponCard = ({ data }) => {
         <figure className='border-b'>
           <img src={data?.Icon?.url || "/images/fallback.png"} alt="" width="218" height="130" className='w-full' />
         </figure>
-        <h6 className='font-medium p-[15px] pb-0 text-dark'>{data?.Title}</h6>
+        <p className='font-medium p-[15px] pb-0 text-dark'>{data?.Title}</p>
       </div>
       <div className='p-[15px] pt-0'>
         <CouponButton
