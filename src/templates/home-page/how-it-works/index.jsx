@@ -1,11 +1,8 @@
 import Title from '@/components/title/title'
-import { getHomPage } from '@/services'
 import { BlocksRenderer } from '@strapi/blocks-react-renderer'
 import React from 'react'
 
-const HowItWorks = async () => {
-  const data = await getHomPage()
-
+const HowItWorks = async ({data}) => {
   return (
     <section className='container mx-auto px-4 lg:px-0 mb-[75px]'>
       <Title

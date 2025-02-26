@@ -1,10 +1,9 @@
 import StoresCard from '@/components/card/stores-card'
 import Title from '@/components/title/title'
-import { getStores } from '@/services'
+// import { getStores } from '@/services'
 import React from 'react'
 
-const FavoriteStores = async () => {
-  const data = await getStores()
+const FavoriteStores = async ({data}) => {
   return (
     <section className='bg-primary py-8 md:py-16 my-8 md:my-10'>
       <div className='container mx-auto px-4 lg:px-0 '>

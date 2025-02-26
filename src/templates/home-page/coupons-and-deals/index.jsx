@@ -1,11 +1,8 @@
 import CouponCard from '@/components/card/coupon-card'
 import Title from '@/components/title/title'
-import { getCouponAndDeals } from '@/services'
 import React from 'react'
 
-const CouponsAndDeals = async () => {
-  const data = await getCouponAndDeals()
-
+const CouponsAndDeals = async ({data}) => {
   return (
     <section className='container mx-auto px-4 lg:px-0'>
       <Title

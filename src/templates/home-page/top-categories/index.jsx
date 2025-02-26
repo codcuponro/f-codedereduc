@@ -1,10 +1,8 @@
 import CategoryButton from '@/components/card/category-button'
 import Title from '@/components/title/title'
-import { getCategories } from '@/services'
 import React from 'react'
 
-const TopCategories = async () => {
-  const data = await getCategories()
+const TopCategories = async ({data}) => {
   return (
     <section className='container mx-auto px-4 lg:px-0 my-8 md:my-16'>
       <Title
