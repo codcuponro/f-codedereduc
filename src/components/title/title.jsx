@@ -8,7 +8,7 @@ const Title = (props) => {
         <h2 className={`text-2xl md:text-[34px] md:leading-[40px] font-semibold text-dark ${hideHeading && 'hidden md:block'} ${white && 'text-pure'}`}>{title}</h2>
         {
           buttonLabel && <Link 
-              href={`/${buttonHref}`} 
+              href={buttonHref} 
               className={` border rounded-[6px] text-center font-bold w-full md:w-auto py-2.5 px-[28px] ${hideButton && 'hidden md:block'}
                 ${white ? 'hover:bg-white text-pure hover:text-primary' : 'hover:bg-primary hover:text-white text-primary border-primary'}
               `}
