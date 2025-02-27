@@ -19,8 +19,8 @@ const LandingPageSlider = ({ data }) => {
                                 </figure>
                                 <div className='p-2 lg:p-6 pt-2 lg:pt-4 flex gap-4'>
                                     <div>
-                                        <figure className='flex flex-col justify-center -mt-7 w-[130px] h-[130px] lg:-mt-12 border rounded-xl lg:rounded-[20px] overflow-hidden bg-pure border-[#DEE2E6]'>
-                                            <Image src={item?.Icon?.url || item?.store?.Icon?.url} alt='' width={130} height={130} className=' w-20 lg:w-[130px] ' />
+                                        <figure className='flex flex-col justify-center -mt-7 w-20 h-20 lg:w-[130px] lg:h-[130px] lg:-mt-12 border rounded-xl lg:rounded-[20px] overflow-hidden bg-pure border-[#DEE2E6]'>
+                                            <Image src={item?.Icon?.url || item?.store?.Icon?.url} alt='' width={130} height={130} className=' w-full lg:w-[130px] ' />
                                         </figure>
                                     </div>
                                     <div>
