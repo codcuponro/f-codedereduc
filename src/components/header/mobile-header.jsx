@@ -31,12 +31,12 @@ const MobileHeader = ({ headerRes }) => {
 
         </button>
       </header>
-      <nav className={`flex flex-col z-[110] p-4 py-8 bg-[#643ba8] text-white transition-all duration-300 fixed w-full 
+      <nav className={`flex flex-col z-[110] p-4 py-6 bg-[#643ba8] text-white transition-all duration-300 fixed w-full 
         ${isMobile ? 'top-[55.75px]' : '-top-[100%]'}`
       }>
         {
-          headerRes?.data?.Navigation?.map((item, idx) => (
-            <Link href={item?.Href || "#"} key={idx}>{item?.Label}</Link>
+          headerRes?.map((item, idx) => (
+            <Link href={item?.Href || "#"} className='py-1' key={idx}>{item?.Label}</Link>
           ))
         }
       </nav>

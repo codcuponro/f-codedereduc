@@ -30,7 +30,7 @@ const Header = async () => {
                     </div>
                 </div>
             </header>
-            <MobileHeader headerRes={headerRes}/>
+            <MobileHeader headerRes={headerRes?.Navigation}/>
         </>
     )
 }
