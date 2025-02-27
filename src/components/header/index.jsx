@@ -7,7 +7,6 @@ import { getHeader } from '../../services'
 
 const Header = async () => {
     const headerRes = await getHeader()
-
     return (
         <>
             <header className='py-3 bg-primary hidden md:block'>
