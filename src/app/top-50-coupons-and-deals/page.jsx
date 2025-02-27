@@ -11,7 +11,7 @@ import { getFavorites50Coupon } from "../../services"
 const Top50CouponsAndDeals = () => {
   const [favoritesCoupon, setFavoritesCoupon] = useState()
   const [categories, setCategories] = useState()
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     (async () => {
