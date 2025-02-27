@@ -7,7 +7,6 @@ import Link from 'next/link';
 
 const LandingPageSlider = ({ data }) => {
     const slider = React.useRef(null);
-
     return (
         <main className='my-7 md:my-[10px] md:mb-8 max-w-[2200px] relative mx-auto'>
             <Slider {...settings} ref={slider} key={1}>
@@ -16,12 +15,12 @@ const LandingPageSlider = ({ data }) => {
                         <div className='px-1 sm:px-2 lg:p-[15px]'>
                             <div key={idx} className='border border-[#DEE2E6] rounded-[20px] overflow-hidden'>
                                 <figure>
-                                    <Image src={item?.Feature_image?.url} alt="" width={575} height={265} className='w-full object-cover' />
+                                    <Image src={item?.Feature_image?.url} alt="" width={575} height={265} className='w-full h-[265px] object-cover' />
                                 </figure>
                                 <div className='p-2 lg:p-6 pt-2 lg:pt-4 flex gap-4'>
                                     <div>
                                         <figure className='flex flex-col justify-center -mt-7 w-[130px] h-[130px] lg:-mt-12 border rounded-xl lg:rounded-[20px] overflow-hidden bg-pure border-[#DEE2E6]'>
-                                            <Image src={item?.Icon?.url} alt='' width={130} height={130} className=' w-20 lg:w-[130px] ' />
+                                            <Image src={item?.Icon?.url || item?.store?.Icon?.url} alt='' width={130} height={130} className=' w-20 lg:w-[130px] ' />
                                         </figure>
                                     </div>
                                     <div>

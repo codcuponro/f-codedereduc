@@ -89,7 +89,7 @@ const CategorySingleTemp = ({ params, data, categories }) => {
                             <h3 className='text-xl text-dark font-semibold mb-5'>Categories</h3>
                             <div className='flex flex-wrap gap-2.5 mt-2.5'>
                                 {categories?.map((item, idx) => (
-                                    <Link href={`/categories/${item?.Slug}` || "#"} key={idx} className='no-underline'>
+                                    <Link href={`/categories/${item?.Slug}` || "#"} key={idx} className='!no-underline' style={{ textDecoration: "none !important" }}>
                                         <button
                                             className={`font-medium flex text-sm sm:text-base items-center rounded-full px-2.5 py-[3px] gap-[3px] 
                                                 ${item?.Slug === params

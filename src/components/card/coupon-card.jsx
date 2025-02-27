@@ -3,10 +3,10 @@ import CouponButton from './coupon-button'
 
 const CouponCard = ({ data }) => {
   return (
-    <div className='border rounded-lg flex flex-col justify-between'>
+    <div className='border rounded-lg flex flex-col justify-between overflow-hidden'>
       <div>
         <figure className='border-b'>
-          <img src={data?.Icon?.url || "/images/fallback.png"} alt="" width="218" height="130" className='w-full' />
+          <img src={data?.Icon?.url || data?.store?.Icon?.url || "/images/fallback.png"} alt="" width="218" height="130" className='w-full h-[130px] object-cover' />
         </figure>
         <p className='font-medium p-[15px] pb-0 text-dark'>{data?.Title}</p>
       </div>

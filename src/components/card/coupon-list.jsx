@@ -10,11 +10,11 @@ const CouponList = ({ logo, item }) => {
         <div className={`border border-[#DEE2E6] overflow-hidden rounded-lg`}>
             <div className='flex flex-row gap-3 sm:gap-4 sm:justify-center items-center md:gap-[27px]'>
                 {
-                    logo ? <figure className='px-2 md:border-r flex justify-center items-start sm:items-center'>
-                        <Image src={item?.Icon?.url || "/images/fallback.png"} alt='' width={125} height={125} className='scale-105 w-[170px] md:w-[125px]' />
+                    logo ? <figure className='md:border-r flex justify-center items-start sm:items-center'>
+                        <Image src={item?.Icon?.url || item?.store?.Icon?.url || "/images/fallback.png"} alt='' width={125} height={125} className='scale-y-105 w-[170px] md:w-[125px]' />
                     </figure>
                         : <h6 className={`font-extrabold text-[34px] flex flex-col pl-[30px] py-[26px] leading-8 ${disabled ? 'text-[#505050]' : 'text-primary'}`} >
-                            10%
+                            {item?.DiscountValue}
                             <span>OFF</span>
                         </h6>
                 }

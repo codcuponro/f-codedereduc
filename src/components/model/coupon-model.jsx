@@ -17,7 +17,7 @@ const CouponModel = ({data}) => {
     return (
         <div>
             <div className='flex flex-col md:flex-row items-center text-center md:text-left md:items-start gap-2'>
-                <Image src={data?.Icon?.url || "/images/fallback.png"} alt='Coupon Icon' width={75} height={75} className='rounded-lg' />
+                <Image src={data?.Icon?.url || data?.store?.Icon?.url  || "/images/fallback.png"} alt='Coupon Icon' width={75} height={75} className='rounded-lg border' />
                 <h5 className='font-semibold text-[22px]'>{data?.Title}</h5>
             </div>
             <div className='flex lg:flex-row flex-col gap-4 items-start mt-8'>
