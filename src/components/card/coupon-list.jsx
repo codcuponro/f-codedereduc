@@ -19,7 +19,7 @@ const CouponList = ({ logo, item }) => {
                         </h6>
                 }
 
-                <div className={`flex flex-col py-4 pr-3 md:pr-[30px] sm:flex-row sm:items-center gap-4 ${logo && '!pl-0'}`}>
+                <div className={`flex flex-col py-4 flex-1 justify-between pr-3 md:pr-[30px] sm:flex-row sm:items-center gap-4 ${logo && '!pl-0'}`}>
                     <div className='flex flex-col text-left md:justify-start md:items-start'>
                         <button className='bg-[#F3F4F6] px-2.5 w-fit text-xs text-dark font-bold py-1 rounded-full'>
                             { item?.CouponsType === "Promotion" ? "Promotion" : "Coupon"}{" "}{item?.categories?.[0]?.Name}

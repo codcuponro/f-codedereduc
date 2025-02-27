@@ -3,31 +3,7 @@ import Title from '@/components/title/title';
 import Link from 'next/link';
 import { useState } from 'react';
 
-const stores = [
-    { name: 'AASport', slug: 'aasport' },
-    { name: 'ABC ZOO', slug: 'abc-zoo' },
-    { name: 'Abonamente Sail', slug: 'abonamente-sail' },
-    { name: 'About You', slug: 'about-you' },
-    { name: 'About You OUTLET', slug: 'about-you-outlet' },
-    { name: 'Abubu', slug: 'abubu' },
-    { name: 'Alex Store', slug: 'alex-store' },
-    { name: 'Alianna', slug: 'alianna' },
-    { name: 'AlidaFashion', slug: 'alida-fashion' },
-    { name: 'Alien Surface', slug: 'alien-surface' },
-    { name: 'AliExpress', slug: 'ali-express' },
-    { name: 'Alinda', slug: 'alinda' },
-    { name: 'Arman Sport', slug: 'arman-sport' },
-    { name: 'Arman Sport Kids', slug: 'arman-sport-kids' },
-    { name: 'Aromateria', slug: 'aromateria' },
-    { name: 'Aronia Charlottenburg', slug: 'aronia-charlottenburg' },
-    { name: 'Art & Craft', slug: 'art-craft' },
-    { name: 'Arta Ceaiului', slug: 'arta-ceaiului' },
-    { name: 'Azal', slug: 'azal' },
-    { name: 'Azay', slug: 'azay' },
-    { name: 'AziaVision', slug: 'azia-vision' },
-    { name: '9One', slug: '9one' },
-    { name: 'Bata', slug: 'bata' }
-];
+
 export default function StoreList({stores}) {
 
     const [selectedLetter, setSelectedLetter] = useState('A');
