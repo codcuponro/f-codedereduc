@@ -1,43 +1,36 @@
-import React from 'react'
-import Title from '@/components/title/title'
-import StoresCard from '@/components/card/stores-card'
-import StoreList from './StoreList'
-import Breadcrumb from '@/components/breadcrumb'
+import React from 'react';
+import Title from '@/components/title/title';
+import Breadcrumb from '@/components/breadcrumb';
+import dynamic from 'next/dynamic';
 
-const StoresTemp = async ({stores, favStores}) => {
-    return (
-        <>
-            <section className='mt-6 mb-10'>
-                <div className='container mx-auto px-4 lg:px-0 '>
-                    <Title
-                        title="Popular stores"
-                    />
-                    <div style={{ marginTop: '35px' }}
-                        className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-5'
-                    >
-                        {
-                            favStores?.map((item, idx) => (
-                                <StoresCard key={idx} data={item} />
-                            ))
-                        }
-                    </div>
-                </div>
-            </section>
+const StoresCard = dynamic(() => import('@/components/card/stores-card'), { ssr: false });
+const StoreList = dynamic(() => import('./StoreList'), { ssr: false });
 
-            <StoreList stores={stores}/>
+const breadcrumbPath = [{ label: 'Stores', href: '/stores' }];
 
-            <div className='container mx-auto px-4 lg:px-0 mb-10'>
-                <Breadcrumb path={breadcrumbPath} />
+const StoresTemp = async ({ stores, favStores = [] }) => {
+  return (
+    <>
+      <section className="mt-6 mb-10">
+        <div className="container mx-auto px-4 lg:px-0">
+          <Title title="Popular Stores" />
+          {favStores.length > 0 && (
+            <div className="mt-9 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-5">
+              {favStores.map((item, idx) => (
+                <StoresCard key={idx} data={item} />
+              ))}
             </div>
-        </>
-    )
-}
+          )}
+        </div>
+      </section>
 
-export default StoresTemp
+      <StoreList stores={stores} />
 
-const breadcrumbPath = [
-    {
-        label: 'stores',
-        href: '/stores'
-    }
-]
+      <div className="container mx-auto px-4 lg:px-0 mb-10">
+        <Breadcrumb path={breadcrumbPath} />
+      </div>
+    </>
+  );
+};
+
+export default StoresTemp;

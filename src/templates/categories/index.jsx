@@ -1,8 +1,8 @@
 import Title from '@/components/title/title'
 import React from 'react'
-import CategoryIconCard from './category-icon-card'
-import { categories } from '../home-page/top-categories'
 import Breadcrumb from '@/components/breadcrumb'
+
+const CategoryIconCard = dynamic(() => import('./category-icon-card'), { ssr: false });
 
 const CategoriesTemp = ({ data }) => {
   const breadcrumbPath = [

@@ -1,5 +1,3 @@
-import CategoryButton from '@/components/card/category-button';
-import CouponList from '@/components/card/coupon-list';
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -8,20 +6,31 @@ import { AiOutlinePhone } from "react-icons/ai";
 import { FaRegEnvelope } from "react-icons/fa6";
 import { FiFacebook } from "react-icons/fi";
 import { TbWorldWww } from "react-icons/tb";
-import Faqs from '@/components/faqs/faqs';
-import Breadcrumb from '@/components/breadcrumb';
-import Rating from '@/components/rating';
 import { getUniqueCategories } from '@/utils';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import {getSingleStore} from "../../../services"
+import dynamic from 'next/dynamic';
+
+const CouponList = dynamic(() => import('@/components/card/coupon-list'), { ssr: false });
+const CategoryButton = dynamic(() => import('@/components/card/category-button'), { ssr: false });
+const Faqs = dynamic(() => import('@/components/faqs/faqs'), { ssr: false });
+const Breadcrumb = dynamic(() => import('@/components/breadcrumb'), { ssr: false });
+const Rating = dynamic(() => import('@/components/rating'), { ssr: false });
 
 const Store = async ({ params }) => {
   const param = await params.single
 
   const singleStore  = await getSingleStore(param)
 
-  const activeCoupon = singleStore?.coupons_and_deals?.filter((item) => item.ExpireDate > new Date().toISOString().split('T')[0])
-  const disableCoupon = singleStore?.coupons_and_deals?.filter((item) => item.ExpireDate < new Date().toISOString().split('T')[0])
+  const { activeCoupon, disableCoupon } = singleStore?.coupons_and_deals?.reduce(
+    (acc, item) => {
+      const isExpired = item.ExpireDate < new Date().toISOString().split('T')[0];
+      isExpired ? acc.disableCoupon.push(item) : acc.activeCoupon.push(item);
+      return acc;
+    },
+    { activeCoupon: [], disableCoupon: [] }
+  );
+
   const categories = getUniqueCategories(singleStore?.coupons_and_deals)
 
   const breadcrumbPath = [
@@ -38,7 +47,7 @@ const Store = async ({ params }) => {
   return (
     <section className='container mx-auto px-4 lg:px-0 mt-5 mb:my-[50px]'>
       <div className='flex flex-row items-start gap-2 sm:gap-[30px]'>
-        <Image src="/svg/nike-logo.svg" alt='' width={170} height={170} className='rounded-lg w-28 sm:w-[170px]' />
+        <Image src={singleStore?.Icon.url || "/images/fallback.png"} alt='' width={170} height={170} className='rounded-lg border w-28 sm:w-[170px]' />
         <div className='max-w-[634px]'>
           <h2 className='text-dark font-semibold text-xl md:text-[28px]'>{singleStore?.Name}</h2>
           <p>{singleStore?.Excerpt}</p>
@@ -160,13 +169,3 @@ const Store = async ({ params }) => {
 }
 
 export default Store
-
-
-
-const categories = [
-  { label: "Fashion", href: "/fashion" },
-  { label: "Shoes", href: "/shoes" },
-  { label: "T-shirts", href: "/t-shirts" },
-  { label: "pants", href: "/pants" },
-  { label: "Accessories", href: "/accessories" },
-]
