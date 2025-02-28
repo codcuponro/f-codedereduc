@@ -7,7 +7,6 @@ import NextTopLoader from 'nextjs-toploader';
 // Slider imports 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ToastProvider from "@/context/ToastProvider";
 
 const inter = Inter({ subsets: ['latin'] })
 
