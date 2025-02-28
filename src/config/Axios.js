@@ -3,7 +3,7 @@ export const Request = async (endpoint, options = {}) => {
   try {
     const response = await fetch(url, {
       method: 'GET',
-      // next: { revalidate: 60 },
+      next: { revalidate: 60 },
       headers: {
         'Content-Type': 'application/json',
       },
