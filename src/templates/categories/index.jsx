@@ -1,6 +1,7 @@
 import Title from '@/components/title/title'
 import React from 'react'
 import Breadcrumb from '@/components/breadcrumb'
+import dynamic from 'next/dynamic';
 
 const CategoryIconCard = dynamic(() => import('./category-icon-card'), { ssr: false });
 
