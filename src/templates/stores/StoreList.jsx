@@ -44,9 +44,9 @@ export default function StoreList({ stores = [] }) {
                 {filteredStores.length > 0 ? (
                     filteredStores.map(({ Name, Slug }, index) => (
                         <div key={index} className="capitalize">
-                            <Link href={`/stores/${Slug}`} className="hover:text-primary">
+                            <a href={`/stores/${Slug}`} className="hover:text-primary">
                                 {Name}
-                            </Link>
+                            </a>
                         </div>
                     ))
                 ) : (

@@ -18,7 +18,7 @@ const Breadcrumb = ({ path }) => {
             <React.Fragment key={id}>
               <li>/</li>
               <li className="capitalize">
-                <Link href={item?.href || '#'}>{item?.label}</Link>
+                <a href={item?.href || '#'}>{item?.label}</a>
               </li>
             </React.Fragment>
         ))}
