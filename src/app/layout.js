@@ -20,7 +20,6 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.className} antialiased`}
       >
-        <NextTopLoader />
         <ToastProvider>
           <Header />
           {children}
