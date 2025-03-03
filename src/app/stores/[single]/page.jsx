@@ -8,8 +8,9 @@ import { FiFacebook } from "react-icons/fi";
 import { TbWorldWww } from "react-icons/tb";
 import { getUniqueCategories } from '@/utils';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
-import {getSingleStore} from "../../../services"
+import { getSingleStore } from "../../../services"
 import dynamic from 'next/dynamic';
+import TOC from "../../../templates/stores/toc"
 
 const CouponList = dynamic(() => import('@/components/card/coupon-list'), { ssr: false });
 const CategoryButton = dynamic(() => import('@/components/card/category-button'), { ssr: false });
@@ -20,7 +21,7 @@ const Rating = dynamic(() => import('@/components/rating'), { ssr: false });
 const Store = async ({ params }) => {
   const param = await params.single
 
-  const singleStore  = await getSingleStore(param)
+  const singleStore = await getSingleStore(param)
 
   const { activeCoupon, disableCoupon } = singleStore?.coupons_and_deals?.reduce(
     (acc, item) => {
@@ -57,7 +58,9 @@ const Store = async ({ params }) => {
       </div>
 
       <div className='mt-[30px]'>
-        <h3 className='text-xl text-dark font-semibold mb-5'>{activeCoupon?.length} Coupons Codes and Deals Active</h3>
+        {
+          activeCoupon?.length > 0 &&  <h3 className='text-xl text-dark font-semibold mb-5'>{activeCoupon?.length} Coupons Codes and Deals Active</h3>
+        }
         <div className='flex flex-col lg:flex-row gap-[50px]'>
           <div className='flex-1'>
             <div className='flex flex-col gap-[25px]'>
@@ -68,15 +71,19 @@ const Store = async ({ params }) => {
                 ))
               }
             </div>
-            <h3 className='text-xl text-dark font-semibold mb-5 mt-10'>{disableCoupon?.length} Coupons Codes and Deals Expired</h3>
-            <div className='flex flex-col gap-[25px]'>
-              {
-                disableCoupon?.length > 0 &&
-                disableCoupon?.map((item, idx) => (
-                  <CouponList key={idx} disabled item={item} />
-                ))
-              }
-            </div>
+            {
+              disableCoupon?.length > 0 && <>
+                <h3 className={`text-xl text-dark font-semibold mb-5 ${activeCoupon?.length > 0 && "mt-10"}`}>{disableCoupon?.length} Coupons Codes and Deals Expired</h3>
+                <div className='flex flex-col gap-[25px]'>
+                  {
+                    disableCoupon?.map((item, idx) => (
+                      <CouponList key={idx} disabled item={item} />
+                    ))
+                  }
+                </div>
+              </>
+            }
+
             <div className='single_store_content mt-10'>
               {
                 singleStore &&
@@ -88,7 +95,7 @@ const Store = async ({ params }) => {
           </div>
 
           <aside className='w-[286px]'>
-            <h3 className='text-xl text-dark font-semibold mb-5 '>Categories</h3>
+            <p className='text-xl text-dark font-semibold mb-5 '>Categories</p>
             <div
               style={{ marginTop: '10px' }}
               className='flex flex-wrap gap-2.5'
@@ -146,16 +153,7 @@ const Store = async ({ params }) => {
                 <li>Voucher Flanco</li>
               </ul>
             </div>
-            <div className='mt-[30px]'>
-              <h3 className='text-xl text-dark font-semibold mb-5 '>Table of contents</h3>
-              <ul className='text-sm text-dark flex flex-col gap-1.5'>
-                <li>Nike Promo Codes and Coupons Feb 2025</li>
-                <li>Every way to save at Nike</li>
-                <li>The Best Nike promo code is 'ATHLETE1'</li>
-                <li>About Nike</li>
-                <li>Frequently asked questions about Nike</li>
-              </ul>
-            </div>
+            <TOC/>
           </aside>
         </div>
       </div>

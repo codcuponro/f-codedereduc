@@ -10,6 +10,7 @@ const FavoritesCoupons = ({data}) => {
         buttonLabel="Top 50 coupons and deals"
         buttonHref="/top-50-coupons-and-deals"
         hideButton
+        h1
       />
       <div
         style={{ marginTop: '35px' }}

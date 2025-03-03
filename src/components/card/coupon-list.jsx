@@ -15,7 +15,7 @@ const CouponList = ({ logo, item }) => {
                     </figure>
                         : <h6 className={`font-extrabold text-[34px] flex flex-col pl-[30px] py-[26px] leading-8 ${disabled ? 'text-[#505050]' : 'text-primary'}`} >
                             {item?.DiscountValue}
-                            <span>OFF</span>
+                            {/* <span>OFF</span> */}
                         </h6>
                 }
 

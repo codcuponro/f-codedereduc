@@ -24,9 +24,9 @@ const LandingPageSlider = ({ data }) => {
                                         </figure>
                                     </div>
                                     <div>
-                                        <h6 className='font-bold text-[#111928] text-sm mb-1'>
-                                            {item?.CouponsType === "Promotion" ? "Promotion" : "Coupon"}{" "}{item?.categories?.[0]?.Name}
-                                        </h6>
+                                        <Link href={`/stores/`+item?.store?.Slug || "#"} className='font-bold text-[#111928] text-sm mb-1'>
+                                            <p>{item?.CouponsType === "Promotion" ? "Promotion" : "Coupon"}{" "}{item?.store?.Name}</p>
+                                        </Link>
                                         <p className='text-[#111928] font-medium sm:text-xl lg:text-2xl'>
                                             <Link href={item?.Slug || "#"}>{item?.Title}</Link>
                                         </p>

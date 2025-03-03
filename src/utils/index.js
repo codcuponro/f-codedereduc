@@ -1,8 +1,9 @@
 export const removeProtocol = (url) => {
     if (!url) return "#";
-    const u = url.replace(/(^\w+:|^)\/\//, '');
+    const u = url.replace(/^(https?:\/\/)/, '');    
     return u.charAt(0).toUpperCase() + u.slice(1);
 };
+
 
 
 export function isExpired(expireDate) {
