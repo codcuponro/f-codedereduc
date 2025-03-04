@@ -6,7 +6,7 @@ import { AiOutlinePhone } from "react-icons/ai";
 import { FaRegEnvelope } from "react-icons/fa6";
 import { FiFacebook } from "react-icons/fi";
 import { TbWorldWww } from "react-icons/tb";
-import { getUniqueCategories } from '@/utils';
+import { formatDate, getCurrentMonthYear, getUniqueCategories } from '@/utils';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import { getSingleStore } from "../../../services"
 import dynamic from 'next/dynamic';
@@ -48,12 +48,14 @@ const Store = async ({ params }) => {
   return (
     <section className='container mx-auto px-4 lg:px-0 mt-5 mb:my-[50px]'>
       <div className='flex flex-row items-start gap-2 sm:gap-[30px]'>
+        <Link href={singleStore?.store || "#"}>
         <Image src={singleStore?.Icon.url || "/images/fallback.png"} alt='' width={170} height={170} className='rounded-lg border w-28 sm:w-[170px]' />
+        </Link>
         <div className='max-w-[634px]'>
-          <h2 className='text-dark font-semibold text-xl md:text-[28px]'>{singleStore?.Name}</h2>
+          <h1 className='text-dark font-semibold text-xl md:text-[28px]'>Coupons {singleStore?.Name} {getCurrentMonthYear()}</h1>
           <p>{singleStore?.Excerpt}</p>
           <Rating totalRating={singleStore?.Rating} />
-          <p className='text-xs font-medium mt-2.5'>Last edited by <span className='underline'>Alina Simion</span> on Feb 5th, 2025</p>
+          <p className='text-xs font-medium mt-2.5'>Last edited by <span className='underline'>Alina Simion</span> on {formatDate(singleStore?.updatedAt)}</p>
         </div>
       </div>
 
