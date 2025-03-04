@@ -15,8 +15,8 @@ export function isExpired(expireDate) {
 export const getUniqueCategories = (coupons) => {
     const uniqueCategories = Array.from(
         new Map(
-            coupons.flatMap(coupon => coupon.categories)
-                .map(category => [category.Slug, category])
+            coupons?.flatMap(coupon => coupon?.categories)
+                ?.map(category => [category.Slug, category])
         ).values()
     );
 

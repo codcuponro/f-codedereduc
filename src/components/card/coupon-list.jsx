@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { isExpired } from '@/utils';
 
 const CouponList = ({ logo, item }) => {
-    console.log("🚀 ~ CouponList ~ item:", item)
     const disabled = isExpired(item?.ExpireDate);
     
     return (
