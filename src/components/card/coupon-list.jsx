@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { isExpired } from '@/utils';
 
 const CouponList = ({ logo, item }) => {
+    console.log("🚀 ~ CouponList ~ item:", item)
     const disabled = isExpired(item?.ExpireDate);
     
     return (
@@ -22,7 +23,7 @@ const CouponList = ({ logo, item }) => {
                 <div className={`flex flex-col py-4 flex-1 justify-between pr-3 md:pr-[30px] sm:flex-row sm:items-center gap-4 ${logo && '!pl-0'}`}>
                     <div className='flex flex-col text-left md:justify-start md:items-start'>
                         <button className='bg-[#F3F4F6] px-2.5 w-fit text-xs text-dark font-bold py-1 rounded-full'>
-                            { item?.CouponsType === "Promotion" ? "Promotion" : "Coupon"}{" "}{item?.categories?.[0]?.Name}
+                            { item?.CouponsType === "Promotion" ? "Promotion" : "Coupon"}{" "}{item?.store?.Name}
                         </button>
                         <h3 className='font-medium sm:text-lg md:text-[22px] md:leading-[30px] mt-2.5'>{item?.Title}</h3>
                     </div>
