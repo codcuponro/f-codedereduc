@@ -87,7 +87,7 @@ async function getExclusiveCoupon() {
       'Icon', "categories.Icon", "store.Icon", "Feature_image"
     ],
     filters: {
-      ExclusiveCoupon: {
+      Slider: {
         $eq: true
       }
     },
@@ -186,6 +186,9 @@ async function getSingleCategory(param) {
   const category = await Request(`/categories?${cparams}`);
 
   const params = qs.stringify({
+    populate: [
+      'Icon'
+    ],
     filters: {
       Top: {
         $eq: true

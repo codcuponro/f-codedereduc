@@ -95,7 +95,7 @@ const CategorySingleTemp = ({ params, data, categories }) => {
                         {categories?.map((item, idx) => (
                             <a key={idx} href={`/categories/${item?.Slug}`} className="no-underline">
                                 <button
-                                    className={`font-medium flex text-sm sm:text-base items-center rounded-full px-2.5 py-[3px] gap-1 
+                                    className={`font-medium flex text-sm sm:text-base group items-center rounded-full px-2.5 py-[3px] gap-1 
                                         ${item?.Slug === params
                                             ? "bg-[#6D28D9] text-white"
                                             : "hover:bg-[#6D28D9] bg-[#E9EDF4] text-[#637381] hover:text-white"
@@ -103,7 +103,7 @@ const CategorySingleTemp = ({ params, data, categories }) => {
                                     onMouseEnter={() => setHoveredIdx(idx)}
                                     onMouseLeave={() => setHoveredIdx(null)}
                                 >
-                                    <Image
+                                    {/* <Image
                                         src={hoveredIdx === idx || item?.Slug === params 
                                             ? "/svg/category.svg" 
                                             : "/svg/category2.svg"}
@@ -111,6 +111,13 @@ const CategorySingleTemp = ({ params, data, categories }) => {
                                         width={15}
                                         height={15}
                                         className="w-[15px]"
+                                    /> */}
+                                    <Image
+                                        src={item?.Icon?.url}
+                                        alt=""
+                                        width={15}
+                                        height={15}
+                                        className="w-[15px] group-hover:invert"
                                     />
                                     {item?.Name}
                                 </button>

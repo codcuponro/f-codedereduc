@@ -11,6 +11,7 @@ import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import { getSingleStore } from "../../../services"
 import dynamic from 'next/dynamic';
 import TOC from "../../../templates/stores/toc"
+import IconImage from "../../../components/icon-image"
 
 const CouponList = dynamic(() => import('@/components/card/coupon-list'), { ssr: false });
 const CategoryButton = dynamic(() => import('@/components/card/category-button'), { ssr: false });
@@ -45,12 +46,12 @@ const Store = async ({ params }) => {
     }
   ]
 
+
   return (
     <section className='container mx-auto px-4 lg:px-0 mt-5 mb:my-[50px]'>
       <div className='flex flex-row items-start gap-2 sm:gap-[30px]'>
-        <Link href={singleStore?.store || "#"}>
-        <Image src={singleStore?.Icon.url || "/images/fallback.png"} alt='' width={170} height={170} className='rounded-lg border w-28 sm:w-[170px]' />
-        </Link>
+        <IconImage singleStore={singleStore}/>
+
         <div className='max-w-[634px]'>
           <h1 className='text-dark font-semibold text-xl md:text-[28px]'>Coupons {singleStore?.Name} {getCurrentMonthYear()}</h1>
           <p>{singleStore?.Excerpt}</p>
@@ -61,7 +62,7 @@ const Store = async ({ params }) => {
 
       <div className='mt-[30px]'>
         {
-          activeCoupon?.length > 0 &&  <h3 className='text-xl text-dark font-semibold mb-5'>{activeCoupon?.length} Coupons Codes and Deals Active</h3>
+          activeCoupon?.length > 0 && <h2 className='text-xl text-dark font-semibold mb-5'>{activeCoupon?.length} Coupons Codes and Deals Active</h2>
         }
         <div className='flex flex-col lg:flex-row gap-[50px]'>
           <div className='flex-1'>
@@ -155,7 +156,7 @@ const Store = async ({ params }) => {
                 <li>Voucher Flanco</li>
               </ul>
             </div>
-            <TOC/>
+            <TOC />
           </aside>
         </div>
       </div>

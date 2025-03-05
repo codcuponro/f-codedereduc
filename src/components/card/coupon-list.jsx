@@ -13,10 +13,10 @@ const CouponList = ({ logo, item }) => {
                     logo ? <figure className='md:border-r flex justify-center items-start p-4 sm:p-0 sm:items-center'>
                         <Image src={item?.Icon?.url || item?.store?.Icon?.url || "/images/fallback.png"} alt='' width={125} height={125} className='scale-y-105 w-[110px] rounded-lg sm:rounded-none sm:w-[170px] md:w-[125px]' />
                     </figure>
-                        : <h6 className={`font-extrabold text-[34px] flex flex-col pl-[30px] py-[26px] leading-8 ${disabled ? 'text-[#505050]' : 'text-primary'}`} >
+                        : <p className={`font-extrabold min-w-[110px] text-[34px] flex flex-col pl-[30px] py-[26px] leading-8 ${disabled ? 'text-[#505050]' : 'text-primary'}`} >
                             {item?.DiscountValue}
                             {/* <span>OFF</span> */}
-                        </h6>
+                        </p>
                 }
 
                 <div className={`flex flex-col py-4 flex-1 justify-between pr-3 md:pr-[30px] sm:flex-row sm:items-center gap-4 ${logo && '!pl-0'}`}>
