@@ -5,7 +5,6 @@ import CouponModel from '../model/coupon-model';
 
 const CouponButton = (props) => {
     const { label, title, disabled, data } = props
-    console.log("🚀 ~ CouponButton ~ label:", label)
     const { openModal, ModalComponent } = useModal();
 
     function truncateText(text) {
