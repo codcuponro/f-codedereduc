@@ -3,7 +3,7 @@ import Breadcrumb from '@/components/breadcrumb';
 import CategoryButton from '@/components/card/category-button';
 import CouponList from '@/components/card/coupon-list';
 import Faqs from '@/components/faqs/faqs';
-import { getUniqueCategories } from '@/utils';
+import { getActiveAndDisabledCoupons, getUniqueCategories } from '@/utils';
 import { getFavorites50Coupon } from '@/services';
 
 const breadcrumbPath = [
@@ -41,7 +41,8 @@ const PopularSearches = memo(() => (
 const Top50CouponsAndDeals = async () => {
   const favoritesCoupon = await getFavorites50Coupon();
   const categories = getUniqueCategories(favoritesCoupon);
-
+  const {activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(favoritesCoupon)
+  
   return (
     <section className='container mx-auto px-4 lg:px-0 mt-5 md:mb-[50px]'>
       {/* Header Section */}
@@ -59,11 +60,11 @@ const Top50CouponsAndDeals = async () => {
         <div className='flex-1'>
           {/* Coupon List */}
           <div className='flex flex-col gap-[25px] mb-20'>
-            {favoritesCoupon.map((item, idx) => (
+            {activeCoupon?.map((item, idx) => (
               <CouponList key={idx} item={item} logo />
             ))}
           </div>
-          <Faqs name={favoritesCoupon?.[0]?.store?.Name} />
+          <Faqs name={activeCoupon?.[0]?.store?.Name} />
         </div>
 
         {/* Sidebar */}

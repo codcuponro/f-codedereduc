@@ -6,7 +6,7 @@ import { AiOutlinePhone } from "react-icons/ai";
 import { FaRegEnvelope } from "react-icons/fa6";
 import { FiFacebook } from "react-icons/fi";
 import { TbWorldWww } from "react-icons/tb";
-import { formatDate, getCurrentMonthYear, getUniqueCategories } from '@/utils';
+import { formatDate, getActiveAndDisabledCoupons, getCurrentMonthYear, getUniqueCategories } from '@/utils';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import { getSingleStore } from "../../../services"
 import dynamic from 'next/dynamic';
@@ -23,16 +23,8 @@ const Store = async ({ params }) => {
   const param = await params.single
 
   const singleStore = await getSingleStore(param)
-
-  const { activeCoupon, disableCoupon } = singleStore?.coupons_and_deals?.reduce(
-    (acc, item) => {
-      const isExpired = item.ExpireDate < new Date().toISOString().split('T')[0];
-      isExpired ? acc.disableCoupon.push(item) : acc.activeCoupon.push(item);
-      return acc;
-    },
-    { activeCoupon: [], disableCoupon: [] }
-  );
-
+  const {activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(singleStore?.coupons_and_deals)
+  
   const categories = getUniqueCategories(singleStore?.coupons_and_deals)
 
   const breadcrumbPath = [
