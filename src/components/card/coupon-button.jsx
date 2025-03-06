@@ -5,6 +5,7 @@ import CouponModel from '../model/coupon-model';
 
 const CouponButton = (props) => {
     const { label, title, disabled, data } = props
+    console.log("🚀 ~ CouponButton ~ label:", label)
     const { openModal, ModalComponent } = useModal();
 
     function truncateText(text) {
@@ -12,12 +13,14 @@ const CouponButton = (props) => {
     }
 
     const handleRoute = () => {
-        !label ?
-            window.open(data.CouponUrl || "#", "_blank")
-            :
-            window.open(data.CouponUrl || "#", "_blank")
-            openModal(<CouponModel data={data} />)
-    };
+        if (!label) {
+          window.open(data.CouponUrl || "#", "_blank");
+        } else {
+          window.open(data.CouponUrl || "#", "_blank");
+          openModal(<CouponModel data={data} />);
+        }
+      };
+      
 
     return (
         <>
