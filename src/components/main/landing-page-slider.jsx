@@ -15,7 +15,7 @@ const LandingPageSlider = ({ data }) => {
                         <div className='px-1 sm:px-2 lg:p-[15px]'>
                             <div key={idx} className='border border-[#DEE2E6] rounded-[20px] overflow-hidden'>
                                 <figure>
-                                    <Image src={item?.Feature_image?.url} alt="" width={575} height={265} className='w-full h-[265px] 3xl:h-[460px] object-cover' />
+                                    <Image src={item?.Feature_image?.url} alt="" width={575} height={265} className='w-full h-[265px] 3xl:h-[460px] object-cover cImg' />
                                 </figure>
                                 <div className='p-2 lg:p-6 pt-2 lg:pt-4 flex gap-4'>
                                     <div>

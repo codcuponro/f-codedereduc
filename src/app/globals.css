@@ -70,3 +70,9 @@
     font-size: 24px;
   }
 }
+
+@media (min-width: 1780px) {
+  .cImg{
+    height: 380px !important;
+  }
+}
