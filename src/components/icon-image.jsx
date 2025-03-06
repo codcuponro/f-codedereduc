@@ -5,7 +5,7 @@ import React from 'react';
 const IconImage = ({ singleStore }) => {
   const websiteUrl = singleStore?.Social?.Website ? `https://${singleStore.Social.Website}` : "#";
   return (
-    <>
+    <div className=''>
     <a
       href={websiteUrl}
       target="_blank"
@@ -22,7 +22,7 @@ const IconImage = ({ singleStore }) => {
         className="rounded-lg border w-28 sm:w-[170px]"
       />
     </a>
-    </>
+    </div>
   );
 };
 

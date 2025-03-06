@@ -66,7 +66,7 @@ async function getCouponAndDeals() {
 async function getFavoritesCoupon() {
   const fcdparams = qs.stringify({
     populate: [
-      'Icon', "categories.Icon", "store.Icon"
+      'Icon', "categories.Icon", "store.Icon", "store.Social"
     ],
     filters: {
       FavoritesCoupon: {

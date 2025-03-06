@@ -3,7 +3,6 @@ import CouponButton from './coupon-button'
 import Link from 'next/link'
 
 const CouponCard = ({ data }) => {
-  console.log("🚀 ~ CouponCard ~ data:", data)
   return (
     <div className='border rounded-lg flex flex-col justify-between overflow-hidden'>
       <div>

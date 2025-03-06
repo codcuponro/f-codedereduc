@@ -51,8 +51,7 @@ const Store = async ({ params }) => {
     <section className='container mx-auto px-4 lg:px-0 mt-5 mb:my-[50px]'>
       <div className='flex flex-row items-start gap-2 sm:gap-[30px]'>
         <IconImage singleStore={singleStore}/>
-
-        <div className='max-w-[634px]'>
+        <div className='max-w-[70%]'>
           <h1 className='text-dark font-semibold text-xl md:text-[28px]'>Coupons {singleStore?.Name} {getCurrentMonthYear()}</h1>
           <p>{singleStore?.Excerpt}</p>
           <Rating totalRating={singleStore?.Rating} />

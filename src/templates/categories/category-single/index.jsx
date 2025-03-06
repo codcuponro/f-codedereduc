@@ -6,7 +6,6 @@ import CouponList from "@/components/card/coupon-list";
 import Faqs from "@/components/faqs/faqs";
 import { Pagination } from "@mui/material";
 import Image from "next/image";
-import Link from "next/link";
 
 const CategorySingleTemp = ({ params, data, categories }) => {
     const [hoveredIdx, setHoveredIdx] = useState(null);
@@ -117,7 +116,7 @@ const CategorySingleTemp = ({ params, data, categories }) => {
                                         alt=""
                                         width={15}
                                         height={15}
-                                        className="w-[15px] group-hover:invert"
+                                        className={`w-[15px] group-hover:invert ${item?.Slug === params && "invert"}`}
                                     />
                                     {item?.Name}
                                 </button>

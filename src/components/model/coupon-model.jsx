@@ -5,6 +5,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 
 const CouponModel = ({data}) => {
+    console.log("🚀 ~ CouponModel ~ data:", data)
     const [copied, setCopied] = useState(false);
     const showToast = useToast();
     const couponCode = data?.CouponCode;
@@ -44,7 +45,7 @@ const CouponModel = ({data}) => {
                 </button>
             </div>
             <p className='font-medium text-sm text-center mt-8'>
-                Copy and paste this code at {data?.CouponUrl && <Link href={data?.CouponUrl} className="text-primary underline">{removeProtocol(data?.CouponUrl)}</Link>}
+                Copy and paste this code at {data?.store?.Social?.Website && <Link href={`https://${data?.store?.Social?.Website}`} target='_blank' className="text-primary underline">#{data?.store?.Social?.Website}</Link>}
             </p>
         </div>
     );

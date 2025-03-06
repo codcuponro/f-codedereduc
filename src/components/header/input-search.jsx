@@ -72,7 +72,7 @@ const InputSearch = ({ full }) => {
                     ) : stores.length > 0 ? (
                         stores.map((store) => (
                             <Link href={`/stores/${store.Slug}`} key={store.id} className="flex !no-underline items-center gap-3 p-2 hover:bg-gray-100 rounded cursor-pointer">
-                                <Image src={store?.Icon?.url || '/images/fallback.png'} alt={store.Name} width={60} height={60} className='w-[60px] rounded-md object-cover' />
+                                <Image src={store?.Icon?.url || '/images/fallback.png'} alt={store.Name} width={60} height={60} className='w-[60px] rounded-md border object-cover' />
                                 <span className="text-gray-800 !no-underline">{store.Name}</span>
                             </Link>
                         ))
