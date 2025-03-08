@@ -1,4 +1,5 @@
 "use client"
+import { removeQueryParams } from '@/utils';
 import { Modal, Box } from '@mui/material';
 import { useState } from 'react';
 
@@ -14,6 +15,9 @@ export const useModal = () => {
     const closeModal = () => {
         setIsOpen(false);
         setModalContent(null);
+        removeQueryParams()
+        // Remove item from localStorage
+        localStorage.removeItem("couponData");
     };
 
     const ModalComponent = () => (

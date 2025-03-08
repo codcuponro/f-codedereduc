@@ -5,7 +5,6 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 
 const CouponModel = ({data}) => {
-    console.log("🚀 ~ CouponModel ~ data:", data)
     const [copied, setCopied] = useState(false);
     const showToast = useToast();
     const couponCode = data?.CouponCode;

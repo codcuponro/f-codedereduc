@@ -68,3 +68,11 @@ export async function getActiveAndDisabledCoupons(coupons) {
   
     return { activeCoupon, disableCoupon };
   }
+
+
+  export const removeQueryParams = () => {
+    const url = new URL(window.location);
+    url.search = ""; // Clears all query parameters
+    window.history.replaceState({}, document.title, url);
+  }
+

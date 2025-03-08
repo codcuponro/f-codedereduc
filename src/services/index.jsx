@@ -53,7 +53,7 @@ async function getCategories() {
 async function getCouponAndDeals() {
   const cdparams = qs.stringify({
     populate: [
-      'Icon', "categories.Icon", "store.Icon"
+      'Icon', "categories.Icon", "store.Icon", "store.Social"
     ],
     pagination: {
       limit: 15
@@ -84,7 +84,7 @@ async function getFavoritesCoupon() {
 async function getExclusiveCoupon() {
   const exparams = qs.stringify({
     populate: [
-      'Icon', "categories.Icon", "store.Icon", "Feature_image"
+      'Icon', "categories.Icon", "store.Icon", "Feature_image", "store.Social"
     ],
     filters: {
       Slider: {
@@ -112,7 +112,7 @@ async function getHeader() {
 async function getFavorites50Coupon() {
   const params = qs.stringify({
     populate: [
-      'Icon', "categories.Icon", "store.Icon"
+      'Icon', "categories.Icon", "store.Icon", "store.Social"
     ],
     filters: {
       FavoritesCoupon: {
@@ -145,7 +145,7 @@ async function getSingleStore(params) {
   const qParams = qs.stringify({
     populate: [
       'Icon', "users_permissions_user", "Social", "coupons_and_deals",
-      'coupons_and_deals.Icon', "coupons_and_deals.categories.Icon", "coupons_and_deals.store.Icon"
+      'coupons_and_deals.Icon', "coupons_and_deals.categories.Icon", "coupons_and_deals.store.Icon", "coupons_and_deals.store.Social"
     ],
     filters: {
       Slug: {
@@ -160,7 +160,7 @@ async function getSingleStore(params) {
 async function getAllCategories() {
   const params = qs.stringify({
     populate: [
-      'Icon', "coupons_and_deals.Icon", "coupons_and_deals.categories", "coupons_and_deals.store"
+      'Icon', "coupons_and_deals.Icon", "coupons_and_deals.categories", "coupons_and_deals.store", "coupons_and_deals.store.Social"
     ],
     pagination: {
       limit: 400
@@ -175,7 +175,7 @@ async function getAllCategories() {
 async function getSingleCategory(param) {
   const cparams = qs.stringify({
     populate: [
-      'Icon', "coupons_and_deals.Icon", "coupons_and_deals.categories", "coupons_and_deals.store.Icon"
+      'Icon', "coupons_and_deals.Icon", "coupons_and_deals.categories", "coupons_and_deals.store.Icon", "coupons_and_deals.store.Social"
     ],
     filters: {
       Slug: {

@@ -1,11 +1,13 @@
 "use client"
 import { useModal } from '@/hooks/useModal';
 import React from 'react'
-import CouponModel from '../model/coupon-model';
+// import CouponModel from '../model/coupon-model';
+import { usePathname } from 'next/navigation';
 
 const CouponButton = (props) => {
     const { label, title, disabled, data } = props
     const { openModal, ModalComponent } = useModal();
+    const path = usePathname()
 
     function truncateText(text) {
         return text?.length > 3 ? text.slice(0, 3) + "..." : text;
@@ -13,13 +15,20 @@ const CouponButton = (props) => {
 
     const handleRoute = () => {
         if (!label) {
-          window.open(data.CouponUrl || "#", "_blank");
+            window.open(data.CouponUrl || "#", "_blank");
         } else {
-          window.open(data.CouponUrl || "#", "_blank");
-          openModal(<CouponModel data={data} />);
+            window.open(`${window.location.origin}${path}?model=true`, "_blank");
+            const providerURL = data?.store?.Social?.Website;
+            const completeURL = providerURL
+                ? providerURL.startsWith("http")
+                    ? providerURL
+                    : `https://${providerURL}`
+                : "";
+            localStorage.setItem("couponData", JSON.stringify(data));
+            window.location = completeURL
+            // openModal(<CouponModel data={data} />);
         }
-      };
-      
+    };
 
     return (
         <>
