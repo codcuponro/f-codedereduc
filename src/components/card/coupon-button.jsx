@@ -14,16 +14,17 @@ const CouponButton = (props) => {
     }
 
     const handleRoute = () => {
+        const providerURL = data?.store?.Social?.Website;
+        const completeURL = providerURL
+            ? providerURL.startsWith("http")
+                ? providerURL
+                : `https://${providerURL}`
+            : "";
+
         if (!label) {
-            window.open(data.CouponUrl || "#", "_blank");
+            window.open(completeURL || "#", "_blank");
         } else {
             window.open(`${window.location.origin}${path}?model=true`, "_blank");
-            const providerURL = data?.store?.Social?.Website;
-            const completeURL = providerURL
-                ? providerURL.startsWith("http")
-                    ? providerURL
-                    : `https://${providerURL}`
-                : "";
             localStorage.setItem("couponData", JSON.stringify(data));
             window.location = completeURL
             // openModal(<CouponModel data={data} />);

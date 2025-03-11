@@ -6,6 +6,7 @@ import ToastProvider from "../context/ToastProvider"
 // Slider imports 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,11 +21,13 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.className} antialiased`}
       >
-        <ToastProvider>
-          <Header />
-          {children}
-          <Footer />
-        </ToastProvider>
+        <Suspense fallback={''}>
+          <ToastProvider>
+            <Header />
+            {children}
+            <Footer />
+          </ToastProvider>
+        </Suspense>
       </body>
     </html>
   );
