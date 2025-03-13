@@ -68,7 +68,7 @@ const ToastProvider = ({ children }) => {
                 </Snackbar>
             </ToastContext.Provider>
             <ModalComponent />
-            {/* <div id="google_translate_element"></div>; */}
+            <div id="google_translate_element"></div>
         </>
     );
 };
