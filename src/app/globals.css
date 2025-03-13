@@ -64,6 +64,27 @@
   text-decoration: underline;
 }
 
+.goog-tooltip,
+.goog-tooltip:hover,
+.goog-tooltip div,
+.goog-text-highlight,
+#goog-gt-tt {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.skiptranslate{
+  opacity: 0 !important;
+  margin-top: -40px !important;
+}
 
 @media (max-width: 768px) {
   .page_content h2{
@@ -75,4 +96,29 @@
   .cImg{
     height: 380px !important;
   }
+}
+
+
+
+/* Remove Google Translate's text highlight */
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+/* Hide Google Translate tooltip */
+.goog-tooltip,
+.goog-tooltip div {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Prevent text selection (Optional) */
+* {
+  user-select: text !important;
+  -webkit-user-select: text !important;
 }
