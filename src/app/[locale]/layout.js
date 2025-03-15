@@ -30,9 +30,7 @@ export default async function RootLayout({
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
-
   const messages = await getMessages()
-
   return (
     <html lang={locale}>
       <body
@@ -42,7 +40,7 @@ export default async function RootLayout({
           <NextIntlClientProvider messages={messages}>
             <ToastProvider>
               <Header />
-              {children}
+                {children}
               <Footer />
             </ToastProvider>
           </NextIntlClientProvider>

@@ -1,11 +1,12 @@
 import qs from "qs"
 import { Request } from "@/config/Axios"
 
-async function getHomPage() {
+async function getHomPage(locale = "ro") {
   const params = qs.stringify({
     populate: [
       'HowItswork.Icon'
     ],
+    locale
   })
   const response = await Request(`/home-page?${params}`);
   return response.data
@@ -124,17 +125,17 @@ async function getFavorites50Coupon() {
     }
   })
   const favoritesCoupon = await Request(`/coupons-and-deals?${params}`);
-  return  favoritesCoupon?.data
+  return favoritesCoupon?.data
 }
 
 async function getAllStore() {
   const params = qs.stringify({
-      populate: [
-          'Icon', "coupons_and_deals",
-      ],
-      pagination: {
-          limit: 500
-      }
+    populate: [
+      'Icon', "coupons_and_deals",
+    ],
+    pagination: {
+      limit: 500
+    }
   })
   const stores = await Request(`/stores?${params}`);
   return stores?.data
@@ -207,7 +208,7 @@ async function getSingleCategory(param) {
 
 async function getAboutPage() {
   const pageResponse = await Request(`/about-page?populate=*`);
-  return  pageResponse?.data
+  return pageResponse?.data
 }
 
 export {

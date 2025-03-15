@@ -1,24 +1,25 @@
 {
     "data": {
       "search-placeholder": "Search for store",
-      "no-result-found": "No results found",
-      "fav-coupon-title" : "Today’s top favorites coupons and deals",
-      "fav-coupon-btn-label" : "Top 50 coupons and deals",
-      "fav-stores-title" : "Top favorites stores",
-      "fav-stores-btn-label" : "See all stores",
-      "top-coupons-and-deals-btn-label" : "See all coupons and deals",
-      "top-coupons-and-deals-title" : "Top coupons and deals",
-      "top-categories-title" : "Top categories",
-      "top-categories-btn-label" : "See all categories",
-      "how-its-works-title" : "Top categories",
+      "no_result_found": "No results found",
+      "loading_text": "Loading",
+      "fav_coupon_title" : "Today’s top favorites coupons and deals",
+      "fav_coupon_btn_label" : "Top 50 coupons and deals",
+      "fav_stores_title" : "Top favorites stores",
+      "fav_stores_btn_label" : "See all stores",
+      "top_coupons_and_deals_btn_label" : "See all coupons and deals",
+      "top_coupons_and_deals_title" : "Top coupons and deals",
+      "top_categories_title" : "Top categories",
+      "top_categories_btn_label" : "See all categories",
+      "how_its_works_title" : "How it works",
       "footer": {
-        "footer-title" : "Signup for the latest deals and coupons delivered weekly",
-        "email-placeholder" : "Enter your email address",
-        "subscribe-btn-label" : "Subscribe",
-        "resources-title" : "Resources",
-        "Company-title" : "Company",
-        "quick-links-title" : "Quick Links",
-        "follow-us-title" : "Follow Us On"
+        "footer_title" : "Signup for the latest deals and coupons delivered weekly",
+        "email_placeholder" : "Enter your email address",
+        "subscribe_btn_label" : "Subscribe",
+        "resources_title" : "Resources",
+        "Company_title" : "Company",
+        "quick_links_title" : "Quick Links",
+        "follow_us_title" : "Follow Us On"
       }
     }
   }

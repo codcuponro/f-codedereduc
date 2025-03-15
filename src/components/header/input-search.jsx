@@ -5,12 +5,14 @@ import qs from 'qs'
 import debounce from 'lodash.debounce'
 import { Request } from '@/config/Axios'
 import { Link } from '@mui/material'
+import { useTranslations } from 'next-intl'
 
 const InputSearch = ({ full }) => {
     const [searchValue, setSearchValue] = useState('');
     const [isFocused, setIsFocused] = useState(false);
     const [stores, setStores] = useState([]);
     const [loading, setLoading] = useState(false);
+    const t = useTranslations('data');
 
     // Fetch stores based on input value
     const getStores = async (query) => {
@@ -56,7 +58,7 @@ const InputSearch = ({ full }) => {
                 <input
                     type='text'
                     className='text-white placeholder:text-white text-sm bg-transparent w-full outline-none'
-                    placeholder='Search for stores'
+                    placeholder={t('search-placeholder')}
                     value={searchValue}
                     onChange={(e) => setSearchValue(e.target.value)}
                     onFocus={() => setIsFocused(true)}
@@ -68,7 +70,7 @@ const InputSearch = ({ full }) => {
             {isFocused && (
                 <div id="list" className='z-[10] absolute p-4 top-14 shadow-lg rounded-xl bg-white border w-full'>
                     {loading ? (
-                        <p className="text-gray-500">Loading...</p>
+                        <p className="text-gray-500">{t('loading_text')}...</p>
                     ) : stores.length > 0 ? (
                         stores.map((store) => (
                             <Link href={`/stores/${store.Slug}`} key={store.id} className="flex !no-underline items-center gap-3 p-2 hover:bg-gray-100 rounded cursor-pointer">
@@ -77,7 +79,7 @@ const InputSearch = ({ full }) => {
                             </Link>
                         ))
                     ) : (
-                        <p className="text-gray-500">No results found</p>
+                        <p className="text-gray-500">{t('no_result_found')}</p>
                     )}
                 </div>
             )}
