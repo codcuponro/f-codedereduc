@@ -1,0 +1,24 @@
+{
+    "data": {
+      "search-placeholder": "Search for store",
+      "no-result-found": "No results found",
+      "fav-coupon-title" : "Today’s top favorites coupons and deals",
+      "fav-coupon-btn-label" : "Top 50 coupons and deals",
+      "fav-stores-title" : "Top favorites stores",
+      "fav-stores-btn-label" : "See all stores",
+      "top-coupons-and-deals-btn-label" : "See all coupons and deals",
+      "top-coupons-and-deals-title" : "Top coupons and deals",
+      "top-categories-title" : "Top categories",
+      "top-categories-btn-label" : "See all categories",
+      "how-its-works-title" : "Top categories",
+      "footer": {
+        "footer-title" : "Signup for the latest deals and coupons delivered weekly",
+        "email-placeholder" : "Enter your email address",
+        "subscribe-btn-label" : "Subscribe",
+        "resources-title" : "Resources",
+        "Company-title" : "Company",
+        "quick-links-title" : "Quick Links",
+        "follow-us-title" : "Follow Us On"
+      }
+    }
+  }

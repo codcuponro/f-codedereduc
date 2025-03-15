@@ -22,7 +22,6 @@ export default async function Home() {
       getHomPage()
     ]);
 
-
   return (
     <>
       <LandingPageSlider data={exclusiveCoupon} />

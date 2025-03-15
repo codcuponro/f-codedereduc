@@ -1,6 +1,6 @@
 import StoresTemp from '@/templates/stores'
 import React from 'react'
-import { getAllStore, getStores } from "../../services"
+import { getAllStore, getStores } from "../../../services"
 
 const Store = async () => {
   const [

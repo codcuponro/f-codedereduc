@@ -2,7 +2,7 @@ import Title from '@/components/title/title'
 import { BlocksRenderer } from '@strapi/blocks-react-renderer'
 import React from 'react'
 
-const HowItWorks = async ({data}) => {
+const HowItWorks = ({data}) => {
   return (
     <section className='container mx-auto px-4 lg:px-0 mb-[75px]'>
       <Title
