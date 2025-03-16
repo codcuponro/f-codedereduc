@@ -2,13 +2,14 @@ import StoresTemp from '@/templates/stores'
 import React from 'react'
 import { getAllStore, getStores } from "../../../services"
 
-const Store = async () => {
+const Store = async (props) => {
+  const params = props?.params?.locale
   const [
     stores,
     favStores,
   ] = await Promise.all([
-    getAllStore(),
-    getStores(),
+    getAllStore(params),
+    getStores(params),
   ]);
 
   return (

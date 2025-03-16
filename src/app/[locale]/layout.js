@@ -31,6 +31,7 @@ export default async function RootLayout({
     notFound();
   }
   const messages = await getMessages()
+  
   return (
     <html lang={locale}>
       <body
@@ -39,9 +40,9 @@ export default async function RootLayout({
         <Suspense fallback={''}>
           <NextIntlClientProvider messages={messages}>
             <ToastProvider>
-              <Header />
+              <Header local={locale}/>
                 {children}
-              <Footer />
+              <Footer local={locale}/>
             </ToastProvider>
           </NextIntlClientProvider>
         </Suspense>

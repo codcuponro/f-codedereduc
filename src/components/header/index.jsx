@@ -5,8 +5,9 @@ import MobileHeader from './mobile-header'
 import InputSearch from './input-search'
 import { getHeader } from '../../services'
 
-const Header = async () => {
-    const headerRes = await getHeader()
+const Header = async ({local}) => {
+    const headerRes = await getHeader(local)
+
     return (
         <>
             <header className='py-3 bg-primary hidden md:block'>

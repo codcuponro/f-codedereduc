@@ -6,7 +6,8 @@ import FavoriteStores from "@/templates/home-page/favorites-stores";
 import HowItWorks from "@/templates/home-page/how-it-works";
 import TopCategories from "@/templates/home-page/top-categories";
 
-export default async function Home() {
+export default async function Home(props) {
+  const params = props?.params?.locale
   
   const [favoritesCoupon,
     exclusiveCoupon,
@@ -14,12 +15,12 @@ export default async function Home() {
     couponsAndDeals,
     categories,
     homePage] = await Promise.all([
-      getFavoritesCoupon(),
-      getExclusiveCoupon(),
-      getStores(),
-      getCouponAndDeals(),
-      getCategories(),
-      getHomPage()
+      getFavoritesCoupon(params),
+      getExclusiveCoupon(params),
+      getStores(params),
+      getCouponAndDeals(params),
+      getCategories(params),
+      getHomPage(params)
     ]);
 
   return (

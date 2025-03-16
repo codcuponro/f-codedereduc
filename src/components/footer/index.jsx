@@ -3,7 +3,7 @@ import React from 'react'
 import { useTranslations } from 'next-intl';
 import Nav from "./nav"
 
-const Footer = () => {
+const Footer = ({local}) => {
   const t = useTranslations('data');
   return (
     <footer className='bg-primary pt-[68px] pb-6 md:pb-[91px] relative'>
@@ -19,7 +19,7 @@ const Footer = () => {
           <button className='bg-pure text-primary py-4 px-10 rounded-md hover:bg-white/10 hover:text-pure border border-white'>{t('footer.subscribe_btn_label')}</button>
         </div>
       </div>
-      <Nav t={t} />
+      <Nav t={t} local={local}/>
       <Image src="/images/footer-shap-1.png" alt='' width={160} height={160} className='absolute right-0 top-10' />
       <Image src="/images/footer-shape-2.png" alt='' width={160} height={160} className='absolute left-0 bottom-0' />
     </footer>

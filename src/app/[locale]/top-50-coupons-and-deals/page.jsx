@@ -38,8 +38,9 @@ const PopularSearches = memo(() => (
   </div>
 ));
 
-const Top50CouponsAndDeals = async () => {
-  const favoritesCoupon = await getFavorites50Coupon();
+const Top50CouponsAndDeals = async (props) => {
+  const params = props?.params?.locale
+  const favoritesCoupon = await getFavorites50Coupon(params);
   const categories = getUniqueCategories(favoritesCoupon);
   const {activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(favoritesCoupon)
   

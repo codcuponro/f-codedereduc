@@ -4,8 +4,8 @@ import React from 'react'
 import { getFooter } from '../../services';
 import { FaFacebookF, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
 
-const Nav = async ({t}) => {
-    const footerRes = await getFooter()
+const Nav = async ({t, local}) => {
+    const footerRes = await getFooter(local)
     return (
         <>
             <div className='container mx-auto px-4 lg:px-0 grid gap-8 grid-cols-2 md:grid-cols-5 lg:grid-cols-6'>

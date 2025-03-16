@@ -21,8 +21,12 @@ const Rating = dynamic(() => import('@/components/rating'), { ssr: false });
 
 const Store = async ({ params }) => {
   const param = await params.single
+  const locale = await params.locale
 
-  const singleStore = await getSingleStore(param)
+  const singleStore = await getSingleStore({
+    slug: param,
+    locale,
+  })
   const {activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(singleStore?.coupons_and_deals)
   
   const categories = getUniqueCategories(singleStore?.coupons_and_deals)
