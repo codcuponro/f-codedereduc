@@ -50,13 +50,13 @@ const Store = async ({ params }) => {
           <h1 className='text-dark font-semibold text-xl md:text-[28px]'>Coupons {singleStore?.Name} {getCurrentMonthYear()}</h1>
           <p>{singleStore?.Excerpt}</p>
           <Rating totalRating={singleStore?.Rating} />
-          <p className='text-xs font-medium mt-2.5'>Last edited by <span className='underline'>Alina Simion</span> on {formatDate(singleStore?.updatedAt)}</p>
+          <p className='text-xs font-medium mt-2.5'>Ultima actualizare de <span className='underline'>Alina Simion</span> la {formatDate(singleStore?.updatedAt)}</p>
         </div>
       </div>
 
       <div className='mt-[30px]'>
         {
-          activeCoupon?.length > 0 && <h2 className='text-xl text-dark font-semibold mb-5'>{activeCoupon?.length} Coupons Codes and Deals Active</h2>
+          activeCoupon?.length > 0 && <h2 className='text-xl text-dark font-semibold mb-5'>{activeCoupon?.length} Coduri Reducere si Oferte Active</h2>
         }
         <div className='flex flex-col lg:flex-row gap-[50px]'>
           <div className='flex-1'>
@@ -70,7 +70,7 @@ const Store = async ({ params }) => {
             </div>
             {
               disableCoupon?.length > 0 && <>
-                <h3 className={`text-xl text-dark font-semibold mb-5 ${activeCoupon?.length > 0 && "mt-10"}`}>{disableCoupon?.length} Coupons Codes and Deals Expired</h3>
+                <h3 className={`text-xl text-dark font-semibold mb-5 ${activeCoupon?.length > 0 && "mt-10"}`}>{disableCoupon?.length} Coduri Reducere si Oferte Expirate</h3>
                 <div className='flex flex-col gap-[25px]'>
                   {
                     disableCoupon?.map((item, idx) => (
@@ -92,7 +92,7 @@ const Store = async ({ params }) => {
           </div>
 
           <aside className='w-[286px]'>
-            <p className='text-xl text-dark font-semibold mb-5 '>Categories</p>
+            <p className='text-xl text-dark font-semibold mb-5 '>Categorii</p>
             <div
               style={{ marginTop: '10px' }}
               className='flex flex-wrap gap-2.5'
@@ -139,7 +139,7 @@ const Store = async ({ params }) => {
               </ul>
             </div>
             <div className='mt-[30px]'>
-              <h3 className='text-xl text-dark font-semibold mb-5 '>Popular searches</h3>
+              <h3 className='text-xl text-dark font-semibold mb-5 '>Cautari populare</h3>
               <ul className='text-sm text-dark flex flex-col gap-1.5'>
                 <li>Cod reducere carVertical</li>
                 <li>Cod reducere Answear</li>

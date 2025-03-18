@@ -35,7 +35,7 @@ const Rating = ({ totalRating = 5 }) => {
             }
         </div>
         {
-            message && <p className='text-green-800 text-sm font-semibold'>Thank you for the voting.</p>
+            message && <p className='text-green-800 text-sm font-semibold'>Multumim pentru vot</p>
         }
         
         </>

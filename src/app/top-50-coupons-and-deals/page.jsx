@@ -21,7 +21,7 @@ const CategoryList = memo(({ categories }) => (
 
 const PopularSearches = memo(() => (
   <div className='mt-[30px]'>
-    <h3 className='text-xl text-dark font-semibold mb-5'>Popular searches</h3>
+    <h3 className='text-xl text-dark font-semibold mb-5'>Cautari populare</h3>
     <ul className='text-sm text-dark flex flex-col gap-1.5'>
       {[
         'Cod reducere carVertical',
@@ -70,7 +70,7 @@ const Top50CouponsAndDeals = async (props) => {
 
         {/* Sidebar */}
         <aside className='lg:w-[286px]'>
-          <h3 className='text-xl text-dark font-semibold mb-5'>Categories</h3>
+          <h3 className='text-xl text-dark font-semibold mb-5'>Categorii</h3>
           <CategoryList categories={categories} />
           <PopularSearches />
         </aside>
