@@ -1,5 +1,5 @@
 import Header from "@/components/header";
-import "../globals.css";
+import "./globals.css";
 import { Inter } from 'next/font/google'
 import Footer from "@/components/footer";
 import ToastProvider from "@/context/ToastProvider"
@@ -7,11 +7,7 @@ import ToastProvider from "@/context/ToastProvider"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Suspense } from "react";
-import { hasLocale, NextIntlClientProvider } from 'next-intl';
-import { notFound } from 'next/navigation';
-import { routing } from '@/i18n/routing';
 import React from "react";
-import { getMessages } from "next-intl/server";
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -25,26 +21,18 @@ export default async function RootLayout({
   children,
   params
 }) {
-
-  const {locale} = await params;
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
-  const messages = await getMessages()
   
   return (
-    <html lang={locale}>
+    <html lang="ro">
       <body
         className={`${inter.className} antialiased`}
       >
         <Suspense fallback={''}>
-          <NextIntlClientProvider messages={messages}>
             <ToastProvider>
-              <Header local={locale}/>
+              <Header/>
                 {children}
-              <Footer local={locale}/>
+              <Footer/>
             </ToastProvider>
-          </NextIntlClientProvider>
         </Suspense>
       </body>
     </html>

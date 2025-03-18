@@ -1,10 +1,7 @@
-import createNextIntlPlugin from 'next-intl/plugin';
- 
-const nextConfig = {
+ const nextConfig = {
   images: {
     domains: ["codcupon.nyc3.digitaloceanspaces.com"],
   },
 };
  
-const withNextIntl = createNextIntlPlugin();
-export default withNextIntl(nextConfig);
+export default nextConfig;

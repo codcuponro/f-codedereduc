@@ -3,9 +3,11 @@ import Link from 'next/link'
 import React from 'react'
 import { getFooter } from '../../services';
 import { FaFacebookF, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
+import {constData} from "../../const"
 
-const Nav = async ({t, local}) => {
-    const footerRes = await getFooter(local)
+const Nav = async ({t}) => {
+    const footerRes = await getFooter()
+    
     return (
         <>
             <div className='container mx-auto px-4 lg:px-0 grid gap-8 grid-cols-2 md:grid-cols-5 lg:grid-cols-6'>
@@ -24,7 +26,7 @@ const Nav = async ({t, local}) => {
                 </div>
                 {/* resources nav  */}
                 <div>
-                    <h6 className='text-pure font-semibold text-lg'>{t('footer.resources_title')}</h6>
+                    <h6 className='text-pure font-semibold text-lg'>{constData?.footer.resources_title}</h6>
                     <ul className='mt-[35px] flex gap-3 flex-col'>
                         {
                             footerRes?.Resources?.map((item, idx) => (
@@ -37,7 +39,7 @@ const Nav = async ({t, local}) => {
                 </div>
                 {/* Company Nav  */}
                 <div>
-                    <h6 className='text-pure font-semibold text-lg'>{t('footer.Company_title')}</h6>
+                    <h6 className='text-pure font-semibold text-lg'>{constData?.footer.Company_title}</h6>
                     <ul className='mt-[35px] flex gap-3 flex-col'>
                         {
                             footerRes?.Company?.map((item, idx) => (
@@ -50,7 +52,7 @@ const Nav = async ({t, local}) => {
                 </div>
                 {/* Quick Links Nav  */}
                 <div>
-                    <h6 className='text-pure font-semibold text-lg'>{t('footer.quick_links_title')}</h6>
+                    <h6 className='text-pure font-semibold text-lg'>{constData?.footer.quick_links_title}</h6>
                     <ul className='mt-[35px] flex gap-3 flex-col'>
                         {
                             footerRes?.QuickLinks?.map((item, idx) => (
@@ -63,7 +65,7 @@ const Nav = async ({t, local}) => {
                 </div>
                 {/* Follow  */}
                 <div>
-                    <h6 className='text-pure font-semibold text-lg'>{t('footer.follow_us_title')}</h6>
+                    <h6 className='text-pure font-semibold text-lg'>{constData?.footer.follow_us_title}</h6>
                     <ul className='mt-[35px] flex gap-4 flex-wrap xl:flex-nowrap'>
                         <li className='text-white border p-2 rounded-full hover:text-primary hover:bg-white hover:border-white'>
                             <Link href={footerRes?.Facebook || "#"}><FaFacebookF /></Link>

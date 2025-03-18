@@ -1,15 +1,14 @@
 import Title from '@/components/title/title'
 import { BlocksRenderer } from '@strapi/blocks-react-renderer'
-import { useTranslations } from 'next-intl';
 import React from 'react'
+import {constData} from "../../../const"
 
 const HowItWorks = ({data}) => {
-  const t = useTranslations('data');
 
   return (
     <section className='container mx-auto px-4 lg:px-0 mb-[75px]'>
       <Title
-        title={t('how_its_works_title')}
+        title={constData?.how_its_works_title}
       />
       <div
         style={{ marginTop: '35px' }}

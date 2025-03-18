@@ -1,16 +1,15 @@
 import CouponCard from '@/components/card/coupon-card'
 import Title from '@/components/title/title'
-import { useTranslations } from 'next-intl';
 import React from 'react'
+import {constData} from "../../../const"
 
 const CouponsAndDeals = ({data}) => {
-  const t = useTranslations('data');
 
   return (
     <section className='container mx-auto px-4 lg:px-0'>
       <Title
-        title={t('top_coupons_and_deals_title')}
-        buttonLabel={t('top_coupons_and_deals_btn_label')}
+        title={constData?.top_coupons_and_deals_title}
+        buttonLabel={constData?.top_coupons_and_deals_btn_label}
         buttonHref="#"
         hideButton
       />
@@ -26,8 +25,8 @@ const CouponsAndDeals = ({data}) => {
       </div>
       <div className='mt-6 md:hidden'>
         <Title
-          title={t('top_coupons_and_deals_title')}
-          buttonLabel={t('top_coupons_and_deals_btn_label')}
+          title={constData?.top_coupons_and_deals_title}
+          buttonLabel={constData?.top_coupons_and_deals_btn_label}
           buttonHref="#"
           hideHeading
         />

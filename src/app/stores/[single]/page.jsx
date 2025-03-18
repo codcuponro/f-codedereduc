@@ -7,10 +7,10 @@ import { FiFacebook } from "react-icons/fi";
 import { TbWorldWww } from "react-icons/tb";
 import { formatDate, getActiveAndDisabledCoupons, getCurrentMonthYear, getUniqueCategories } from '@/utils';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
-import { getSingleStore } from "../../../../services"
+import { getSingleStore } from "../../../services"
 import dynamic from 'next/dynamic';
-import TOC from "../../../../templates/stores/toc"
-import IconImage from "../../../../components/icon-image"
+import TOC from "../../../templates/stores/toc"
+import IconImage from "../../../components/icon-image"
 
 const CouponList = dynamic(() => import('@/components/card/coupon-list'), { ssr: false });
 const CategoryButton = dynamic(() => import('@/components/card/category-button'), { ssr: false });

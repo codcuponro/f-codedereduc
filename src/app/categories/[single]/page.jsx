@@ -1,5 +1,5 @@
 import CategorySingleTemp from "@/templates/categories/category-single"
-import {getSingleCategory} from "../../../../services"
+import {getSingleCategory} from "../../../services"
 
 const SingleCategory = async ({ params }) => {
   const param = await params.single

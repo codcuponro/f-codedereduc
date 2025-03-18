@@ -5,14 +5,13 @@ import qs from 'qs'
 import debounce from 'lodash.debounce'
 import { Request } from '@/config/Axios'
 import { Link } from '@mui/material'
-import { useTranslations } from 'next-intl'
+import {constData} from "@/const"
 
 const InputSearch = ({ full }) => {
     const [searchValue, setSearchValue] = useState('');
     const [isFocused, setIsFocused] = useState(false);
     const [stores, setStores] = useState([]);
     const [loading, setLoading] = useState(false);
-    const t = useTranslations('data');
 
     // Fetch stores based on input value
     const getStores = async (query) => {
@@ -58,7 +57,7 @@ const InputSearch = ({ full }) => {
                 <input
                     type='text'
                     className='text-white placeholder:text-white text-sm bg-transparent w-full outline-none'
-                    placeholder={t('search-placeholder')}
+                    placeholder={constData?.search_placeholder}
                     value={searchValue}
                     onChange={(e) => setSearchValue(e.target.value)}
                     onFocus={() => setIsFocused(true)}

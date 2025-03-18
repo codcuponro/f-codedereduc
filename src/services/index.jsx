@@ -1,18 +1,17 @@
 import qs from "qs"
 import { Request } from "@/config/Axios"
 
-async function getHomPage(locale = "ro") {
+async function getHomPage() {
   const params = qs.stringify({
     populate: [
       'HowItswork.Icon'
     ],
-    locale
   })
   const response = await Request(`/home-page?${params}`);
   return response.data
 }
 
-async function getStores(locale = "ro") {
+async function getStores() {
   const sparams = qs.stringify({
     populate: [
       'Icon', "coupons_and_deals",
@@ -22,7 +21,6 @@ async function getStores(locale = "ro") {
         $eq: true
       }
     },
-    locale,
     pagination: {
       limit: 10
     }
@@ -33,7 +31,7 @@ async function getStores(locale = "ro") {
 
 
 
-async function getCategories(locale = "ro") {
+async function getCategories() {
   const cparams = qs.stringify({
     populate: [
       'Icon', "coupons_and_deals.Icon", "coupons_and_deals.categories", "coupons_and_deals.store"
@@ -43,7 +41,6 @@ async function getCategories(locale = "ro") {
         $eq: true
       }
     },
-    locale,
     pagination: {
       limit: 25
     }
@@ -53,12 +50,11 @@ async function getCategories(locale = "ro") {
 }
 
 
-async function getCouponAndDeals(locale = "ro") {
+async function getCouponAndDeals() {
   const cdparams = qs.stringify({
     populate: [
       'Icon', "categories.Icon", "store.Icon", "store.Social"
     ],
-    locale,
     pagination: {
       limit: 15
     }
@@ -67,12 +63,11 @@ async function getCouponAndDeals(locale = "ro") {
   return couponAndDeals?.data
 }
 
-async function getFavoritesCoupon(locale = "ro") {
+async function getFavoritesCoupon() {
   const fcdparams = qs.stringify({
     populate: [
       'Icon', "categories.Icon", "store.Icon", "store.Social"
     ],
-    locale,
     filters: {
       FavoritesCoupon: {
         $eq: true
@@ -86,12 +81,11 @@ async function getFavoritesCoupon(locale = "ro") {
   return favoritesCoupon?.data
 }
 
-async function getExclusiveCoupon(locale = "ro") {
+async function getExclusiveCoupon() {
   const exparams = qs.stringify({
     populate: [
       'Icon', "categories.Icon", "store.Icon", "Feature_image", "store.Social"
     ],
-    locale,
     filters: {
       Slider: {
         $eq: true
@@ -105,30 +99,27 @@ async function getExclusiveCoupon(locale = "ro") {
   return exParamsCoupon?.data
 }
 
-async function getFooter(locale = "ro") {
+async function getFooter() {
   const params = qs.stringify({
-    locale,
     populate: '*',
   });
   const footerRes = await Request(`/footer?${params}`);
   return footerRes?.data
 }
 
-async function getHeader(locale = "ro") {
+async function getHeader() {
   const params = qs.stringify({
-    locale,
     populate: '*',
   });
   const headerRes = await Request(`/header?${params}`);
   return headerRes?.data
 }
 
-async function getFavorites50Coupon(locale = "ro") {
+async function getFavorites50Coupon() {
   const params = qs.stringify({
     populate: [
       'Icon', "categories.Icon", "store.Icon", "store.Social"
     ],
-    locale,
     filters: {
       FavoritesCoupon: {
         $eq: true
@@ -142,12 +133,11 @@ async function getFavorites50Coupon(locale = "ro") {
   return favoritesCoupon?.data
 }
 
-async function getAllStore(locale = "ro") {
+async function getAllStore() {
   const params = qs.stringify({
     populate: [
       'Icon', "coupons_and_deals",
     ],
-    locale,
     pagination: {
       limit: 500
     }
@@ -163,7 +153,6 @@ async function getSingleStore(params) {
       'Icon', "users_permissions_user", "Social", "coupons_and_deals",
       'coupons_and_deals.Icon', "coupons_and_deals.categories.Icon", "coupons_and_deals.store.Icon", "coupons_and_deals.store.Social"
     ],
-    locale: params?.locale,
     filters: {
       Slug: {
         $eq: params.slug
@@ -174,12 +163,11 @@ async function getSingleStore(params) {
   return stores?.data?.[0]
 }
 
-async function getAllCategories(locale = "ro") {
+async function getAllCategories() {
   const params = qs.stringify({
     populate: [
       'Icon', "coupons_and_deals.Icon", "coupons_and_deals.categories", "coupons_and_deals.store", "coupons_and_deals.store.Social"
     ],
-    locale,
     pagination: {
       limit: 400
     }
@@ -195,7 +183,6 @@ async function getSingleCategory(param) {
     populate: [
       'Icon', "coupons_and_deals.Icon", "coupons_and_deals.categories", "coupons_and_deals.store.Icon", "coupons_and_deals.store.Social"
     ],
-    locale: param?.locale,
     filters: {
       Slug: {
         $eq: param?.slug
@@ -213,7 +200,6 @@ async function getSingleCategory(param) {
         $eq: true
       }
     },
-    locale,
     pagination: {
       limit: 12
     }
@@ -225,9 +211,8 @@ async function getSingleCategory(param) {
   }
 }
 
-async function getAboutPage(locale = "ro") {
+async function getAboutPage() {
   const params = qs.stringify({
-    locale,
     populate: '*',
   });
   const pageResponse = await Request(`/about-page?${params}`);
