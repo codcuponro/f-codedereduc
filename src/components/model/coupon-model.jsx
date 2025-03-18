@@ -1,5 +1,5 @@
+import { constData } from '@/const';
 import useToast from '@/hooks/useToast';
-import { removeProtocol } from '@/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
@@ -36,7 +36,7 @@ const CouponModel = ({data}) => {
                         >
                             <span className='text-[10px] text-pure group-hover:text-[#00A142]'>{copied ? "Copy again" : "Click to copy"}</span>
                             <span className='text-xl text-white font-bold uppercase leading-6 group-hover:text-[#00A142]'>
-                                {copied ? "CODE COPIED" : "COPY CODE"}
+                                {copied ? "CODE COPIED" : constData?.copy_code}
                             </span>
                         </button>
                         <div className='absolute bg-[#00A142] inset-0 -ml-1 mt-1.5 mr-1.5 -mb-1 rounded-[6px] z-1' />

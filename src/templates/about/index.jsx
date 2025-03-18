@@ -3,10 +3,10 @@ import Title from '@/components/title/title'
 import { BlocksRenderer } from '@strapi/blocks-react-renderer'
 import React from 'react'
 
-const AboutTemp = ({ data }) => {
+const AboutTemp = ({ data, title }) => {
     const breadcrumbPath = [
         {
-            label: 'About Us',
+            label: title,
             href: '/about-us'
         }
     ]
@@ -15,7 +15,7 @@ const AboutTemp = ({ data }) => {
             <section className='mt-6 mb-10'>
                 <div className='container mx-auto px-4 lg:px-0 '>
                     <Title
-                        title="About us"
+                        title={title}
                     />
                     <div style={{ marginTop: '35px' }}
                         className='page_content single_store_content'

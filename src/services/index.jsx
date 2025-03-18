@@ -219,6 +219,31 @@ async function getAboutPage() {
   return pageResponse?.data
 }
 
+async function getCookiePolicy() {
+  const params = qs.stringify({
+    populate: '*',
+  });
+  const pageResponse = await Request(`/cookie-policy?${params}`);
+  return pageResponse?.data
+}
+
+async function getPrivacyPage() {
+  const params = qs.stringify({
+    populate: '*',
+  });
+  const pageResponse = await Request(`/privacy?${params}`);
+  return pageResponse?.data
+}
+
+async function getTermAndConditionPage() {
+  const params = qs.stringify({
+    populate: '*',
+  });
+  const pageResponse = await Request(`/terms-ans-condition?${params}`);
+  return pageResponse?.data
+}
+
+
 export {
   getHomPage,
   getStores,
@@ -233,5 +258,8 @@ export {
   getSingleStore,
   getAllCategories,
   getSingleCategory,
-  getAboutPage
+  getAboutPage,
+  getCookiePolicy,
+  getPrivacyPage,
+  getTermAndConditionPage
 }

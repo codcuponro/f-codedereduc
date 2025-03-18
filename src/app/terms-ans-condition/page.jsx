@@ -1,13 +1,13 @@
 import AboutTemp from '@/templates/about'
 import React from 'react'
-import {getAboutPage} from "../../services"
+import {getTermAndConditionPage} from "../../services"
 
 const AboutUs = async (props) => {
   const params = props?.params?.locale
-  const pageData  = await getAboutPage(params)
+  const pageData  = await getTermAndConditionPage(params)
   return (
     <>
-      <AboutTemp data={pageData} title="Despre noi"/>
+      <AboutTemp data={pageData} title="Termeni si Conditii"/>
     </>
   )
 }

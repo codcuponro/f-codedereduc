@@ -69,7 +69,7 @@ const InputSearch = ({ full }) => {
             {isFocused && (
                 <div id="list" className='z-[10] absolute p-4 top-14 shadow-lg rounded-xl bg-white border w-full'>
                     {loading ? (
-                        <p className="text-gray-500">{t('loading_text')}...</p>
+                        <p className="text-gray-500">{constData?.loading_text}...</p>
                     ) : stores.length > 0 ? (
                         stores.map((store) => (
                             <Link href={`/stores/${store.Slug}`} key={store.id} className="flex !no-underline items-center gap-3 p-2 hover:bg-gray-100 rounded cursor-pointer">
@@ -78,7 +78,7 @@ const InputSearch = ({ full }) => {
                             </Link>
                         ))
                     ) : (
-                        <p className="text-gray-500">{t('no_result_found')}</p>
+                        <p className="text-gray-500">{constData?.no_result_found}</p>
                     )}
                 </div>
             )}

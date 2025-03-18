@@ -4,7 +4,7 @@ export const constData = {
       "loading_text": "Încărcare",
       "fav_coupon_title" : "Top coduri reducere si cupoane",
       "fav_coupon_btn_label" : "Vezi top coduri reducere",
-      "copy_code": "Copy code",
+      "copy_code": "Copiaza codul",
       "fav_stores_title" : "Top magazine favorite",
       "fav_stores_btn_label" : "Toate magazinele",
       "top_coupons_and_deals_btn_label" : "Toate codurile de reducere si ofertele",
