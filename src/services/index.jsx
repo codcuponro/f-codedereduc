@@ -150,7 +150,7 @@ async function getAllStore() {
 async function getSingleStore(params) {
   const qParams = qs.stringify({
     populate: [
-      'Icon', "users_permissions_user", "Social", "coupons_and_deals",
+      'Icon', "author", "Social", "coupons_and_deals",
       'coupons_and_deals.Icon', "coupons_and_deals.categories.Icon", "coupons_and_deals.store.Icon", "coupons_and_deals.store.Social"
     ],
     filters: {

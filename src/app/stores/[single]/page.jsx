@@ -26,8 +26,9 @@ const Store = async ({ params }) => {
     slug: param,
     locale,
   })
+
   const {activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(singleStore?.coupons_and_deals)
-  
+
   const categories = getUniqueCategories(singleStore?.coupons_and_deals)
 
   const breadcrumbPath = [
@@ -50,7 +51,7 @@ const Store = async ({ params }) => {
           <h1 className='text-dark font-semibold text-xl md:text-[28px]'>Coupons {singleStore?.Name} {getCurrentMonthYear()}</h1>
           <p>{singleStore?.Excerpt}</p>
           <Rating totalRating={singleStore?.Rating} />
-          <p className='text-xs font-medium mt-2.5'>Ultima actualizare de <span className='underline'>Alina Simion</span> la {formatDate(singleStore?.updatedAt)}</p>
+          <p className='text-xs font-medium mt-2.5'>Ultima actualizare de <span className='underline'>{singleStore?.author?.Name}</span> la {formatDate(singleStore?.updatedAt)}</p>
         </div>
       </div>
 
