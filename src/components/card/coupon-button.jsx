@@ -40,7 +40,7 @@ const CouponButton = (props) => {
                     `}>
                     {label && <span className={`text-[10px] ${disabled && "group-hover:!text-pure"}`}>{label}</span>}
                     <span className={`text-xl text-nowrap font-bold uppercase leading-6 `}>
-                        {label ? truncateText(title) : "get the deal"}
+                        {label ? truncateText(title) : "Vezi oferta"}
                     </span>
                 </button>
                 <div className={`absolute inset-0 -ml-1 mt-1.5 mr-1.5 -mb-1 rounded-[6px] z-1 
