@@ -8,8 +8,8 @@ const CategoryIconCard = dynamic(() => import('./category-icon-card'), { ssr: fa
 const CategoriesTemp = ({ data }) => {
   const breadcrumbPath = [
     {
-      label: 'Categories',
-      href: '/categories'
+      label: 'Categorii',
+      href: '/categorii'
     }
   ]
   return (
@@ -17,7 +17,7 @@ const CategoriesTemp = ({ data }) => {
       <section className='mt-6 mb-10'>
         <div className='container mx-auto px-4 lg:px-0 '>
           <Title
-            title="Categories"
+            title="Categorii"
           />
           <div style={{ marginTop: '35px' }}
             className='grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 md:gap-5'

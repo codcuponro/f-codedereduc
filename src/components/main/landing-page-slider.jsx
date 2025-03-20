@@ -14,7 +14,7 @@ const LandingPageSlider = ({ data }) => {
                     data?.map((item, idx) => (
                         <div className='px-1 sm:px-2 lg:p-[15px]'>
                             <div key={idx} className='border border-[#DEE2E6] rounded-[20px] overflow-hidden'>
-                                <a href={`/stores/`+item?.store?.Slug || "#"}>
+                                <a href={`/magazine/`+item?.store?.Slug || "#"}>
                                     <Image src={item?.Feature_image?.url} alt="" width={575} height={265} className='w-full h-[265px] 3xl:h-[460px] object-cover cImg' />
                                 </a>
                                 <div className='p-2 lg:p-6 pt-2 lg:pt-4 flex gap-4'>
@@ -24,11 +24,11 @@ const LandingPageSlider = ({ data }) => {
                                         </figure>
                                     </div>
                                     <div>
-                                        <Link href={`/stores/`+item?.store?.Slug || "#"} className='font-bold text-[#111928] text-sm mb-1'>
+                                        <Link href={`/magazine/`+item?.store?.Slug || "#"} className='font-bold text-[#111928] text-sm mb-1'>
                                             <p>{item?.CouponsType === "Promotion" ? "Promotion" : "Coupon"}{" "}{item?.store?.Name}</p>
                                         </Link>
                                         <p className='text-[#111928] font-medium sm:text-xl lg:text-2xl line-clamp-2'>
-                                            <Link href={`/stores/`+item?.store?.Slug || "#"}>{item?.Title}</Link>
+                                            <Link href={`/magazine/`+item?.store?.Slug || "#"}>{item?.Title}</Link>
                                         </p>
                                     </div>
                                 </div>

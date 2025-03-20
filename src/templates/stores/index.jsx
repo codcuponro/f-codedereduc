@@ -13,7 +13,7 @@ const StoresTemp = async ({ stores, favStores = [] }) => {
     <>
       <section className="mt-6 mb-10">
         <div className="container mx-auto px-4 lg:px-0">
-          <Title title="Popular Stores" />
+          <Title title="Magazine populare" />
           {favStores.length > 0 && (
             <div className="mt-9 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-5">
               {favStores.map((item, idx) => (

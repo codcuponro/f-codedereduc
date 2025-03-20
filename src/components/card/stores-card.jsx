@@ -6,7 +6,7 @@ const StoresCard = ({data}) => {
     return (
         <div className='border bg-pure rounded-lg overflow-hidden flex flex-col justify-between'>
             <figure className='overflow-hidden'>
-                <a href={`/stores/${data.Slug}`}>                
+                <a href={`/magazine/${data.Slug}`}>                
                     <Image src={data?.Icon?.url || "/images/fallback.png"} alt="" width="218" height="130" className='w-full h-[150px] object-cover scale-105' />
                 </a>
             </figure>

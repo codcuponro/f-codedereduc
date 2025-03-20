@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from 'react';
 import Title from '@/components/title/title';
-import Link from 'next/link';
 
 export default function StoreList({ stores = [] }) {
     const [selectedLetter, setSelectedLetter] = useState('A');
@@ -21,7 +20,7 @@ export default function StoreList({ stores = [] }) {
 
     return (
         <div className="container mx-auto px-4 lg:px-0">
-            <Title title="All Stores" />
+            <Title title="Toate Magazinele" />
 
             {/* Alphabet Selector */}
             <div className="flex flex-wrap gap-2 mt-10 mb-9">
@@ -44,13 +43,13 @@ export default function StoreList({ stores = [] }) {
                 {filteredStores.length > 0 ? (
                     filteredStores.map(({ Name, Slug }, index) => (
                         <div key={index} className="capitalize">
-                            <a href={`/stores/${Slug}`} className="hover:text-primary">
+                            <a href={`/magazine/${Slug}`} className="hover:text-primary">
                                 {Name}
                             </a>
                         </div>
                     ))
                 ) : (
-                    <p className="col-span-full text-gray-500">No stores found.</p>
+                    <p className="col-span-full text-gray-500">Nu s-au găsit magazine.</p>
                 )}
             </div>
         </div>

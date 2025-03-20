@@ -16,7 +16,7 @@ const CategorySingleTemp = ({ params, data, categories }) => {
     
     const breadcrumbPath = useMemo(() => [
         { label: "Categories", href: "/categories" },
-        { label: categoryTitle, href: `/categories/${params}` }
+        { label: categoryTitle, href: `/categorii/${params}` }
     ], [params, categoryTitle]);
 
     const totalCoupons = data?.coupons_and_deals?.length || 0;
@@ -92,7 +92,7 @@ const CategorySingleTemp = ({ params, data, categories }) => {
                     <h3 className="text-xl text-dark font-semibold mb-5">Categories</h3>
                     <div className="flex flex-wrap gap-2.5 mt-2.5">
                         {categories?.map((item, idx) => (
-                            <a key={idx} href={`/categories/${item?.Slug}`} className="no-underline">
+                            <a key={idx} href={`/categorii/${item?.Slug}`} className="no-underline">
                                 <button
                                     className={`font-medium flex text-sm sm:text-base group items-center rounded-full px-2.5 py-[3px] gap-1 
                                         ${item?.Slug === params
