@@ -51,7 +51,7 @@ const Store = async ({ params }) => {
           <h1 className='text-dark font-semibold text-xl md:text-[28px]'>Coupons {singleStore?.Name} {getCurrentMonthYear()}</h1>
           <p>{singleStore?.Excerpt}</p>
           <Rating totalRating={singleStore?.Rating} />
-          <p className='text-xs font-medium mt-2.5'>Ultima actualizare de <span className='underline'>{singleStore?.author?.Name}</span> la {formatDate(singleStore?.updatedAt)}</p>
+          <p className='text-xs font-medium mt-2.5'>Ultima actualizare de <Link href="/despre-noi" className='underline'>{singleStore?.author?.Name}</Link> la {formatDate(singleStore?.updatedAt)}</p>
         </div>
       </div>
 
