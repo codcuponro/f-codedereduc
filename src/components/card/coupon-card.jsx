@@ -15,7 +15,7 @@ const CouponCard = ({ data }) => {
       </div>
       <div className='p-[15px] pt-0'>
         <CouponButton
-          label={data?.CouponsType !== "Promotion" && "Copy Code"}
+          label={data?.CouponsType !== "Promotion" && "Copiaza codul"}
           title={data?.CouponCode}
           data={data}
         />

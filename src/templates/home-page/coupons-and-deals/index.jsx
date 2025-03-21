@@ -10,8 +10,6 @@ const {activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(data)
     <section className='container mx-auto px-4 lg:px-0'>
       <Title
         title={constData?.top_coupons_and_deals_title}
-        buttonLabel={constData?.top_coupons_and_deals_btn_label}
-        buttonHref="#"
         hideButton
       />
       <div
@@ -27,8 +25,6 @@ const {activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(data)
       <div className='mt-6 md:hidden'>
         <Title
           title={constData?.top_coupons_and_deals_title}
-          buttonLabel={constData?.top_coupons_and_deals_btn_label}
-          buttonHref="#"
           hideHeading
         />
       </div>

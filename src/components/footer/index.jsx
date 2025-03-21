@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className='bg-primary pt-[68px] pb-6 md:pb-[91px] relative'>
       {/* subscribe  */}
       <div className='container mx-auto px-4 lg:px-0 flex flex-col md:flex-row md:items-center gap-10 justify-between mb-[116px]'>
-        <h5 className='font-semibold text-[28px] flex-1 max-w-[470px] leading-[38px] text-pure'>{constData?.footer?.footer_title}</h5>
+        <h6 className='font-semibold text-[28px] flex-1 max-w-[470px] leading-[38px] text-pure'>{constData?.footer?.footer_title}</h6>
         <div className='flex-1 flex md:justify-end gap-[5px]'>
           <input
             type="text"

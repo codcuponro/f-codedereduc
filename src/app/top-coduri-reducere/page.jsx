@@ -7,7 +7,7 @@ import { getActiveAndDisabledCoupons, getUniqueCategories } from '@/utils';
 import { getFavorites50Coupon } from '@/services';
 
 const breadcrumbPath = [
-  { label: 'Top 50 coupons and deals', href: '/top-50-coupons-and-deals' }
+  { label: 'Top 50 coupons and deals', href: '/top-coduri-reducere' }
 ];
 
 // Memoized Category Button List
@@ -43,14 +43,15 @@ const Top50CouponsAndDeals = async (props) => {
   const favoritesCoupon = await getFavorites50Coupon(params);
   const categories = getUniqueCategories(favoritesCoupon);
   const {activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(favoritesCoupon)
-  
+  const currentMonth = new Date().toLocaleString('en-US', { month: 'short', year: 'numeric' });
+
   return (
     <section className='container mx-auto px-4 lg:px-0 mt-5 md:mb-[50px]'>
       {/* Header Section */}
       <div className='flex flex-col sm:flex-row items-start gap-[30px]'>
         <div className='max-w-[634px]'>
           <h2 className='text-dark font-semibold leading-9 mb-3 text-[28px]'>
-            Top 50 Coupons and Deals - Feb 2025
+            Top 50 Coupons and Deals - {currentMonth}
           </h2>
           <p>Save up to 50% off at your favorite stores with the best deals curated by the CodCupon team.</p>
         </div>

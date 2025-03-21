@@ -8,7 +8,7 @@ export const constData = {
       "fav_stores_title" : "Top magazine favorite",
       "fav_stores_btn_label" : "Toate magazinele",
       "top_coupons_and_deals_btn_label" : "Toate codurile de reducere si ofertele",
-      "top_coupons_and_deals_title" : "Coduri reducere si vouchere recomandate",
+      "top_coupons_and_deals_title" : "Coduri Reducere si Oferte Noi",
       "top_categories_title" : "Top categorii",
       "promotion": "Oferta",
       "top_categories_btn_label" : "Toate categoriile",
