@@ -26,7 +26,7 @@ const Header = async ({local}) => {
                                 ))
                             }
                         </nav>
-                        <Link href="/stores">
+                        <Link href="/magazine">
                             <Image src="/svg/grid-alt.svg" alt='icon' width={22} height={20} />
                         </Link>
                     </div>
