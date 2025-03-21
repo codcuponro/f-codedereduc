@@ -7,7 +7,7 @@ import { FiFacebook } from "react-icons/fi";
 import { TbWorldWww } from "react-icons/tb";
 import { formatDate, getActiveAndDisabledCoupons, getCurrentMonthYear, getUniqueCategories } from '@/utils';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
-import { getSingleStore } from "../../../services"
+import { getAllCategories, getSingleStore } from "../../../services"
 import dynamic from 'next/dynamic';
 import TOC from "../../../templates/stores/toc"
 import IconImage from "../../../components/icon-image"
@@ -29,7 +29,8 @@ const Store = async ({ params }) => {
 
   const {activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(singleStore?.coupons_and_deals)
 
-  const categories = getUniqueCategories(singleStore?.coupons_and_deals)
+  // const categories = getUniqueCategories(singleStore?.coupons_and_deals)
+  const categories = await getAllCategories(params)
 
   const breadcrumbPath = [
     {
