@@ -14,27 +14,27 @@ const Faqs = ({name}) => {
 
     const faqsList = [
         {
-            question:  `What is a ${name} discount code?+`,
+            question:  `What is a ${name} discount code?`,
             answer: "Answer"
         },
         {
-            question: `How do I use ${name} discount codes?+`,
+            question: `How do I use ${name} discount codes?`,
             answer: "Answer"
         },
         {
-            question: `Why isn't my ${name} discount code working?+`,
+            question: `Why isn't my ${name} discount code working?`,
             answer: "Answer"
         },
         {
-            question: `How much can I save with a ${name} discount code?+`,
+            question: `How much can I save with a ${name} discount code?`,
             answer: "Answer"
         },
         {
-            question: `Is ${name} participating in the Black Friday campaign?+`,
+            question: `Is ${name} participating in the Black Friday campaign?`,
             answer: "Answer"
         },
         {
-            question: `When is Black Friday 2025 at ${name}?+`,
+            question: `When is Black Friday 2025 at ${name}?`,
             answer: "Answer"
         },
     ]
