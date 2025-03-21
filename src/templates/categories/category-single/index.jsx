@@ -7,7 +7,7 @@ import Faqs from "@/components/faqs/faqs";
 import { Pagination } from "@mui/material";
 import Image from "next/image";
 
-const CategorySingleTemp = ({ params, data, categories }) => {
+const CategorySingleTemp = ({ params, data, categories, coupons }) => {
     const [hoveredIdx, setHoveredIdx] = useState(null);
     const [page, setPage] = useState(1);
     const itemsPerPage = 10;
@@ -19,12 +19,16 @@ const CategorySingleTemp = ({ params, data, categories }) => {
         { label: categoryTitle, href: `/categorii/${params}` }
     ], [params, categoryTitle]);
 
-    const totalCoupons = data?.coupons_and_deals?.length || 0;
+    
+
+    const totalCoupons = coupons?.length || 0;
     const totalPages = Math.ceil(totalCoupons / itemsPerPage);
 
     const paginatedCoupons = useMemo(() => (
-        data?.coupons_and_deals?.slice((page - 1) * itemsPerPage, page * itemsPerPage)
+        coupons?.slice((page - 1) * itemsPerPage, page * itemsPerPage)
     ), [data, page, itemsPerPage]);
+
+    
 
     return (
         <section className="container mx-auto px-4 lg:px-0 mt-5 md:mb-[50px]">
