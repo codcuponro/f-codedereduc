@@ -29,7 +29,7 @@ const CouponList = ({ logo, item }) => {
                     </div>
                     <div className='hidden sm:block'>
                         <CouponButton
-                            label={item?.CouponsType !== "Promotion" && "Copy Code"}
+                            label={item?.CouponsType !== "Promotion" && "Copiaza codul"}
                             title={item?.CouponCode}
                             data={item}
                             disabled={disabled}
