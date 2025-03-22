@@ -20,7 +20,7 @@ const CouponCard = ({ data }) => {
           data={data}
         />
         <Link href={"/magazine/" + data?.store?.Slug || "#"} className='bg-[#F3F4F6] px-2.5 text-xs w-fit line-clamp-1 text-dark font-bold py-1 rounded-full mt-[12px]'>
-          {data?.CouponsType === "Promotion" ? "Promotion" : "Coupon"}{" "}{data?.store?.Name}
+          {data?.CouponsType === "Promotion" ? "Promotie" : "Cod reducere"}{" "}{data?.store?.Name}
         </Link>
       </div>
     </div>

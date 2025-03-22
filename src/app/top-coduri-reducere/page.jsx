@@ -3,7 +3,7 @@ import Breadcrumb from '@/components/breadcrumb';
 import CategoryButton from '@/components/card/category-button';
 import CouponList from '@/components/card/coupon-list';
 import Faqs from '@/components/faqs/faqs';
-import { getActiveAndDisabledCoupons } from '@/utils';
+import { getActiveAndDisabledCoupons, getUniqueCategories } from '@/utils';
 import { getAllCategories, getFavorites50Coupon } from '@/services';
 
 const breadcrumbPath = [
@@ -41,9 +41,9 @@ const PopularSearches = memo(() => (
 const Top50CouponsAndDeals = async (props) => {
   const params = props?.params?.locale
   const favoritesCoupon = await getFavorites50Coupon(params);
-  const categories = await getAllCategories(params)
-  // const categories = getUniqueCategories(favoritesCoupon);
+  // const categories = await getAllCategories(params)
   const {activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(favoritesCoupon)
+  const categories = getUniqueCategories(activeCoupon);
   const currentMonth = new Date().toLocaleString('en-US', { month: 'short', year: 'numeric' });
 
   return (
