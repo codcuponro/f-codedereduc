@@ -29,13 +29,12 @@ const Store = async ({ params }) => {
 
   const {activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(singleStore?.coupons_and_deals)
 
-  // const categories = getUniqueCategories(singleStore?.coupons_and_deals)
-  const categories = await getAllCategories(params)
+  const categories = getUniqueCategories(singleStore?.coupons_and_deals)
 
   const breadcrumbPath = [
     {
-      label: 'Store',
-      href: '/store'
+      label: 'Magazine',
+      href: '/magazine'
     },
     {
       label: param?.replace(/-/g, ' '),
