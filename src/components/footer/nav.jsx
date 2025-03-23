@@ -68,16 +68,16 @@ const Nav = async ({t}) => {
                     <h6 className='text-pure font-semibold text-lg'>{constData?.footer.follow_us_title}</h6>
                     <ul className='mt-[35px] flex gap-4 flex-wrap xl:flex-nowrap'>
                         <li className='text-white border p-2 rounded-full hover:text-primary hover:bg-white hover:border-white'>
-                            <Link href={footerRes?.Facebook || "#"}><FaFacebookF /></Link>
+                            <Link href={footerRes?.Facebook || "#"} aria-label={"facebook"}><FaFacebookF /></Link>
                         </li>
                         <li className='text-white border p-2 rounded-full hover:text-primary hover:bg-white hover:border-white'>
-                            <Link href={footerRes?.Twitter || "#"}><FaTwitter /></Link>
+                            <Link href={footerRes?.Twitter || "#"} aria-label={"twitter"}><FaTwitter /></Link>
                         </li>
                         <li className='text-white border p-2 rounded-full hover:text-primary hover:bg-white hover:border-white'>
-                            <Link href={footerRes?.Youtube || `#`}><FaYoutube /></Link>
+                            <Link href={footerRes?.Youtube || `#`} aria-label={"youtube"}><FaYoutube /></Link>
                         </li>
                         <li className='text-white border p-2 rounded-full hover:text-primary hover:bg-white hover:border-white'>
-                            <Link href={footerRes?.Linkedin || `#`}><FaLinkedinIn /></Link>
+                            <Link href={footerRes?.Linkedin || `#`} aria-label={"linkedin"}><FaLinkedinIn /></Link>
                         </li>
                     </ul>
                     <p className='text-white/70 mt-[25px]'>© 2023 Codcupon</p>

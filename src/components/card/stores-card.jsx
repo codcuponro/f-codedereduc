@@ -6,7 +6,7 @@ const StoresCard = ({ data }) => {
     return (
         <div className='border bg-pure rounded-lg overflow-hidden flex flex-col justify-between'>
             <figure className='overflow-hidden'>
-                <a href={`/magazine/${data.Slug}`}>
+                <a href={`/magazine/${data.Slug}`} aria-label={data.Slug}>
                     <Image
                         src={data?.Feature_image?.url}
                         alt="Featured Image"
