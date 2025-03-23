@@ -28,7 +28,6 @@ const Store = async ({ params }) => {
   })
 
   const {activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(singleStore?.coupons_and_deals)
-
   const categories = getUniqueCategories(singleStore?.coupons_and_deals)
 
   const breadcrumbPath = [

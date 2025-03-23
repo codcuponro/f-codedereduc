@@ -14,21 +14,22 @@ const LandingPageSlider = ({ data }) => {
                     data?.map((item, idx) => (
                         <div className='px-1 sm:px-2 lg:p-[15px]'>
                             <div key={idx} className='border border-[#DEE2E6] rounded-[20px] overflow-hidden'>
-                                <a href={`/magazine/`+item?.store?.Slug || "#"}>
-                                    <Image src={item?.Feature_image?.url} alt="" width={575} height={265} className='w-full h-[265px] 3xl:h-[460px] object-cover cImg' />
+                                <a href={`/magazine/` + item?.store?.Slug || "#"}>
+                                    <Image src={item?.Feature_image?.url} alt="" width={575} height={265} className='w-full h-[265px] 3xl:h-[460px] object-cover cImg' quality={100}
+                                        priority />
                                 </a>
                                 <div className='p-2 lg:p-6 pt-2 lg:pt-4 flex gap-4'>
                                     <div>
-                                        <a href={`/magazine/`+item?.store?.Slug || "#"} className='flex flex-col justify-center outline-none -mt-7 w-20 h-20 lg:w-[130px] lg:h-[130px] lg:-mt-12 border rounded-xl lg:rounded-[20px] overflow-hidden bg-pure border-[#DEE2E6]'>
+                                        <a href={`/magazine/` + item?.store?.Slug || "#"} className='flex flex-col justify-center outline-none -mt-7 w-20 h-20 lg:w-[130px] lg:h-[130px] lg:-mt-12 border rounded-xl lg:rounded-[20px] overflow-hidden bg-pure border-[#DEE2E6]'>
                                             <Image src={item?.Icon?.url || item?.store?.Icon?.url} alt='' width={130} height={130} className=' w-full lg:w-[130px] ' />
                                         </a>
                                     </div>
                                     <div>
-                                        <Link href={`/magazine/`+item?.store?.Slug || "#"} className='font-bold text-[#111928] text-sm mb-1'>
+                                        <Link href={`/magazine/` + item?.store?.Slug || "#"} className='font-bold text-[#111928] text-sm mb-1'>
                                             <p>{item?.CouponsType === "Promotion" ? "Promotion" : "Coupon"}{" "}{item?.store?.Name}</p>
                                         </Link>
                                         <p className='text-[#111928] font-medium sm:text-xl lg:text-2xl line-clamp-2'>
-                                            <Link href={`/magazine/`+item?.store?.Slug || "#"}>{item?.Title}</Link>
+                                            <Link href={`/magazine/` + item?.store?.Slug || "#"}>{item?.Title}</Link>
                                         </p>
                                     </div>
                                 </div>
