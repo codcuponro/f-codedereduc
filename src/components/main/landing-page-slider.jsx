@@ -8,13 +8,13 @@ import Link from 'next/link';
 const LandingPageSlider = ({ data }) => {
     const slider = React.useRef(null);
     return (
-        <main className='my-7 md:my-[10px] md:mb-8 max-w-[2200px] relative mx-auto'>
+        <main className='my-7 md:my-[10px] md:mb-8 max-w-[2200px] relative mx-auto' inert>
             <Slider {...settings} ref={slider} key={1}>
                 {
                     data?.map((item, idx) => (
                         <div className='px-1 sm:px-2 lg:p-[15px]'>
                             <div key={idx} className='border border-[#DEE2E6] rounded-[20px] overflow-hidden'>
-                               <a href={`/magazine/` + item?.store?.Slug || "#"}>
+                                <a href={`/magazine/` + item?.store?.Slug || "#"}>
                                     <Image
                                         src={item?.Feature_image?.url}
                                         alt="Featured Image"
@@ -47,12 +47,22 @@ const LandingPageSlider = ({ data }) => {
                 }
             </Slider>
             <div className='flex justify-center text-xl gap-2.5 mt-5'>
-                <button className='p-[8.3px] border rounded-full hover:bg-primary hover:text-white' onClick={() => slider?.current?.slickPrev()}>
+                <button
+                    className='p-[8.3px] border rounded-full hover:bg-primary hover:text-white'
+                    onClick={() => slider?.current?.slickPrev()}
+                    aria-label="Previous slide"
+                >
                     <LuChevronLeft />
                 </button>
-                <button className='p-[8.3px] border rounded-full hover:bg-primary hover:text-white' onClick={() => slider?.current?.slickNext()}>
+
+                <button
+                    className='p-[8.3px] border rounded-full hover:bg-primary hover:text-white'
+                    onClick={() => slider?.current?.slickNext()}
+                    aria-label="Next slide"
+                >
                     <LuChevronRight />
                 </button>
+
             </div>
             <div className='bg-gradient-to-r from-white/50 via-white/30 to-transparent w-10 sm:w-24 lg:w-[180px] h-full absolute top-0 left-0' />
             <div className='bg-gradient-to-l from-white/50 via-white/30 to-transparent w-10 sm:w-24 lg:w-[180px] h-full absolute top-0 right-0' />

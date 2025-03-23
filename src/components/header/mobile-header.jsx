@@ -12,7 +12,11 @@ const MobileHeader = ({ headerRes }) => {
         <Link href="/">
           <Image src="/logo.svg" alt='logo' width={160} height={40} className='w-[120px] md:w-[160px]' />
         </Link>
-        <button onClick={() => setIsMobile(!isMobile)} className='w-[50px] h-[50px] flex justify-center items-center'>
+        <button
+          onClick={() => setIsMobile(!isMobile)}
+          className='w-[50px] h-[50px] flex justify-center items-center'
+          aria-label={isMobile ? "Close menu" : "Open menu"}
+        >
           {
             isMobile ? <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none">
               <path d="M16 8L8 16M12 12L16 16M8 8L10 10" stroke="#fff" strokeWidth="1.5" stroke-linecap="round" strokeLinejoin="round" />
