@@ -39,7 +39,7 @@ const CouponList = ({ logo, item }) => {
             </div>
             <div className='pl-2 pr-1 -mt-3 pb-2 sm:hidden'>
                 <CouponButton
-                    label={item?.CouponsType !== "Promotion" && "Copy Code"}
+                    label={item?.CouponsType !== "Promotion" && "Copiaza codul"}
                     title={item?.CouponCode}
                     data={item}
                     disabled={disabled}
