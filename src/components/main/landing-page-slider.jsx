@@ -15,8 +15,16 @@ const LandingPageSlider = ({ data }) => {
                         <div className='px-1 sm:px-2 lg:p-[15px]'>
                             <div key={idx} className='border border-[#DEE2E6] rounded-[20px] overflow-hidden'>
                                 <a href={`/magazine/` + item?.store?.Slug || "#"}>
-                                    <Image src={item?.Feature_image?.url} alt="" width={575} height={265} className='w-full h-[265px] 3xl:h-[460px] object-cover cImg' quality={100}
-                                        priority />
+                                    <Image
+                                        src={item?.Feature_image?.url}
+                                        alt="Featured Image"
+                                        width={575}
+                                        height={265}
+                                        className="w-full h-auto max-h-[460px] object-cover cImg"
+                                        quality={80} // Reduce quality slightly to improve load speed
+                                        priority={true} // Only if this is the main LCP image
+                                    />
+
                                 </a>
                                 <div className='p-2 lg:p-6 pt-2 lg:pt-4 flex gap-4'>
                                     <div>

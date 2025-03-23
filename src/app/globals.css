@@ -122,3 +122,8 @@
   user-select: text !important;
   -webkit-user-select: text !important;
 }
+
+
+.cImg {
+  aspect-ratio: 575 / 265;
+}
