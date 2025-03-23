@@ -7,7 +7,7 @@ import { getActiveAndDisabledCoupons, getUniqueCategories } from '@/utils';
 import { getAllCategories, getFavorites50Coupon } from '@/services';
 
 const breadcrumbPath = [
-  { label: 'Top 50 coupons and deals', href: '/top-coduri-reducere' }
+  { label: 'Top Coduri Reducere', href: '/top-coduri-reducere' }
 ];
 
 // Memoized Category Button List
