@@ -19,6 +19,28 @@ const Faqs = dynamic(() => import('@/components/faqs/faqs'), { ssr: false });
 const Breadcrumb = dynamic(() => import('@/components/breadcrumb'), { ssr: false });
 const Rating = dynamic(() => import('@/components/rating'), { ssr: false });
 
+export async function generateMetadata({ params }) {
+  const param = await params.single
+  const name = param.replace(/-/g, ' ')
+  return {
+    title: `Cod reducere ${name}, Vouchere si Oferte ${getCurrentMonthYear()} - CodCupon.ro`,
+    description: `Aici gasesti cele mai noi coduri de reducere ${name}, Vouchere si oferte alese cu grija si verificate de echipa CodCupon`,
+    openGraph: {
+      images: [
+        {
+          url: "https://codcupon.nyc3.digitaloceanspaces.com/f98c281be600e40254e4b5755891c682.webp" || "../../public/og-image.webp",
+          width: 1200,
+          height: 630
+        },
+      ],
+    },
+    alternates: {
+      canonical: `https://www.codcupon.ro/magazine/${param}`,
+    },
+  }
+}
+
+
 const Store = async ({ params }) => {
   const param = await params.single
   const locale = await params.locale
@@ -140,7 +162,7 @@ const Store = async ({ params }) => {
                 </li>
               </ul>
             </div>
-            <PopularSearch/>
+            <PopularSearch />
             <TOC />
           </aside>
         </div>
