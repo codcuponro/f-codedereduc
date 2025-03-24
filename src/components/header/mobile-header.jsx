@@ -40,9 +40,10 @@ const MobileHeader = ({ headerRes }) => {
       }>
         {
           headerRes?.map((item, idx) => (
-            <Link href={item?.Href || "#"} className='py-[7.2px]' key={idx}>{item?.Label}</Link>
+            <a href={item?.Href || "#"} className='py-[7.2px] capitalize' key={idx}>{item?.Label}</a>
           ))
         }
+        <a href="/magazine" className='py-[7.2px] capitalize'>Toate magazinele</a>
       </nav>
       <div className='bg-primary pb-2.5 sticky top-[56px] z-[100] md:hidden px-3'>
         <InputSearch full />
