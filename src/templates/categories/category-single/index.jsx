@@ -85,9 +85,9 @@ const CategorySingleTemp = ({ params, data, categories, coupons }) => {
                     )}
 
                     {/* FAQs Section */}
-                    <div className="mt-12">
+                    {/* <div className="mt-12">
                     <Faqs name={data?.Name} />
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Sidebar */}

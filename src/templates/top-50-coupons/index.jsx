@@ -27,10 +27,11 @@ const Top50Coupons = ({ activeCoupon, categories }) => {
                         <h2 className='text-dark font-semibold leading-9 mb-3 text-[28px]'>
                             Top Coduri si Vouchere Reducere  <span className='capitalize'><span className='capitalize'>{getCurrentMonthYear()}</span></span>
                         </h2>
-                        <p>Save up to 50% off at your favorite stores with the best deals curated by the CodCupon team.</p>
+                        <p>
+                        Aici gasesti cele mai bune coduri de reducere, vouchere si cupoane din <span className='capitalize'>{getCurrentMonthYear()}</span> la magazinele din Romania. <a href="/despre-noi" className='underline'>Echipa CodCupon</a> le-a ales si verificat manual pe fiecare in parte, ca tu sa beneficiezi de cele mai mari reduceri disponibile.
+                        </p>
                     </div>
                 </div>
-                
                 
                 {/* Coupons & Sidebar Section */}
                 <div className='mt-[30px] flex flex-col lg:flex-row gap-[50px]'>
