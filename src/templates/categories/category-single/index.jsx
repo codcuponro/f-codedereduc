@@ -33,10 +33,10 @@ const CategorySingleTemp = ({ params, data, categories, coupons }) => {
         <section className="container mx-auto px-4 lg:px-0 mt-5 md:mb-[50px]">
             <div className="flex flex-col sm:flex-row items-start gap-8">
                 <div className="max-w-[634px]">
-                    <h2 className="text-dark font-semibold leading-9 mb-3 text-[28px] capitalize">
+                    <h2 className="text-dark font-semibold leading-9 mb-[10px] text-[28px] capitalize">
                         {categoryTitle}
                     </h2>
-                    <p>{data?.Excerpt}</p>
+                    <p className='font-medium'>{data?.Excerpt}</p>
                 </div>
             </div>
 

@@ -50,7 +50,7 @@ const Store = async ({ params }) => {
         <div className='max-w-[70%]'>
           <h1 className='text-dark font-semibold text-xl md:text-[28px]'>Cod reducere {singleStore?.Name}, Cupoane si Oferte <span className='capitalize'>{getCurrentMonthYear()}</span>  </h1>
           {/* <p>{singleStore?.Excerpt}</p> */}
-          <p className='mt-[20px]'>Aici gasesti cele mai noi coduri de reducere {singleStore?.Name}, cupoane si oferte alese cu grija si verificate de echipa CodCupon.</p>
+          <p className='mt-[20px] font-medium'>Aici gasesti cele mai noi coduri de reducere {singleStore?.Name}, cupoane si oferte alese cu grija si verificate de echipa CodCupon.</p>
           <Rating totalRating={singleStore?.Rating} />
           <p className='text-xs font-medium mt-2.5'>Ultima actualizare de <Link href="/despre-noi" className='underline'>{singleStore?.author?.Name}</Link> la <span className='capitalize'>{formatDate(singleStore?.updatedAt)}</span></p>
         </div>
