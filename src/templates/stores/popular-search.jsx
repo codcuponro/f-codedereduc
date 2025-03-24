@@ -4,8 +4,6 @@ import { getPopularSearch } from '../../services'
 
 const PopularSearch = async () => {
     const data = await getPopularSearch()
-    console.log("🚀 ~ PopularSearch ~ data:", data)
-
     return (
         <>
             <div className='mt-[30px]'>

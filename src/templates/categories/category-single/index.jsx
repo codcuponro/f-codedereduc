@@ -19,7 +19,6 @@ const CategorySingleTemp = ({ params, data, categories, coupons }) => {
         { label: categoryTitle, href: `/categorii/${params}` }
     ], [params, categoryTitle]);
 
-    
 
     const totalCoupons = coupons?.length || 0;
     const totalPages = Math.ceil(totalCoupons / itemsPerPage);
