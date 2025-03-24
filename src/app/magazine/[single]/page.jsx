@@ -48,9 +48,9 @@ const Store = async ({ params }) => {
       <div className='flex flex-row items-start gap-2 sm:gap-[30px]'>
         <IconImage singleStore={singleStore} />
         <div className='max-w-[70%]'>
-          <h1 className='text-dark font-semibold text-xl md:text-[28px]'>Cod reducere {singleStore?.Name}, Voucher si Oferte <span className='capitalize'>{getCurrentMonthYear()}</span>  </h1>
+          <h1 className='text-dark font-semibold text-xl md:text-[28px]'>Cod reducere {singleStore?.Name}, Vouchere si Oferte <span className='capitalize'>{getCurrentMonthYear()}</span>  </h1>
           {/* <p>{singleStore?.Excerpt}</p> */}
-          <p className='mt-[10px] font-medium'>Aici gasesti cele mai noi coduri de reducere {singleStore?.Name}, Voucher si oferte alese cu grija si verificate de echipa CodCupon.</p>
+          <p className='mt-[10px] font-medium'>Aici gasesti cele mai noi coduri de reducere {singleStore?.Name}, Vouchere si oferte alese cu grija si verificate de echipa CodCupon.</p>
           <Rating totalRating={singleStore?.Rating} />
           <p className='text-xs font-medium mt-2.5'>Ultima actualizare de <Link href="/despre-noi" className='underline'>{singleStore?.author?.Name}</Link> la <span className='capitalize'>{formatDate(singleStore?.updatedAt)}</span></p>
         </div>
