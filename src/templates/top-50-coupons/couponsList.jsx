@@ -6,7 +6,7 @@ import { Pagination } from '@mui/material';
 const CouponsList = ({activeCoupon}) => {
 
     const [page, setPage] = useState(1);
-    const itemsPerPage = 1;
+    const itemsPerPage = 10;
 
     const totalCoupons = activeCoupon?.length || 0;
     const totalPages = Math.ceil(totalCoupons / itemsPerPage);

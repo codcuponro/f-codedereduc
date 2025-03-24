@@ -27,7 +27,7 @@ export const getUniqueCategories = (coupons) => {
 export const getCurrentMonthYear = () => {
     const date = new Date();
     const options = { month: "long", year: "numeric" };
-    return date.toLocaleDateString("en-US", options);
+    return date.toLocaleDateString("ro-RO", options);
 };
 
 

@@ -48,7 +48,7 @@ const Store = async ({ params }) => {
       <div className='flex flex-row items-start gap-2 sm:gap-[30px]'>
         <IconImage singleStore={singleStore} />
         <div className='max-w-[70%]'>
-          <h1 className='text-dark font-semibold text-xl md:text-[28px]'>Cod reducere {singleStore?.Name}, Cupoane si Oferte {getCurrentMonthYear()}  </h1>
+          <h1 className='text-dark font-semibold text-xl md:text-[28px]'>Cod reducere {singleStore?.Name}, Cupoane si Oferte <span className='capitalize'>{getCurrentMonthYear()}</span>  </h1>
           {/* <p>{singleStore?.Excerpt}</p> */}
           <p className='mt-[20px]'>Aici gasesti cele mai noi coduri de reducere {singleStore?.Name}, cupoane si oferte alese cu grija si verificate de echipa CodCupon.</p>
           <Rating totalRating={singleStore?.Rating} />

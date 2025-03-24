@@ -16,7 +16,7 @@ const CategoryList = memo(({ categories }) => (
     </div>
 ));
 
-const currentMonth = new Date().toLocaleString('en-US', { month: 'short', year: 'numeric' });
+const currentMonth = new Date().toLocaleString('ro-RO', { month: 'short', year: 'numeric' });
 
 const Top50Coupons = ({ activeCoupon, categories }) => {
     return (
@@ -26,7 +26,7 @@ const Top50Coupons = ({ activeCoupon, categories }) => {
                 <div className='flex flex-col sm:flex-row items-start gap-[30px]'>
                     <div className='max-w-[634px]'>
                         <h2 className='text-dark font-semibold leading-9 mb-3 text-[28px]'>
-                            Top Coduri si Vouchere Reducere  {currentMonth}
+                            Top Coduri si Vouchere Reducere  <span className='capitalize'>{currentMonth}</span>
                         </h2>
                         <p>Save up to 50% off at your favorite stores with the best deals curated by the CodCupon team.</p>
                     </div>
