@@ -27,8 +27,8 @@ export default async function Home(props) {
     <>
       <LandingPageSlider data={exclusiveCoupon} />
       <FavoritesCoupons data={favoritesCoupon} />
-      <FavoriteStores data={favStores} />
-      <CouponsAndDeals data={couponsAndDeals} />
+      <FavoriteStores data={favStores?.slice(0,10)} />
+      <CouponsAndDeals data={couponsAndDeals?.slice(0,15)} />
       <TopCategories data={categories} />
       <HowItWorks data={homePage} />
     </>

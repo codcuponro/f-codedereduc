@@ -11,6 +11,7 @@ import { getAllCategories, getSingleStore } from "../../../services"
 import dynamic from 'next/dynamic';
 import TOC from "../../../templates/stores/toc"
 import IconImage from "../../../components/icon-image"
+import PopularSearch from "../../../templates/stores/popular-search"
 
 const CouponList = dynamic(() => import('@/components/card/coupon-list'), { ssr: false });
 const CategoryButton = dynamic(() => import('@/components/card/category-button'), { ssr: false });
@@ -27,7 +28,7 @@ const Store = async ({ params }) => {
     locale,
   })
 
-  const {activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(singleStore?.coupons_and_deals)
+  const { activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(singleStore?.coupons_and_deals)
   const categories = getUniqueCategories(singleStore?.coupons_and_deals)
 
   const breadcrumbPath = [
@@ -45,12 +46,13 @@ const Store = async ({ params }) => {
   return (
     <section className='container mx-auto px-4 lg:px-0 mt-5 mb:my-[50px]'>
       <div className='flex flex-row items-start gap-2 sm:gap-[30px]'>
-        <IconImage singleStore={singleStore}/>
+        <IconImage singleStore={singleStore} />
         <div className='max-w-[70%]'>
-          <h1 className='text-dark font-semibold text-xl md:text-[28px]'>Coupons {singleStore?.Name} {getCurrentMonthYear()}</h1>
-          <p>{singleStore?.Excerpt}</p>
+          <h1 className='text-dark font-semibold text-xl md:text-[28px]'>Cod reducere {singleStore?.Name}, Cupoane si Oferte {getCurrentMonthYear()}  </h1>
+          {/* <p>{singleStore?.Excerpt}</p> */}
+          <p className='mt-[20px]'>Aici gasesti cele mai noi coduri de reducere {singleStore?.Name}, cupoane si oferte alese cu grija si verificate de echipa CodCupon.</p>
           <Rating totalRating={singleStore?.Rating} />
-          <p className='text-xs font-medium mt-2.5'>Ultima actualizare de <Link href="/despre-noi" className='underline'>{singleStore?.author?.Name}</Link> la {formatDate(singleStore?.updatedAt)}</p>
+          <p className='text-xs font-medium mt-2.5'>Ultima actualizare de <Link href="/despre-noi" className='underline'>{singleStore?.author?.Name}</Link> la <span className='capitalize'>{formatDate(singleStore?.updatedAt)}</span></p>
         </div>
       </div>
 
@@ -138,18 +140,7 @@ const Store = async ({ params }) => {
                 </li>
               </ul>
             </div>
-            <div className='mt-[30px]'>
-              <h3 className='text-xl text-dark font-semibold mb-5 '>Cautari populare</h3>
-              <ul className='text-sm text-dark flex flex-col gap-1.5'>
-                <li>Cod reducere carVertical</li>
-                <li>Cod reducere Answear</li>
-                <li>Cod reducere ePantofi</li>
-                <li>Cod reducere Fashion Days</li>
-                <li>Cod reducere Footshop</li>
-                <li>Cod reducere Modivo</li>
-                <li>Voucher Flanco</li>
-              </ul>
-            </div>
+            <PopularSearch/>
             <TOC />
           </aside>
         </div>

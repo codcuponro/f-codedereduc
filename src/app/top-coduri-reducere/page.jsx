@@ -5,6 +5,7 @@ import CouponList from '@/components/card/coupon-list';
 import Faqs from '@/components/faqs/faqs';
 import { getActiveAndDisabledCoupons, getUniqueCategories } from '@/utils';
 import { getAllCategories, getFavorites50Coupon } from '@/services';
+import PopularSearch from '@/templates/stores/popular-search';
 
 const breadcrumbPath = [
   { label: 'Top Coduri Reducere', href: '/top-coduri-reducere' }
@@ -19,24 +20,6 @@ const CategoryList = memo(({ categories }) => (
   </div>
 ));
 
-const PopularSearches = memo(() => (
-  <div className='mt-[30px]'>
-    <h3 className='text-xl text-dark font-semibold mb-5'>Cautari populare</h3>
-    <ul className='text-sm text-dark flex flex-col gap-1.5'>
-      {[
-        'Cod reducere carVertical',
-        'Cod reducere Answear',
-        'Cod reducere ePantofi',
-        'Cod reducere Fashion Days',
-        'Cod reducere Footshop',
-        'Cod reducere Modivo',
-        'Voucher Flanco'
-      ].map((item, idx) => (
-        <li key={idx}>{item}</li>
-      ))}
-    </ul>
-  </div>
-));
 
 const Top50CouponsAndDeals = async (props) => {
   const params = props?.params?.locale
@@ -52,7 +35,7 @@ const Top50CouponsAndDeals = async (props) => {
       <div className='flex flex-col sm:flex-row items-start gap-[30px]'>
         <div className='max-w-[634px]'>
           <h2 className='text-dark font-semibold leading-9 mb-3 text-[28px]'>
-            Top 50 Coupons and Deals - {currentMonth}
+            Top Coduri si Vouchere Reducere  {currentMonth}
           </h2>
           <p>Save up to 50% off at your favorite stores with the best deals curated by the CodCupon team.</p>
         </div>
@@ -67,14 +50,13 @@ const Top50CouponsAndDeals = async (props) => {
               <CouponList key={idx} item={item} logo />
             ))}
           </div>
-          <Faqs name={activeCoupon?.[0]?.store?.Name} />
         </div>
 
         {/* Sidebar */}
         <aside className='lg:w-[286px]'>
           <h3 className='text-xl text-dark font-semibold mb-5'>Categorii</h3>
           <CategoryList categories={categories} />
-          <PopularSearches />
+          <PopularSearch />
         </aside>
       </div>
 

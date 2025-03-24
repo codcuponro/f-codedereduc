@@ -41,7 +41,7 @@ const Faqs = ({name}) => {
 
     return (
         <section>
-            <h2 className='text-2xl text-dark font-semibold mb-5'>Frequently asked questions about {name}</h2>
+            <h2 className='text-2xl text-dark font-semibold mb-5'>Intrebari frecvente {name}</h2>
             <ul className='flex flex-col gap-5'>
                 {
                     faqsList?.map((item, idx) => (

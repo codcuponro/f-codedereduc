@@ -34,16 +34,11 @@ export const getCurrentMonthYear = () => {
 
 export const formatDate = (dateString) => {
     const date = new Date(dateString);
-
-    const options = { month: "short", day: "numeric", year: "numeric" };
-    const formattedDate = date.toLocaleDateString("en-US", options);
-
-    // Extract day to add suffix (st, nd, rd, th)
-    const day = date.getDate();
-    const daySuffix = getDaySuffix(day);
-
-    return formattedDate.replace(/\d+/, day + daySuffix);
+    const options = { day: "numeric", month: "long", year: "numeric" };
+    const formattedDate = date.toLocaleDateString("ro-RO", options);
+    return formattedDate;
 };
+
 
 const getDaySuffix = (day) => {
     if (day >= 11 && day <= 13) return "th"; // Special case for 11th, 12th, 13th
