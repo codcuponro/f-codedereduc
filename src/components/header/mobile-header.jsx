@@ -40,7 +40,7 @@ const MobileHeader = ({ headerRes }) => {
       }>
         {
           headerRes?.map((item, idx) => (
-            <Link href={item?.Href || "#"} className='py-1' key={idx}>{item?.Label}</Link>
+            <Link href={item?.Href || "#"} className='py-[7.2px]' key={idx}>{item?.Label}</Link>
           ))
         }
       </nav>
