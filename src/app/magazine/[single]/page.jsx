@@ -22,6 +22,10 @@ const Rating = dynamic(() => import('@/components/rating'), { ssr: false });
 export async function generateMetadata({ params }) {
   const param = await params.single
   const name = param.replace(/-/g, ' ')
+  .split(' ')
+  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+  .join(' ');
+
   return {
     title: `Cod reducere ${name}, Vouchere si Oferte ${getCurrentMonthYear()} - CodCupon.ro`,
     description: `Aici gasesti cele mai noi coduri de reducere ${name}, Vouchere si oferte alese cu grija si verificate de echipa CodCupon`,

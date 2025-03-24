@@ -27,7 +27,9 @@ export const getUniqueCategories = (coupons) => {
 export const getCurrentMonthYear = () => {
     const date = new Date();
     const options = { month: "long", year: "numeric" };
-    return date.toLocaleDateString("ro-RO", options);
+    const formattedDate = date.toLocaleDateString("ro-RO", options);
+    // Capitalize the first letter of the formatted date
+    return formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1);
 };
 
 
