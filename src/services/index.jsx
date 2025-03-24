@@ -11,6 +11,17 @@ async function getHomPage() {
   return response.data
 }
 
+async function getPopularSearch() {
+  const params = qs.stringify({
+    populate: [
+      'PopularSearch'
+    ],
+  })
+  const response = await Request(`/theme-option?${params}`);
+  return response.data
+}
+
+
 async function getStores() {
   const sparams = qs.stringify({
     populate: [
@@ -261,5 +272,6 @@ export {
   getAboutPage,
   getCookiePolicy,
   getPrivacyPage,
-  getTermAndConditionPage
+  getTermAndConditionPage,
+  getPopularSearch
 }
