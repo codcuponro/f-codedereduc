@@ -8,7 +8,7 @@ const StoresCard = ({ data }) => {
             <figure className='overflow-hidden'>
                 <a href={`/magazine/${data.Slug}`} aria-label={data.Slug}>
                     <Image
-                        src={data?.Feature_image?.url}
+                        src={data?.Icon?.url}
                         alt="Featured Image"
                         layout="responsive" // Auto scales image
                         width={575}
