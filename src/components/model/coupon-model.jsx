@@ -42,7 +42,7 @@ const CouponModel = ({ data }) => {
                 </button>
             </div>
             <p className='font-medium text-sm text-center mt-8'>
-                Continua la {data?.store?.Social?.Website && <Link href={`https://${data?.store?.Social?.Website}`} target='_blank' className="text-primary underline">#{data?.store?.Social?.Website}</Link>}
+                Continua la {data?.store?.Social?.Website && <Link href={`https://${data?.store?.Social?.Website}`} target='_blank' className="text-primary underline">{data?.store?.Social?.Website}</Link>}
             </p>
         </div>
     );

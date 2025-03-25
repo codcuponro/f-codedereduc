@@ -138,6 +138,7 @@ async function getFavorites50Coupon() {
         $eq: true
       }
     },
+    sort: ["createdAt:desc"],
     pagination: {
       limit: 50
     }
