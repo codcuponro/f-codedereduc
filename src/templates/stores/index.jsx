@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 const StoresCard = dynamic(() => import('@/components/card/stores-card'), { ssr: false });
 const StoreList = dynamic(() => import('./StoreList'), { ssr: false });
 
-const breadcrumbPath = [{ label: 'Stores', href: '/stores' }];
+const breadcrumbPath = [{ label: 'magazine', href: '/Magazine' }];
 
 const StoresTemp = async ({ stores, favStores = [] }) => {
   return (

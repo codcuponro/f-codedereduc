@@ -68,7 +68,8 @@ async function getCouponAndDeals() {
     ],
     pagination: {
       limit: 15
-    }
+    },
+    sort: ["createdAt:desc"] 
   })
   const couponAndDeals = await Request(`/coupons-and-deals?${cdparams}`);
   return couponAndDeals?.data
@@ -86,7 +87,8 @@ async function getFavoritesCoupon() {
     },
     pagination: {
       limit: 10
-    }
+    },
+    sort: ["createdAt:desc"] 
   })
   const favoritesCoupon = await Request(`/coupons-and-deals?${fcdparams}`);
   return favoritesCoupon?.data

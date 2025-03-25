@@ -144,25 +144,25 @@ const Store = async ({ params }) => {
                   <i>
                     <AiOutlinePhone className='w-4' />
                   </i>
-                  <span className='-mt-[3px]'>Telefon: <Link href={`tel:${singleStore?.Social?.Telephone}`} target='_blank' className='underline'>{singleStore?.Social?.Telephone}</Link></span>
+                  <span className='-mt-[3px]'>Telefon: <a href={`tel:${singleStore?.Social?.Telephone}`} target='_blank' className='underline'>{singleStore?.Social?.Telephone}</a></span>
                 </li>
                 <li className='text-sm !flex gap-1 mt-2'>
                   <i>
                     <FaRegEnvelope className='w-4' />
                   </i>
-                  <span className='-mt-[3px]'>Email: <Link href={`mailto:${singleStore?.Social?.Website}`} target='_blank' className='underline'>{singleStore?.Social?.Email}</Link></span>
+                  <span className='-mt-[3px]'>Email: <a href={`mailto:${singleStore?.Social?.Website}`} target='_blank' className='underline'>{singleStore?.Social?.Email}</a></span>
                 </li>
                 <li className='text-sm !flex gap-1 mt-2'>
                   <i>
                     <TbWorldWww className='w-4' />
                   </i>
-                  <span className='-mt-[3px]'>Website: <Link href={`${singleStore?.Social?.Website}`} target='_blank' className='underline'>{singleStore?.Social?.Website}</Link></span>
+                  <span className='-mt-[3px]'>Website: <a href={`https://${singleStore?.Social?.Website}`} target='_blank' className='underline'>{singleStore?.Social?.Website}</a></span>
                 </li>
                 <li className='text-sm !flex gap-1 mt-2'>
                   <i>
                     <FiFacebook className='w-4' />
                   </i>
-                  <span className='-mt-[3px]'>Facebook: <Link href={`https://facebook.com${singleStore?.Social?.Facebook}`} target='_blank' className='underline'>{singleStore?.Social?.Facebook}</Link></span>
+                  <span className='-mt-[3px]'>Facebook: <a href={`https://facebook.com${singleStore?.Social?.Facebook}`} target='_blank' className='underline'>{singleStore?.Social?.Facebook}</a></span>
                 </li>
               </ul>
             </div>

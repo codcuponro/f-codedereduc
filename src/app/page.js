@@ -9,7 +9,8 @@ import TopCategories from "@/templates/home-page/top-categories";
 export default async function Home(props) {
   const params = props?.params?.locale
   
-  const [favoritesCoupon,
+  const [
+    favoritesCoupon,
     exclusiveCoupon,
     favStores,
     couponsAndDeals,
