@@ -41,8 +41,10 @@ const CouponModel = ({ data }) => {
                     </div>
                 </button>
             </div>
-            <p className='font-medium text-sm text-center mt-8'>
-                Continua la {data?.store?.AffiliateLink && <Link href={data?.store?.AffiliateLink || "#"} target='_blank' className="text-primary underline">{data?.store?.Social?.Website}</Link>}
+            <p className='font-medium text-sm text-center flex justify-center gap-1.5 mt-8'>
+                Continua la {data?.store?.AffiliateLink && <Link href={data?.store?.AffiliateLink || "#"} target='_blank' className="text-primary underline flex">{data?.store?.Name}
+                <Image src="/svg/link.svg" alt='' width={18} height={18}/>
+                </Link>}
             </p>
         </div>
     );
