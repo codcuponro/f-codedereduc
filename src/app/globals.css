@@ -130,7 +130,7 @@
 
 
 @media (max-width:768px) {
-  h2, h3{
+  .single_store_content h2, .single_store_content h3{
     font-size: 24px !important;
   }
 }
