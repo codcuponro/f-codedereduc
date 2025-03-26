@@ -14,13 +14,8 @@ const CouponButton = (props) => {
     }
 
     const handleRoute = () => {
-        const providerURL = data.CouponUrl || data?.store?.Social?.Website;
-        const completeURL = providerURL
-            ? providerURL.startsWith("http")
-                ? providerURL
-                : `https://${providerURL}`
-            : "";
-
+        // const providerURL = data.CouponUrl || data?.store?.AffiliateLink;
+        const completeURL = data?.store?.AffiliateLink || "#"
         if (!label) {
             window.open(completeURL || "#", "_blank");
         } else {

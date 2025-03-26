@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React from 'react';
 
 const IconImage = ({ singleStore }) => {
-  const websiteUrl = singleStore?.Social?.Website ? `https://${singleStore.Social.Website}` : "#";
+  const websiteUrl = singleStore?.AffiliateLink || "#";
   return (
     <div className=''>
     <a
@@ -11,7 +11,7 @@ const IconImage = ({ singleStore }) => {
       target="_blank"
       rel="noopener noreferrer"
       onClick={(e) => {
-        if (!singleStore?.Social?.Website) e.preventDefault(); // Prevents navigation when no URL
+        if (!singleStore?.AffiliateLink) e.preventDefault(); // Prevents navigation when no URL
       }}
     >
       <Image
