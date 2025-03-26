@@ -171,7 +171,7 @@ async function getSingleStore(params) {
       Slug: {
         $eq: params.slug
       }
-    }
+    },
   })
   const stores = await Request(`/stores?${qParams}`);
   return stores?.data?.[0]

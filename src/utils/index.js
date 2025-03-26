@@ -32,6 +32,20 @@ export const getCurrentMonthYear = () => {
     return formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1);
 };
 
+export function getSortedData(data, order = 'desc') {
+    if (!Array.isArray(data)) {
+        return { success: false, message: "Invalid data format. Expected an array." };
+    }
+
+    const sortedData = data.sort((a, b) => {
+        return order === 'asc' 
+            ? new Date(a.createdAt) - new Date(b.createdAt) 
+            : new Date(b.createdAt) - new Date(a.createdAt);
+    });
+
+    return sortedData
+}
+
 
 
 export const formatDate = (dateString) => {

@@ -16,9 +16,9 @@ const HowItWorks = ({data}) => {
       >
         {
           data?.HowItswork?.map((item, idx) => (
-            <div key={idx} className='border p-[42px] rounded-xl'>
-              <img src={item?.Icon?.url} width={81} height={74} alt='' />
-              <h6 className='mt-[30px] font-semibold text-2xl text-dark'>{idx + 1}. {" "} {item?.Title}</h6>
+            <div key={idx} className='border p-6 md:p-[42px] rounded-xl'>
+              <img src={item?.Icon?.url} width={81} height={74} alt='w-[81px]' />
+              <h6 className='mt-[30px] font-semibold text-lg md:text-2xl text-dark'>{idx + 1}. {" "} {item?.Title}</h6>
               <p className='text-text mt-[14px]'>{item?.Caption}</p>
             </div>
           ))

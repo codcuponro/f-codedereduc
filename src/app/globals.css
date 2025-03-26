@@ -127,3 +127,10 @@
 .cImg {
   aspect-ratio: 575 / 265;
 }
+
+
+@media (max-width:768px) {
+  h2, h3{
+    font-size: 24px !important;
+  }
+}

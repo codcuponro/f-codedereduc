@@ -5,7 +5,7 @@ import { AiOutlinePhone } from "react-icons/ai";
 import { FaRegEnvelope } from "react-icons/fa6";
 import { FiFacebook } from "react-icons/fi";
 import { TbWorldWww } from "react-icons/tb";
-import { formatDate, getActiveAndDisabledCoupons, getCurrentMonthYear, getUniqueCategories } from '@/utils';
+import { formatDate, getActiveAndDisabledCoupons, getCurrentMonthYear, getSortedData, getUniqueCategories } from '@/utils';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import { getAllCategories, getSingleStore } from "../../../services"
 import dynamic from 'next/dynamic';
@@ -55,6 +55,7 @@ const Store = async ({ params }) => {
   })
 
   const { activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(singleStore?.coupons_and_deals)
+  const sortedCoupon = getSortedData(activeCoupon)
   const categories = getUniqueCategories(singleStore?.coupons_and_deals)
 
   const breadcrumbPath = [
@@ -91,7 +92,7 @@ const Store = async ({ params }) => {
             <div className='flex flex-col gap-[25px]'>
               {
                 activeCoupon?.length > 0 &&
-                activeCoupon?.map((item, idx) => (
+                sortedCoupon?.map((item, idx) => (
                   <CouponList key={idx} item={item} />
                 ))
               }
