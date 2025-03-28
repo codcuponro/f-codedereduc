@@ -3,9 +3,10 @@ import React, { createContext, useEffect, useState } from 'react';
 import { Snackbar, Alert } from '@mui/material';
 import { useModal } from '@/hooks/useModal';
 import CouponModel from '@/components/model/coupon-model';
-import useGetAllSearchParams from "@/hooks/useGetAllSearchParams"
+import { useGetAllSearchParams } from '@/hooks/useGetAllSearchParams';
 
 export const ToastContext = createContext();
+
 const ToastProvider = ({ children }) => {
     const [toast, setToast] = useState({ open: false, message: '', severity: 'success' });
     const { openModal, ModalComponent } = useModal();

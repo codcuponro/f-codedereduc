@@ -40,11 +40,13 @@ export default function RootLayout({ children }) {
         </Script>
       </head>
       <body className={inter.className}>
-        <ToastProvider>
-          <Header/>
-          {children}
-          <Footer/>
-        </ToastProvider>
+        <Suspense fallback={null}>
+          <ToastProvider>
+            <Header/>
+            {children}
+            <Footer/>
+          </ToastProvider>
+        </Suspense>
       </body>
     </html>
   )
