@@ -10,27 +10,45 @@
 }
 
 /* JS/Non-JS handling */
+.js .no-js {
+  display: none !important;
+}
+
+.no-js .js {
+  display: none !important;
+}
+
 .no-js * {
-  pointer-events: none;
+  pointer-events: none !important;
 }
 
 .no-js a {
-  pointer-events: none;
-  text-decoration: none;
-  color: inherit;
+  pointer-events: none !important;
+  text-decoration: none !important;
+  color: inherit !important;
 }
 
 .no-js button {
-  pointer-events: none;
-  cursor: default;
+  pointer-events: none !important;
+  cursor: default !important;
 }
 
 .no-js .interactive {
-  pointer-events: none;
+  pointer-events: none !important;
 }
 
 .js .interactive {
-  pointer-events: auto;
+  pointer-events: auto !important;
+}
+
+/* Ensure content is visible in non-JS mode */
+.no-js .container,
+.no-js .header,
+.no-js .footer,
+.no-js .main-content {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .container{

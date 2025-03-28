@@ -25,15 +25,17 @@ export default async function Home(props) {
     ]);
 
   return (
-    <>
+    <main className="main-content">
       <div className="interactive">
         <LandingPageSlider data={exclusiveCoupon} />
       </div>
-      <FavoritesCoupons data={favoritesCoupon} />
-      <FavoriteStores data={favStores?.slice(0,10)} />
-      <CouponsAndDeals data={couponsAndDeals?.slice(0,15)} />
-      <TopCategories data={categories} />
-      <HowItWorks data={homePage} />
-    </>
+      <div className="no-js">
+        <FavoritesCoupons data={favoritesCoupon} />
+        <FavoriteStores data={favStores?.slice(0,10)} />
+        <CouponsAndDeals data={couponsAndDeals?.slice(0,15)} />
+        <TopCategories data={categories} />
+        <HowItWorks data={homePage} />
+      </div>
+    </main>
   );
 }

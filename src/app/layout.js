@@ -33,13 +33,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <noscript>
+          <style>{`
+            .js { display: none !important; }
+            .no-js { display: block !important; }
+          `}</style>
+        </noscript>
         <Script id="js-detection" strategy="beforeInteractive">
           {`
             document.documentElement.classList.add('js');
+            document.documentElement.classList.remove('no-js');
           `}
         </Script>
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} no-js`}>
         <Suspense fallback={null}>
           <ToastProvider>
             <Header/>
@@ -49,5 +56,5 @@ export default function RootLayout({ children }) {
         </Suspense>
       </body>
     </html>
-  )
+  );
 }
