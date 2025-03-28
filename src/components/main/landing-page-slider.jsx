@@ -5,15 +5,87 @@ import Slider from "react-slick";
 import { LuChevronRight, LuChevronLeft } from "react-icons/lu";
 import Link from 'next/link';
 
+const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "160px",
+    slidesToShow: 2,
+    speed: 500,
+    arrows: false,
+    responsive: [
+        {
+            breakpoint: 1600,
+            settings: {
+                slidesToShow: 2
+            }
+        },
+        {
+            breakpoint: 1280,
+            settings: {
+                slidesToShow: 2,
+                centerPadding: "100px",
+            }
+        }
+    ]
+};
+
 const LandingPageSlider = ({ data }) => {
     const slider = React.useRef(null);
+    const [isClient, setIsClient] = React.useState(false);
+
+    React.useEffect(() => {
+        setIsClient(true);
+    }, []);
+
+    if (!isClient) {
+        return (
+            <main className='my-7 md:my-[10px] md:mb-8 max-w-[2200px] relative mx-auto'>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {data?.slice(0, 2).map((item, idx) => (
+                        <div key={idx} className='border border-[#DEE2E6] rounded-[20px] overflow-hidden'>
+                            <a href={`/magazine/` + item?.store?.Slug || "#"} aria-label={item?.store?.Name}>
+                                <Image
+                                    src={item?.Feature_image?.url}
+                                    alt="Featured Image"
+                                    width={575}
+                                    height={265}
+                                    className="w-full h-auto max-h-[460px] object-cover cImg"
+                                    quality={60}
+                                    priority={true}
+                                />
+                            </a>
+                            <div className='p-2 lg:p-6 pt-2 lg:pt-4 flex gap-4'>
+                                <div>
+                                    <a href={`/magazine/` + item?.store?.Slug || "#"} 
+                                    aria-label={item?.store?.Name}
+                                    className='flex flex-col justify-center outline-none -mt-7 w-20 h-20 lg:w-[130px] lg:h-[130px] lg:-mt-12 border rounded-xl lg:rounded-[20px] overflow-hidden bg-pure border-[#DEE2E6]'>
+                                        <Image src={item?.Icon?.url || item?.store?.Icon?.url} alt='' width={130} height={130} className=' w-full lg:w-[130px] ' />
+                                    </a>
+                                </div>
+                                <div>
+                                    <Link href={`/magazine/` + item?.store?.Slug || "#"} className='font-bold text-[#111928] text-sm mb-1' aria-label={item?.store?.Name}>
+                                        <p>{item?.CouponsType === "Promotion" ? "Promotie" : "Cod reducere"}{" "}{item?.store?.Name}</p>
+                                    </Link>
+                                    <p className='text-[#111928] font-medium sm:text-xl lg:text-2xl line-clamp-2' aria-label={item?.Title}>
+                                        <Link href={`/magazine/` + item?.store?.Slug || "#"}>{item?.Title}</Link>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </main>
+        );
+    }
+
     return (
-        <main className='my-7 md:my-[10px] md:mb-8 max-w-[2200px] relative mx-auto' inert>
+        <main className='my-7 md:my-[10px] md:mb-8 max-w-[2200px] relative mx-auto'>
             <Slider {...settings} ref={slider} key={1}>
                 {
                     data?.map((item, idx) => (
-                        <div className='px-1 sm:px-2 lg:p-[15px]'>
-                            <div key={idx} className='border border-[#DEE2E6] rounded-[20px] overflow-hidden'>
+                        <div key={idx} className='px-1 sm:px-2 lg:p-[15px]'>
+                            <div className='border border-[#DEE2E6] rounded-[20px] overflow-hidden'>
                                 <a href={`/magazine/` + item?.store?.Slug || "#"} aria-label={item?.store?.Name}>
                                     <Image
                                         src={item?.Feature_image?.url}
@@ -21,10 +93,9 @@ const LandingPageSlider = ({ data }) => {
                                         width={575}
                                         height={265}
                                         className="w-full h-auto max-h-[460px] object-cover cImg"
-                                        quality={60} // Reduce quality slightly to improve load speed
-                                        priority={true} // Only if this is the main LCP image
+                                        quality={60}
+                                        priority={true}
                                     />
-
                                 </a>
                                 <div className='p-2 lg:p-6 pt-2 lg:pt-4 flex gap-4'>
                                     <div>
@@ -64,7 +135,6 @@ const LandingPageSlider = ({ data }) => {
                 >
                     <LuChevronRight />
                 </button>
-
             </div>
             <div className='bg-gradient-to-r from-white/50 via-white/30 to-transparent w-10 sm:w-24 lg:w-[180px] h-full absolute top-0 left-0' />
             <div className='bg-gradient-to-l from-white/50 via-white/30 to-transparent w-10 sm:w-24 lg:w-[180px] h-full absolute top-0 right-0' />
@@ -74,47 +144,6 @@ const LandingPageSlider = ({ data }) => {
 
 export default LandingPageSlider
 
-
-
-const settings = {
-    className: "center",
-    centerMode: true,
-    infinite: true,
-    centerPadding: "160px",
-    slidesToShow: 2,
-    speed: 500,
-    arrows: false,
-    // autoplay: true,
-    responsive: [
-        {
-            breakpoint: 1600,
-            settings: {
-                slidesToShow: 2
-            }
-        },
-        {
-            breakpoint: 1280,
-            settings: {
-                slidesToShow: 2,
-                centerPadding: "100px",
-            }
-        },
-        {
-            breakpoint: 1000,
-            settings: {
-                slidesToShow: 1,
-                centerPadding: "60px",
-            }
-        },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 1,
-                centerPadding: "20px",
-            }
-        },
-    ]
-};
 
 
 const sliderData = [

@@ -40,6 +40,10 @@ export default function RootLayout({ children }) {
             .no-js .interactive { display: none !important; }
             .no-js .static-content { display: block !important; }
             .no-js .toast-provider { display: none !important; }
+            .js .no-js { display: none !important; }
+            .js .interactive { display: block !important; }
+            .js .static-content { display: block !important; }
+            .js .toast-provider { display: block !important; }
           `}</style>
         </noscript>
         <Script id="js-detection" strategy="beforeInteractive">
