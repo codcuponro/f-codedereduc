@@ -1,10 +1,8 @@
 import React from 'react';
 import Title from '@/components/title/title';
 import Breadcrumb from '@/components/breadcrumb';
-import dynamic from 'next/dynamic';
-
-const StoresCard = dynamic(() => import('@/components/card/stores-card'), { ssr: false });
-const StoreList = dynamic(() => import('./StoreList'), { ssr: false });
+import StoresCard from '@/components/card/stores-card';
+import StoreList from './StoreList';
 
 const breadcrumbPath = [{ label: 'magazine', href: '/Magazine' }];
 

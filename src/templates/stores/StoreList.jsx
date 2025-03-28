@@ -2,28 +2,41 @@
 
 import { useState, useMemo } from 'react';
 import Title from '@/components/title/title';
+import Link from 'next/link';
 
 export default function StoreList({ stores = [] }) {
     const [selectedLetter, setSelectedLetter] = useState('A');
     
-    const alphabet = Array.from('ABCDEFGHIJKLMNOPQRSTUVWXYZ'); // Improved readability
-    const numbersRegex = /^[0-9]/; // Matches names starting with a number
+    const alphabet = Array.from('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+    const numbersRegex = /^[0-9]/;
 
-    // Memoized store filtering
     const filteredStores = useMemo(() => {
         return stores.filter(store => 
             selectedLetter === '0-9'
-                ? numbersRegex.test(store.Name) // Check if Name starts with a number
-                : store.Name.toUpperCase().startsWith(selectedLetter) // Case-insensitive check
+                ? numbersRegex.test(store.Name)
+                : store.Name.toUpperCase().startsWith(selectedLetter)
         );
     }, [stores, selectedLetter]);
+
+    // Group stores by first letter for static rendering
+    const storesByLetter = useMemo(() => {
+        const groups = {};
+        stores.forEach(store => {
+            const firstChar = numbersRegex.test(store.Name) ? '0-9' : store.Name.toUpperCase()[0];
+            if (!groups[firstChar]) {
+                groups[firstChar] = [];
+            }
+            groups[firstChar].push(store);
+        });
+        return groups;
+    }, [stores]);
 
     return (
         <div className="container mx-auto px-4 lg:px-0">
             <Title title="Toate Magazinele" />
 
-            {/* Alphabet Selector */}
-            <div className="flex flex-wrap gap-2 mt-10 mb-9">
+            {/* Alphabet Selector - Client-side interactive */}
+            <div className="flex flex-wrap gap-2 mt-10 mb-9 no-js">
                 {[...alphabet, '0-9'].map(letter => (
                     <button
                         key={letter}
@@ -38,19 +51,41 @@ export default function StoreList({ stores = [] }) {
                 ))}
             </div>
 
-            {/* Store List */}
+            {/* Store List - Static content with client-side filtering */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-32">
                 {filteredStores.length > 0 ? (
                     filteredStores.map(({ Name, Slug }, index) => (
                         <div key={index} className="capitalize">
-                            <a href={`/magazine/${Slug}`} className="hover:text-primary">
+                            <Link 
+                                href={`/magazine/${Slug}`} 
+                                className="hover:text-primary no-js"
+                                aria-label={`Vezi coduri reducere ${Name}`}
+                            >
                                 {Name}
-                            </a>
+                            </Link>
                         </div>
                     ))
                 ) : (
                     <p className="col-span-full text-gray-500">Nu s-au găsit magazine.</p>
                 )}
+            </div>
+
+            {/* Static content for SEO - Hidden visually */}
+            <div className="sr-only">
+                {Object.entries(storesByLetter).map(([letter, letterStores]) => (
+                    <div key={letter}>
+                        <h2>Magazine cu litera {letter}</h2>
+                        <ul>
+                            {letterStores.map(({ Name, Slug }) => (
+                                <li key={Slug}>
+                                    <Link href={`/magazine/${Slug}`}>
+                                        {Name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
             </div>
         </div>
     );

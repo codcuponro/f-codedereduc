@@ -26,7 +26,9 @@ export default async function Home(props) {
 
   return (
     <>
-      <LandingPageSlider data={exclusiveCoupon} />
+      <div className="interactive">
+        <LandingPageSlider data={exclusiveCoupon} />
+      </div>
       <FavoritesCoupons data={favoritesCoupon} />
       <FavoriteStores data={favStores?.slice(0,10)} />
       <CouponsAndDeals data={couponsAndDeals?.slice(0,15)} />

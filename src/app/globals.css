@@ -4,9 +4,33 @@
 
 :root {
   --primary: #5B21B6;
-  --dark: #111928;
+  --dark: #333;
   --pure: #fff;
   --text: #1F2A37
+}
+
+/* JS/Non-JS handling */
+.no-js * {
+  pointer-events: none;
+}
+
+.no-js a {
+  pointer-events: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.no-js button {
+  pointer-events: none;
+  cursor: default;
+}
+
+.no-js .interactive {
+  pointer-events: none;
+}
+
+.js .interactive {
+  pointer-events: auto;
 }
 
 .container{
@@ -133,4 +157,35 @@
   .single_store_content h2, .single_store_content h3{
     font-size: 24px !important;
   }
+}
+
+/* Non-JS mode styles */
+.no-js {
+  pointer-events: none;
+}
+
+.no-js * {
+  pointer-events: none;
+}
+
+/* When JavaScript is enabled, restore interactions */
+.js .no-js {
+  pointer-events: auto;
+}
+
+.js .no-js * {
+  pointer-events: auto;
+}
+
+/* Keep links and buttons visible but non-interactive in non-JS mode */
+.no-js a,
+.no-js button {
+  opacity: 1;
+  cursor: default;
+}
+
+/* Restore cursor and interactions when JS is enabled */
+.js .no-js a,
+.js .no-js button {
+  cursor: pointer;
 }

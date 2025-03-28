@@ -67,18 +67,18 @@ const getDaySuffix = (day) => {
 };
 
 
-export async function getActiveAndDisabledCoupons(coupons) {  
-    const { activeCoupon, disableCoupon } = coupons?.reduce(
-      (acc, item) => {
-        const isExpired = item.ExpireDate < new Date().toISOString().split('T')[0];
-        isExpired ? acc.disableCoupon.push(item) : acc.activeCoupon.push(item);
-        return acc;
-      },
-      { activeCoupon: [], disableCoupon: [] }
-    );
+export async function getActiveAndDisabledCoupons(coupons) {
+  if (!coupons) return { activeCoupon: [], disableCoupon: [] };
   
-    return { activeCoupon, disableCoupon };
-  }
+  return coupons.reduce(
+    (acc, item) => {
+      const isExpired = item.ExpireDate < new Date().toISOString().split('T')[0];
+      isExpired ? acc.disableCoupon.push(item) : acc.activeCoupon.push(item);
+      return acc;
+    },
+    { activeCoupon: [], disableCoupon: [] }
+  );
+}
 
 
   export const removeQueryParams = () => {

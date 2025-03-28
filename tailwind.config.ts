@@ -11,8 +11,8 @@ export default {
     extend: {
       colors: {
         primary: "var(--primary)",
-        dark: "var(--dark)",
         pure: "var(--pure)",
+        dark: "#333",
         text: "var(--text)",
       },
     },

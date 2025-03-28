@@ -12,12 +12,12 @@ import dynamic from 'next/dynamic';
 import TOC from "../../../templates/stores/toc"
 import IconImage from "../../../components/icon-image"
 import PopularSearch from "../../../templates/stores/popular-search"
+import CouponList from "@/components/card/coupon-list";
+import Rating from "@/components/rating";
 
-const CouponList = dynamic(() => import('@/components/card/coupon-list'), { ssr: false });
 const CategoryButton = dynamic(() => import('@/components/card/category-button'), { ssr: false });
 const Faqs = dynamic(() => import('@/components/faqs/faqs'), { ssr: false });
 const Breadcrumb = dynamic(() => import('@/components/breadcrumb'), { ssr: false });
-const Rating = dynamic(() => import('@/components/rating'), { ssr: false });
 
 export async function generateMetadata({ params }) {
   const param = await params.single

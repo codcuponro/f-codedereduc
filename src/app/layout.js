@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Suspense } from "react";
 import React from "react";
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,24 +29,23 @@ export const metadata = {
   },
 };
 
-export default async function RootLayout({
-  children,
-  params
-}) {
-  
+export default function RootLayout({ children }) {
   return (
-    <html lang="ro">
-      <body
-        className={`${inter.className} antialiased`}
-      >
-        <Suspense fallback={''}>
-            <ToastProvider>
-              <Header/>
-                {children}
-              <Footer/>
-            </ToastProvider>
-        </Suspense>
+    <html lang="en">
+      <head>
+        <Script id="js-detection" strategy="beforeInteractive">
+          {`
+            document.documentElement.classList.add('js');
+          `}
+        </Script>
+      </head>
+      <body className={inter.className}>
+        <ToastProvider>
+          <Header/>
+          {children}
+          <Footer/>
+        </ToastProvider>
       </body>
     </html>
-  );
+  )
 }

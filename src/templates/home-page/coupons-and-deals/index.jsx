@@ -5,7 +5,10 @@ import {constData} from "../../../const"
 import { getActiveAndDisabledCoupons } from '@/utils'
 
 const CouponsAndDeals = async ({data}) => {
-const {activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(data)
+  if (!data?.CouponsAndDeals?.data) return null;
+  
+  const {activeCoupon} = await getActiveAndDisabledCoupons(data.CouponsAndDeals.data)
+  
   return (
     <section className='container mx-auto px-4 lg:px-0'>
       <Title
