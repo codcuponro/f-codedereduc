@@ -35,15 +35,10 @@ export default function RootLayout({ children }) {
       <head>
         <noscript>
           <style>{`
-            .js { display: none !important; }
-            .no-js { display: block !important; }
-            .no-js .interactive { display: none !important; }
-            .no-js .static-content { display: block !important; }
-            .no-js .toast-provider { display: none !important; }
             .js .no-js { display: none !important; }
-            .js .interactive { display: block !important; }
-            .js .static-content { display: block !important; }
-            .js .toast-provider { display: block !important; }
+            .no-js .js { display: none !important; }
+            .no-js .interactive { display: none !important; }
+            .no-js .toast-provider { display: none !important; }
           `}</style>
         </noscript>
         <Script id="js-detection" strategy="beforeInteractive">
@@ -54,13 +49,11 @@ export default function RootLayout({ children }) {
         </Script>
       </head>
       <body className={`${inter.className} no-js`}>
-        <div className="static-content">
-          <Header/>
-          <main>
-            {children}
-          </main>
-          <Footer/>
-        </div>
+        <Header/>
+        <main>
+          {children}
+        </main>
+        <Footer/>
         <div className="toast-provider">
           <Suspense fallback={null}>
             <ToastProvider />
