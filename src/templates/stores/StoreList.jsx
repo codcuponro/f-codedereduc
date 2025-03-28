@@ -34,9 +34,14 @@ export default function StoreList({ stores = [] }) {
     return (
         <div className="container mx-auto px-4 lg:px-0">
             <Title title="Toate Magazinele" />
+            
+            {/* SEO-friendly description */}
+            <div className="sr-only">
+                <p>Descoperă toate magazinele partenere CodCupon. Fiecare magazin oferă coduri de reducere și vouchere exclusive pentru a te ajuta să economisești la cumpărături.</p>
+            </div>
 
             {/* Alphabet Selector - Client-side interactive */}
-            <div className="flex flex-wrap gap-2 mt-10 mb-9 no-js">
+            <div className="flex flex-wrap gap-2 mt-10 mb-9 no-js" role="navigation" aria-label="Navigare alfabetică magazine">
                 {[...alphabet, '0-9'].map(letter => (
                     <button
                         key={letter}
@@ -45,6 +50,8 @@ export default function StoreList({ stores = [] }) {
                             ${selectedLetter === letter 
                                 ? 'bg-primary text-white' 
                                 : 'border-gray-300 text-gray-700 hover:bg-primary hover:text-white'}`}
+                        aria-label={`Arată magazinele care încep cu ${letter}`}
+                        aria-current={selectedLetter === letter ? 'page' : undefined}
                     >
                         {letter}
                     </button>
@@ -52,14 +59,14 @@ export default function StoreList({ stores = [] }) {
             </div>
 
             {/* Store List - Static content with client-side filtering */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-32">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-32" role="list">
                 {filteredStores.length > 0 ? (
                     filteredStores.map(({ Name, Slug }, index) => (
-                        <div key={index} className="capitalize">
+                        <div key={index} className="capitalize" role="listitem">
                             <Link 
                                 href={`/magazine/${Slug}`} 
                                 className="hover:text-primary no-js"
-                                aria-label={`Vezi coduri reducere ${Name}`}
+                                aria-label={`Vezi coduri reducere și vouchere pentru ${Name}`}
                             >
                                 {Name}
                             </Link>
@@ -72,13 +79,15 @@ export default function StoreList({ stores = [] }) {
 
             {/* Static content for SEO - Hidden visually */}
             <div className="sr-only">
+                <h2>Listă completă magazine partenere</h2>
+                <p>Găsește toate magazinele partenere CodCupon, organizate alfabetic, cu coduri de reducere și vouchere exclusive.</p>
                 {Object.entries(storesByLetter).map(([letter, letterStores]) => (
                     <div key={letter}>
-                        <h2>Magazine cu litera {letter}</h2>
+                        <h3>Magazine cu litera {letter}</h3>
                         <ul>
                             {letterStores.map(({ Name, Slug }) => (
                                 <li key={Slug}>
-                                    <Link href={`/magazine/${Slug}`}>
+                                    <Link href={`/magazine/${Slug}`} aria-label={`Vezi coduri reducere și vouchere pentru ${Name}`}>
                                         {Name}
                                     </Link>
                                 </li>

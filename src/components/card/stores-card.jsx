@@ -4,16 +4,16 @@ import React from 'react'
 
 const StoresCard = ({ data }) => {
     return (
-        <div className='border bg-pure rounded-lg overflow-hidden flex flex-col justify-between'>
+        <article className='border bg-pure rounded-lg overflow-hidden flex flex-col justify-between'>
             <figure className='overflow-hidden'>
                 <Link 
                     href={`/magazine/${data.Slug}`} 
-                    aria-label={`Vezi coduri reducere ${data.Name}`}
+                    aria-label={`Vezi coduri reducere și vouchere pentru ${data.Name}`}
                     className="no-js"
                 >
                     <Image 
                         src={data?.Icon?.url}
-                        alt={`Logo ${data.Name}`}
+                        alt={`Logo ${data.Name} - Magazin partener CodCupon`}
                         layout="responsive"
                         width={575}
                         height={165}
@@ -28,16 +28,19 @@ const StoresCard = ({ data }) => {
             <div className='py-[15px] px-2 flex justify-center'>
                 <Link 
                     href={`/magazine/${data.Slug}`} 
-                    aria-label={`Vezi coduri reducere ${data.Name}`}
+                    aria-label={`Vezi ${data?.coupons_and_deals?.length} coduri reducere și vouchere pentru ${data.Name}`}
                     className="no-js"
                 >
-                    <button className='bg-[#F3F4F6] flex items-center justify-center gap-1 px-2.5 text-xs text-dark font-bold py-1 rounded-full'>
-                        <div className='w-2 h-2 bg-green-500 rounded-full' />
+                    <button 
+                        className='bg-[#F3F4F6] flex items-center justify-center gap-1 px-2.5 text-xs text-dark font-bold py-1 rounded-full'
+                        aria-label={`${data?.coupons_and_deals?.length} coduri reducere disponibile pentru ${data.Name}`}
+                    >
+                        <div className='w-2 h-2 bg-green-500 rounded-full' aria-hidden="true" />
                         {data?.coupons_and_deals?.length} Vouchere {data.Name}
                     </button>
                 </Link>
             </div>
-        </div>
+        </article>
     )
 }
 
