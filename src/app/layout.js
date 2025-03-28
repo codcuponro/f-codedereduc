@@ -35,8 +35,8 @@ export default function RootLayout({ children }) {
       <head>
         <noscript>
           <style>{`
+            .js .interactive { display: block !important; }
             .js .no-js { display: none !important; }
-            .no-js .js { display: none !important; }
             .no-js .interactive { display: none !important; }
             .no-js .toast-provider { display: none !important; }
           `}</style>

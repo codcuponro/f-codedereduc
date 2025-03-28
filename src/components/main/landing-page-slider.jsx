@@ -32,11 +32,6 @@ const settings = {
 
 const LandingPageSlider = ({ data }) => {
     const slider = React.useRef(null);
-    const [isClient, setIsClient] = React.useState(false);
-
-    React.useEffect(() => {
-        setIsClient(true);
-    }, []);
 
     const StaticSlider = () => (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -142,7 +137,7 @@ const LandingPageSlider = ({ data }) => {
             <div className="no-js">
                 <StaticSlider />
             </div>
-            <div className="js">
+            <div className="interactive">
                 <InteractiveSlider />
             </div>
         </main>
