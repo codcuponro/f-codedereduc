@@ -41,7 +41,7 @@ export default function StoreList({ stores = [] }) {
             </div>
 
             {/* Alphabet Selector - Client-side interactive */}
-            <div className="flex flex-wrap gap-2 mt-10 mb-9 no-js" role="navigation" aria-label="Navigare alfabetică magazine">
+            <div className="flex flex-wrap gap-2 mt-10 mb-9 interactive" role="navigation" aria-label="Navigare alfabetică magazine">
                 {[...alphabet, '0-9'].map(letter => (
                     <button
                         key={letter}
@@ -59,13 +59,13 @@ export default function StoreList({ stores = [] }) {
             </div>
 
             {/* Store List - Static content with client-side filtering */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-32" role="list">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-32 interactive" role="list">
                 {filteredStores.length > 0 ? (
                     filteredStores.map(({ Name, Slug }, index) => (
                         <div key={index} className="capitalize" role="listitem">
                             <Link 
                                 href={`/magazine/${Slug}`} 
-                                className="hover:text-primary no-js"
+                                className="hover:text-primary"
                                 aria-label={`Vezi coduri reducere și vouchere pentru ${Name}`}
                             >
                                 {Name}

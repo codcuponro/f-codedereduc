@@ -37,6 +37,8 @@ export default function RootLayout({ children }) {
           <style>{`
             .js { display: none !important; }
             .no-js { display: block !important; }
+            .no-js .interactive { display: none !important; }
+            .no-js .static-content { display: block !important; }
           `}</style>
         </noscript>
         <Script id="js-detection" strategy="beforeInteractive">
@@ -47,12 +49,13 @@ export default function RootLayout({ children }) {
         </Script>
       </head>
       <body className={`${inter.className} no-js`}>
+        <Header/>
+        <main className="static-content">
+          {children}
+        </main>
+        <Footer/>
         <Suspense fallback={null}>
-          <ToastProvider>
-            <Header/>
-            {children}
-            <Footer/>
-          </ToastProvider>
+          <ToastProvider />
         </Suspense>
       </body>
     </html>
