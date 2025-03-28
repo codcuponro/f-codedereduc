@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: "CodCupon - Coduri reducere, Vouchere si Oferte",
-  description: "Descopera reduceri fabuloase! Echipa CodCupon verifica coduri de reducere de la 1000+ magazine din Romania pentru a te ajuta sa economisesti.",
+  description: "Descopera reduceri fabuloase! Echipa CodCupon verifica coduri de reducere de la 1000+ magazine din Romania pentru a te ajuta sa economisești.",
   openGraph: {
     images: [
       {
@@ -39,6 +39,7 @@ export default function RootLayout({ children }) {
             .no-js { display: block !important; }
             .no-js .interactive { display: none !important; }
             .no-js .static-content { display: block !important; }
+            .no-js .toast-provider { display: none !important; }
           `}</style>
         </noscript>
         <Script id="js-detection" strategy="beforeInteractive">
@@ -49,14 +50,18 @@ export default function RootLayout({ children }) {
         </Script>
       </head>
       <body className={`${inter.className} no-js`}>
-        <Header/>
-        <main className="static-content">
-          {children}
-        </main>
-        <Footer/>
-        <Suspense fallback={null}>
-          <ToastProvider />
-        </Suspense>
+        <div className="static-content">
+          <Header/>
+          <main>
+            {children}
+          </main>
+          <Footer/>
+        </div>
+        <div className="toast-provider">
+          <Suspense fallback={null}>
+            <ToastProvider />
+          </Suspense>
+        </div>
       </body>
     </html>
   );

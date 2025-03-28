@@ -7,7 +7,7 @@ import { useGetAllSearchParams } from '@/hooks/useGetAllSearchParams';
 
 export const ToastContext = createContext();
 
-const ToastProvider = ({ children }) => {
+const ToastProvider = () => {
     const [toast, setToast] = useState({ open: false, message: '', severity: 'success' });
     const { openModal, ModalComponent } = useModal();
     const allSearchParams = useGetAllSearchParams();
@@ -30,7 +30,6 @@ const ToastProvider = ({ children }) => {
     return (
         <>
             <ToastContext.Provider value={showToast}>
-                {children}
                 <Snackbar open={toast.open} autoHideDuration={3000} onClose={closeToast}>
                     <Alert onClose={closeToast} severity={toast.severity} variant="filled">
                         {toast.message}
