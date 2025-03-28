@@ -81,9 +81,11 @@ export async function getActiveAndDisabledCoupons(coupons) {
 }
 
 
-  export const removeQueryParams = () => {
+export const removeQueryParams = () => {
+  if (typeof window !== 'undefined') {
     const url = new URL(window.location);
     url.search = ""; // Clears all query parameters
     window.history.replaceState({}, document.title, url);
   }
+}
 
