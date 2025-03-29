@@ -122,7 +122,7 @@
   user-select: text !important;
   -webkit-user-select: text !important;
 }
-
+.faqs a{text-decoration: underline;}
 
 .cImg {
   aspect-ratio: 575 / 265;

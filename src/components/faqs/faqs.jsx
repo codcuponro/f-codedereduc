@@ -3,8 +3,14 @@ import React, { useState } from 'react'
 import { IoIosRemoveCircleOutline } from "react-icons/io";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 
-const Faqs = ({name}) => {
+const Faqs = ({name, coupon}) => {
     const [openFaq, setOpenFaq] = useState(null)
+    const currentYear = new Date().getFullYear();
+
+    const latesCoupon = coupon.filter((item)=>item.CouponsType === 'Coupon Code')
+    const titles = latesCoupon.map((item) => item.Title);
+    const DiscountValue = latesCoupon.map((item) => item.DiscountValue); 
+
     const handleFaq = (idx) => {
         if (openFaq === idx) {
             return setOpenFaq(null)
@@ -14,28 +20,24 @@ const Faqs = ({name}) => {
 
     const faqsList = [
         {
-            question:  `What is a ${name} discount code?`,
-            answer: "Answer"
+            question:  `Cate vouchere si oferte sunt disponibile pentru ${name}?`,
+            answer: `In acest moment, sunt active ${coupon?.length} vouchere si oferte pe care le puteti folosi pe site-ul celor de la ${name}.`
         },
         {
-            question: `How do I use ${name} discount codes?`,
-            answer: "Answer"
+            question: `Cum folosesc codul de reducere ${name}?`,
+            answer: `Pentru a folosi codul de reducere ${name}, adauga produsele dorite in cos, apoi apasa pe cosul de cumparaturi sau butonul de checkout. Copiaza codul de reducere din aceasta pagina si adauga-l in campul Cod promotional si apasa pe butonul Aplica.`
         },
         {
-            question: `Why isn't my ${name} discount code working?`,
-            answer: "Answer"
+            question: `De ce codul de reducere ${name} nu functioneaza?`,
+            answer: `De regula, pe <a href="/">CodCupon.ro</a> veti gasi doar coduri de reducere active, insa in cazul in care comerciantul a dezactivat acest cod, el nu va functiona. `
         },
         {
-            question: `How much can I save with a ${name} discount code?`,
-            answer: "Answer"
+            question: `Care este ultimul voucher ${name} adaugat?  `,
+            answer: `Ultimul voucher ${name} adaugat este “${titles.join(", ")}”. Acesta ofera clientilor ${DiscountValue.join(", ")} reducere.`
         },
         {
-            question: `Is ${name} participating in the Black Friday campaign?`,
-            answer: "Answer"
-        },
-        {
-            question: `When is Black Friday 2025 at ${name}?`,
-            answer: "Answer"
+            question: `Cand o sa fie ${name} Black Friday ${currentYear}?`,
+            answer:    `In mod obisnuit, ${name} Black Friday are loc in ultima vineri din luna Noiembrie, dar aceasta nu este o regula bine definita, ${name} poate decide sa inceapa Black Friday mai devreme. Aboneaza-te la newsletetter-ul nostru si vei fi primul care va afla cand are loc ${name} Black Friday.`
         },
     ]
 
@@ -50,7 +52,7 @@ const Faqs = ({name}) => {
                                 {openFaq === idx ? <IoIosRemoveCircleOutline size={23} className='text-primary' /> : <AiOutlinePlusCircle size={23} className='text-primary' />}
                             </h3>
                             {
-                                openFaq === idx && <p className='mt-5 text-dark'>{item?.answer}</p>
+                                openFaq === idx && <div className='mt-5 text-dark faqs' dangerouslySetInnerHTML={{__html : item?.answer}}></div>
                             }
                         </li>
                     ))

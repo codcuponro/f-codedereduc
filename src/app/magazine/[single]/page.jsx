@@ -54,6 +54,7 @@ const Store = async ({ params }) => {
   })
 
   const { activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(singleStore?.coupons_and_deals)
+  console.log("🚀 ~ Store ~ activeCoupon:", activeCoupon)
   const sortedCoupon = getSortedData(activeCoupon)
   const categories = getUniqueCategories(singleStore?.coupons_and_deals)
 
@@ -116,7 +117,7 @@ const Store = async ({ params }) => {
               }
             </div>
 
-            <Faqs name={singleStore?.Name} />
+            <Faqs name={singleStore?.Name} coupon={activeCoupon}/>
           </div>
 
           <aside className='w-[286px]'>
