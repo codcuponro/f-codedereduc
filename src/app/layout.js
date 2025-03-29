@@ -38,13 +38,13 @@ export default async function RootLayout({
       <body
         className={`${inter.className} antialiased`}
       >
-        <Suspense fallback={''}>
+        {/* <Suspense fallback={''}> */}
             <ToastProvider>
               <Header/>
                 {children}
               <Footer/>
             </ToastProvider>
-        </Suspense>
+        {/* </Suspense> */}
       </body>
     </html>
   );
