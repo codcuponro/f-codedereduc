@@ -116,7 +116,7 @@ const Store = async ({ params }) => {
               }
             </div>
 
-            <Faqs name={singleStore?.Name} coupon={activeCoupon}/>
+            <Faqs name={singleStore?.Name} coupon={activeCoupon} allCoupon={singleStore?.coupons_and_deals}/>
           </div>
 
           <aside className='w-[286px]'>

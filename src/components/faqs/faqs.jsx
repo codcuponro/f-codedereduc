@@ -3,12 +3,14 @@ import React, { useState } from 'react'
 import { IoIosRemoveCircleOutline } from "react-icons/io";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 
-const Faqs = ({name, coupon}) => {
+const Faqs = ({name, coupon, allCoupon}) => {
     const [openFaq, setOpenFaq] = useState(null)
     const currentYear = new Date().getFullYear();
 
     const latesCoupon = coupon.filter((item)=>item.CouponsType === 'Coupon Code')
     const titles = latesCoupon.map((item) => item.CouponCode);
+    const couponCode = allCoupon.map((item) => item.CouponCode);
+
     const DiscountValue = latesCoupon.map((item) => item.DiscountValue); 
 
     const handleFaq = (idx) => {
@@ -37,7 +39,7 @@ const Faqs = ({name, coupon}) => {
         },
     ]
 
-    if(titles.length > 0){
+    if(couponCode.length > 0){
         faqsList.push(
             {
                 question: `Care este ultimul voucher ${name} adaugat?  `,
