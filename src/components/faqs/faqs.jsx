@@ -41,7 +41,7 @@ const Faqs = ({name, coupon}) => {
         faqsList.push(
             {
                 question: `Care este ultimul voucher ${name} adaugat?  `,
-                answer: `Ultimul voucher ${name} adaugat este “${titles.join(", ")}”. Acesta ofera clientilor ${DiscountValue.join(", ")} reducere.`
+                answer: `Ultimul voucher ${name} adaugat este “${titles[0]}”. Acesta ofera clientilor ${DiscountValue[0]} reducere.`
             },
         )
     }
