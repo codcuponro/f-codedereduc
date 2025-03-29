@@ -8,7 +8,7 @@ const Faqs = ({name, coupon}) => {
     const currentYear = new Date().getFullYear();
 
     const latesCoupon = coupon.filter((item)=>item.CouponsType === 'Coupon Code')
-    const titles = latesCoupon.map((item) => item.Title);
+    const titles = latesCoupon.map((item) => item.CouponCode);
     const DiscountValue = latesCoupon.map((item) => item.DiscountValue); 
 
     const handleFaq = (idx) => {
@@ -32,14 +32,19 @@ const Faqs = ({name, coupon}) => {
             answer: `De regula, pe <a href="/">CodCupon.ro</a> veti gasi doar coduri de reducere active, insa in cazul in care comerciantul a dezactivat acest cod, el nu va functiona. `
         },
         {
-            question: `Care este ultimul voucher ${name} adaugat?  `,
-            answer: `Ultimul voucher ${name} adaugat este “${titles.join(", ")}”. Acesta ofera clientilor ${DiscountValue.join(", ")} reducere.`
-        },
-        {
             question: `Cand o sa fie ${name} Black Friday ${currentYear}?`,
             answer:    `In mod obisnuit, ${name} Black Friday are loc in ultima vineri din luna Noiembrie, dar aceasta nu este o regula bine definita, ${name} poate decide sa inceapa Black Friday mai devreme. Aboneaza-te la newsletetter-ul nostru si vei fi primul care va afla cand are loc ${name} Black Friday.`
         },
     ]
+
+    if(titles.length > 0){
+        faqsList.push(
+            {
+                question: `Care este ultimul voucher ${name} adaugat?  `,
+                answer: `Ultimul voucher ${name} adaugat este “${titles.join(", ")}”. Acesta ofera clientilor ${DiscountValue.join(", ")} reducere.`
+            },
+        )
+    }
 
     return (
         <section>
