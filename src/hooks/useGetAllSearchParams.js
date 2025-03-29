@@ -1,4 +1,4 @@
-import { useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 
 function useGetAllSearchParams() {
   const searchParams = useSearchParams();

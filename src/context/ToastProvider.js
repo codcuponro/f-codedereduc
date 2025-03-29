@@ -1,5 +1,5 @@
 "use client"
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext, Suspense, useEffect, useState } from 'react';
 import { Snackbar, Alert } from '@mui/material';
 import { useModal } from '@/hooks/useModal';
 import CouponModel from '@/components/model/coupon-model';
@@ -36,7 +36,7 @@ const ToastProvider = ({ children }) => {
                     </Alert>
                 </Snackbar>
             </ToastContext.Provider>
-            <ModalComponent />
+            <Suspense fallback={''}><ModalComponent /></Suspense>
         </>
     );
 };
