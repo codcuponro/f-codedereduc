@@ -1,5 +1,5 @@
 "use client"
-import React, { createContext, Suspense, useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import { Snackbar, Alert } from '@mui/material';
 import { useModal } from '@/hooks/useModal';
 import CouponModel from '@/components/model/coupon-model';
@@ -20,11 +20,11 @@ const ToastProvider = ({ children }) => {
     };
 
     useEffect(() => {
-        if (allSearchParams?.model === "true") {
+        if (allSearchParams.model) {
             const localCouponData = JSON.parse(localStorage.getItem("couponData") || "{}");
             openModal(<CouponModel data={localCouponData} />);
         }
-    }, [])
+    }, [allSearchParams])
 
     return (
         <>
@@ -36,7 +36,7 @@ const ToastProvider = ({ children }) => {
                     </Alert>
                 </Snackbar>
             </ToastContext.Provider>
-            <Suspense fallback={''}><ModalComponent /></Suspense>
+            <ModalComponent />
         </>
     );
 };
