@@ -4,6 +4,7 @@ import { Snackbar, Alert } from '@mui/material';
 import { useModal } from '@/hooks/useModal';
 import CouponModel from '@/components/model/coupon-model';
 import useGetAllSearchParams from "@/hooks/useGetAllSearchParams"
+import GoogleAnalytics from '@bradgarropy/next-google-analytics';
 
 export const ToastContext = createContext();
 const ToastProvider = ({ children }) => {
@@ -28,6 +29,7 @@ const ToastProvider = ({ children }) => {
 
     return (
         <>
+            <GoogleAnalytics measurementId="G-FHC2S49REF" />
             <ToastContext.Provider value={showToast}>
                 {children}
                 <Snackbar open={toast.open} autoHideDuration={3000} onClose={closeToast}>
@@ -35,7 +37,7 @@ const ToastProvider = ({ children }) => {
                         {toast.message}
                     </Alert>
                 </Snackbar>
-            </ToastContext.Provider>
+            </ToastContext.Provider>            
             <ModalComponent />
         </>
     );

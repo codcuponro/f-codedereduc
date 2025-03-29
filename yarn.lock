@@ -89,6 +89,11 @@
     "@babel/helper-string-parser" "^7.25.9"
     "@babel/helper-validator-identifier" "^7.25.9"
 
+"@bradgarropy/next-google-analytics@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/@bradgarropy/next-google-analytics/-/next-google-analytics-1.0.2.tgz"
+  integrity sha512-Xhli9NkdJbmvs1QNAcC9At3w/GIlXunVIMQzcAYfVP8tQSX3Q4un0doZfQknNvRz+QO6we+8lDE4/dMOio0vzQ==
+
 "@emotion/babel-plugin@^11.13.5":
   version "11.13.5"
   resolved "https://registry.npmjs.org/@emotion/babel-plugin/-/babel-plugin-11.13.5.tgz"

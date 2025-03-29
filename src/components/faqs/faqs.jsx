@@ -7,11 +7,13 @@ const Faqs = ({name, coupon, allCoupon}) => {
     const [openFaq, setOpenFaq] = useState(null)
     const currentYear = new Date().getFullYear();
 
-    const latesCoupon = coupon.filter((item)=>item.CouponsType === 'Coupon Code')
-    const titles = latesCoupon.map((item) => item.CouponCode);
-    const couponCode = allCoupon.map((item) => item.CouponCode);
-
-    const DiscountValue = latesCoupon.map((item) => item.DiscountValue); 
+    const latesCoupon = allCoupon.filter((item)=>item.CouponsType === 'Coupon Code')
+    const aTitles = latesCoupon.map((item) => item.CouponCode);
+    const aDiscountValue = latesCoupon.map((item) => item.DiscountValue);
+    
+    const latesCouponNA = coupon.filter((item)=>item.CouponsType === 'Coupon Code')
+    const Titles = latesCouponNA.map((item) => item.CouponCode);
+    const DiscountValue = latesCouponNA.map((item) => item.DiscountValue);
 
     const handleFaq = (idx) => {
         if (openFaq === idx) {
@@ -39,11 +41,11 @@ const Faqs = ({name, coupon, allCoupon}) => {
         },
     ]
 
-    if(couponCode.length > 0){
+    if(aTitles.length > 0){
         faqsList.push(
             {
                 question: `Care este ultimul voucher ${name} adaugat?  `,
-                answer: `Ultimul voucher ${name} adaugat este “${titles[0]}”. Acesta ofera clientilor ${DiscountValue[0]} reducere.`
+                answer: `Ultimul voucher ${name} adaugat este “${ Titles[0] || aTitles[0]}”. Acesta ofera clientilor ${DiscountValue[0] || aDiscountValue[0]} reducere.`
             },
         )
     }
@@ -58,9 +60,7 @@ const Faqs = ({name, coupon, allCoupon}) => {
                             <h3 className='sm:text-xl cursor-pointer text-dark font-semibold flex justify-between items-center gap-3'>{item?.question}
                                 {openFaq === idx ? <IoIosRemoveCircleOutline size={23} className='text-primary' /> : <AiOutlinePlusCircle size={23} className='text-primary' />}
                             </h3>
-                            {
-                                openFaq === idx && <div className='mt-5 text-dark faqs' dangerouslySetInnerHTML={{__html : item?.answer}}></div>
-                            }
+                            <div className='mt-5 text-dark faqs' dangerouslySetInnerHTML={{__html : item?.answer}}></div>
                         </li>
                     ))
                 }
