@@ -8,16 +8,15 @@ import { TbWorldWww } from "react-icons/tb";
 import { formatDate, getActiveAndDisabledCoupons, getCurrentMonthYear, getSortedData, getUniqueCategories } from '@/utils';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import { getAllCategories, getSingleStore } from "../../../services"
-import dynamic from 'next/dynamic';
 import TOC from "../../../templates/stores/toc"
 import IconImage from "../../../components/icon-image"
 import PopularSearch from "../../../templates/stores/popular-search"
 
-const CouponList = dynamic(() => import('@/components/card/coupon-list'), { ssr: false });
-const CategoryButton = dynamic(() => import('@/components/card/category-button'), { ssr: false });
-const Faqs = dynamic(() => import('@/components/faqs/faqs'), { ssr: false });
-const Breadcrumb = dynamic(() => import('@/components/breadcrumb'), { ssr: false });
-const Rating = dynamic(() => import('@/components/rating'), { ssr: false });
+import CouponList from '@/components/card/coupon-list'
+import CategoryButton from '@/components/card/category-button'
+import Faqs from '@/components/faqs/faqs'
+import Breadcrumb from '@/components/breadcrumb'
+import Rating from '@/components/rating'
 
 export async function generateMetadata({ params }) {
   const param = await params.single
