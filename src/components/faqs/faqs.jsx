@@ -58,7 +58,7 @@ const Faqs = ({name, coupon, allCoupon}) => {
                     faqsList?.map((item, idx) => (
                         <li key={idx} className='py-[18px] px-4 sm:px-[30px] rounded-[10px] border border-[#DEE2E6]' onClick={() => handleFaq(idx)}>
                             <h3 className='sm:text-xl cursor-pointer text-dark font-semibold flex justify-between items-center gap-3'>{item?.question}
-                                {openFaq === idx ? <IoIosRemoveCircleOutline size={23} className='text-primary' /> : <AiOutlinePlusCircle size={23} className='text-primary' />}
+                                {/* {openFaq === idx ? <IoIosRemoveCircleOutline size={23} className='text-primary' /> : <AiOutlinePlusCircle size={23} className='text-primary' />} */}
                             </h3>
                             <div className='mt-5 text-dark faqs' dangerouslySetInnerHTML={{__html : item?.answer}}></div>
                         </li>
