@@ -19,7 +19,7 @@ const Nav = async ({t}) => {
                     </p>
                     <button className='text-pure gap-2.5 text-sx flex items-center'>
                         <Image src="/svg/phone-ring.svg" alt='' className='' width={20} height={20} />
-                        <a href={`${footerRes?.MobileNumber?.Href}`} target='_blank'>
+                        <a href={`${footerRes?.MobileNumber?.Href || "#"}`} target='_blank'>
                             {footerRes?.MobileNumber?.Label}
                         </a>
                     </button>
@@ -31,7 +31,7 @@ const Nav = async ({t}) => {
                         {
                             footerRes?.Resources?.map((item, idx) => (
                                 <li key={idx} className='text-white/70 hover:text-pure'>
-                                    <Link href={item.Href}>{item.Label}</Link>
+                                    <Link href={item.Href || "#"}>{item.Label}</Link>
                                 </li>
                             ))
                         }
@@ -44,7 +44,7 @@ const Nav = async ({t}) => {
                         {
                             footerRes?.Company?.map((item, idx) => (
                                 <li key={idx} className='text-white/70 hover:text-pure'>
-                                    <Link href={item.Href}>{item.Label}</Link>
+                                    <Link href={item.Href || "#"}>{item.Label}</Link>
                                 </li>
                             ))
                         }
@@ -57,7 +57,7 @@ const Nav = async ({t}) => {
                         {
                             footerRes?.QuickLinks?.map((item, idx) => (
                                 <li key={idx} className='text-white/70 hover:text-pure'>
-                                    <Link href={item.Href}>{item.Label}</Link>
+                                    <Link href={item.Href || "#"}>{item.Label}</Link>
                                 </li>
                             ))
                         }

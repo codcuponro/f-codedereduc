@@ -7,7 +7,7 @@ const IconImage = ({ singleStore }) => {
   return (
     <div className=''>
     <a
-      href={websiteUrl}
+      href={websiteUrl || "#"}
       target="_blank"
       rel="noopener noreferrer"
       onClick={(e) => {
