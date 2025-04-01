@@ -19,7 +19,7 @@ export const constData = {
         "subscribe_btn_label" : "Abonați-vă",
         "resources_title" : "Resurse",
         "Company_title" : "Companie",
-        "quick_links_title" : "Legături rapide",
+        "quick_links_title" : "Cautari populare",
         "follow_us_title" : "Urmărește-ne pe"
       }
     }

@@ -18,7 +18,7 @@ const AboutTemp = ({ data, title }) => {
                         title={title}
                     />
                     <div style={{ marginTop: '35px' }}
-                        className='page_content single_store_content'
+                        className='page_content single_store_content max-w-[837px]'
                     >
                         {
                             data &&

@@ -153,7 +153,7 @@ async function getAllStore() {
       'Icon', "coupons_and_deals",
     ],
     pagination: {
-      limit: 500
+      limit: 1000
     }
   })
   const stores = await Request(`/stores?${params}`);

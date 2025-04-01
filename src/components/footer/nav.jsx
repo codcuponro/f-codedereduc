@@ -17,12 +17,12 @@ const Nav = async ({t}) => {
                     </Link>
                     <p className='mt-5 max-w-[270px] mb-[22px] text-white/70'>{footerRes?.Caption}
                     </p>
-                    <button className='text-pure gap-2.5 text-sx flex items-center'>
+                    {/* <button className='text-pure gap-2.5 text-sx flex items-center'>
                         <Image src="/svg/phone-ring.svg" alt='' className='' width={20} height={20} />
                         <a href={`${footerRes?.MobileNumber?.Href || "#"}`} target='_blank'>
                             {footerRes?.MobileNumber?.Label}
                         </a>
-                    </button>
+                    </button> */}
                 </div>
                 {/* resources nav  */}
                 <div>
@@ -80,7 +80,7 @@ const Nav = async ({t}) => {
                             <Link href={footerRes?.Linkedin || `#`} aria-label={"linkedin"}><FaLinkedinIn /></Link>
                         </li>
                     </ul>
-                    <p className='text-white/70 mt-[25px]'>© 2023 Codcupon</p>
+                    <p className='text-white/70 mt-[25px]'>© 2025 Codcupon</p>
                 </div>
             </div>
         </>
