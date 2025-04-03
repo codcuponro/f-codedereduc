@@ -187,7 +187,7 @@ async function getAllCategories() {
     }
   })
   const categories = await Request(`/categories?${params}`);
-  return categories?.data
+  return categories?.data?.sort((a, b) => a.Name.localeCompare(b.Name));
 }
 
 
@@ -230,6 +230,14 @@ async function getAboutPage() {
     populate: '*',
   });
   const pageResponse = await Request(`/about-page?${params}`);
+  return pageResponse?.data
+}
+
+async function getContactPage() {
+  const params = qs.stringify({
+    populate: '*',
+  });
+  const pageResponse = await Request(`/contact?${params}`);
   return pageResponse?.data
 }
 
@@ -276,5 +284,6 @@ export {
   getCookiePolicy,
   getPrivacyPage,
   getTermAndConditionPage,
-  getPopularSearch
+  getPopularSearch,
+  getContactPage
 }
