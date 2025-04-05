@@ -8,7 +8,14 @@ import TopCategories from "@/templates/home-page/top-categories";
 
 export default async function Home(props) {
   const params = props?.params?.locale
-  
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "codcupon",
+    "url": "https://codcupon.ro/",
+    "logo": "https://www.codcupon.ro/logo.svg",
+    "sameAs": "https://codcupon.ro/contact"
+  }
   const [
     favoritesCoupon,
     exclusiveCoupon,
@@ -28,10 +35,14 @@ export default async function Home(props) {
     <>
       <LandingPageSlider data={exclusiveCoupon} />
       <FavoritesCoupons data={favoritesCoupon} />
-      <FavoriteStores data={favStores?.slice(0,10)} />
-      <CouponsAndDeals data={couponsAndDeals?.slice(0,15)} />
+      <FavoriteStores data={favStores?.slice(0, 10)} />
+      <CouponsAndDeals data={couponsAndDeals?.slice(0, 15)} />
       <TopCategories data={categories} />
       <HowItWorks data={homePage} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </>
   );
 }
