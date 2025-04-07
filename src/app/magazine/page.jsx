@@ -12,6 +12,15 @@ const Store = async (props) => {
     getStores(params),
   ]);
 
+  const itemList = stores?.map((item,idx) => {
+    return {
+      "@type": "ListItem",
+      "position": idx+1,
+      "name": item?.Name || "",
+      "item": `https://codcupon.ro/magazine/${item?.Slug}`
+    }
+  })
+
   const jsonLd = [
     {
       "@context": "https://schema.org",
@@ -23,21 +32,8 @@ const Store = async (props) => {
     },
     {
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://codcupon.ro/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "magazine",
-          "item": "https://codcupon.ro/magazine"
-        }
-      ]
+      "@type": "Event",
+      "itemListElement": JSON.stringify(itemList)
     },
   ]
 
