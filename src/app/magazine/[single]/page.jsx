@@ -127,8 +127,20 @@ const Store = async ({ params }) => {
         "@type": "Organization",
         "name": "codcupon",
         "url": "https://codcupon.ro"
+      },
+      "performer": {
+        "@type": "Organization",
+        "name": "Top Romanian Stores"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://codcupon.ro/black-friday",
+        "price": "0",
+        "priceCurrency": "RON",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2025-11-29T09:00"
       }
-    },
+    },    
     {
       "@context": "https://schema.org",
       "@type": "Product",
