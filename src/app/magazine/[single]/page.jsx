@@ -109,6 +109,28 @@ const Store = async ({ params }) => {
     },
     {
       "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Black Friday Deals",
+      "startDate": "2025-11-29T09:00",
+      "endDate": "2025-11-30T23:59",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "VirtualLocation",
+        "url": "https://codcupon.ro/black-friday"
+      },
+      "image": [
+        "https://codcupon.ro/images/black-friday-banner.jpg"
+      ],
+      "description": "Massive discounts from top Romanian stores for Black Friday!",
+      "organizer": {
+        "@type": "Organization",
+        "name": "codcupon",
+        "url": "https://codcupon.ro"
+      }
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "Product",
       "name": singleStore?.Name,
       "description": "Exclusive coupon with discount.",
@@ -118,6 +140,7 @@ const Store = async ({ params }) => {
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": singleStore?.Rating || 5,
+        "reviewCount" : 187
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -270,25 +293,3 @@ export default Store
 
 
 
-// {
-//   "@context": "https://schema.org",
-//   "@type": "Event",
-//   "name": "Black Friday Deals",
-//   "startDate": "2025-11-29T09:00",
-//   "endDate": "2025-11-30T23:59",
-//   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-//   "eventStatus": "https://schema.org/EventScheduled",
-//   "location": {
-//     "@type": "VirtualLocation",
-//     "url": "https://codcupon.ro/black-friday"
-//   },
-//   "image": [
-//     "https://codcupon.ro/images/black-friday-banner.jpg"
-//   ],
-//   "description": "Massive discounts from top Romanian stores for Black Friday!",
-//   "organizer": {
-//     "@type": "Organization",
-//     "name": "codcupon",
-//     "url": "https://codcupon.ro"
-//   }
-// },
