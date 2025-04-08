@@ -117,7 +117,7 @@ const Store = async ({ params }) => {
       "eventStatus": "https://schema.org/EventScheduled",
       "location": {
         "@type": "VirtualLocation",
-        "url": "https://codcupon.ro/black-friday"
+        "url": "https://codcupon.ro/"
       },
       "image": [
         "https://codcupon.ro/images/black-friday-banner.jpg"
