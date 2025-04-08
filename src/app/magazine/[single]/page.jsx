@@ -91,14 +91,6 @@ const Store = async ({ params }) => {
   const jsonLd = [
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "codcupon",
-      "url": "https://codcupon.ro/",
-      "logo": "https://www.codcupon.ro/logo.svg",
-      "sameAs": "https://codcupon.ro/contact"
-    },
-    {
-      "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
         {
@@ -117,47 +109,24 @@ const Store = async ({ params }) => {
     },
     {
       "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "Black Friday Deals",
-      "startDate": "2025-11-29T09:00",
-      "endDate": "2025-11-30T23:59",
-      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "location": {
-        "@type": "VirtualLocation",
-        "url": "https://codcupon.ro/black-friday"
-      },
-      "image": [
-        "https://codcupon.ro/images/black-friday-banner.jpg"
-      ],
-      "description": "Massive discounts from top Romanian stores for Black Friday!",
-      "organizer": {
-        "@type": "Organization",
-        "name": "codcupon",
-        "url": "https://codcupon.ro"
-      }
-    },
-    {
-      "@context": "https://schema.org",
       "@type": "Product",
-      "name": "Coupon",
+      "name": singleStore?.Name,
       "description": "Exclusive coupon with discount.",
       "brand": {
         "@type": "Organization",
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "157"
+        "ratingValue": singleStore?.Rating || 5,
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Coupons and Offers",
         "itemListElement": singleStore?.coupons_and_deals?.map(coupon => ({
           "@type": "Offer",
-          "name": 'https://www.codcupon.ro/magazine/' + coupon.Title,
+          "name": singleStore?.Name,
           "description": coupon.Title,
-          "url": coupon.Slug,
+          "url": 'https://www.codcupon.ro/magazine/' + singleStore?.Name,
           "priceCurrency": "RON",
           "price": "0",
           "availability": "https://schema.org/InStock",
@@ -297,3 +266,29 @@ const Store = async ({ params }) => {
 }
 
 export default Store
+
+
+
+
+// {
+//   "@context": "https://schema.org",
+//   "@type": "Event",
+//   "name": "Black Friday Deals",
+//   "startDate": "2025-11-29T09:00",
+//   "endDate": "2025-11-30T23:59",
+//   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+//   "eventStatus": "https://schema.org/EventScheduled",
+//   "location": {
+//     "@type": "VirtualLocation",
+//     "url": "https://codcupon.ro/black-friday"
+//   },
+//   "image": [
+//     "https://codcupon.ro/images/black-friday-banner.jpg"
+//   ],
+//   "description": "Massive discounts from top Romanian stores for Black Friday!",
+//   "organizer": {
+//     "@type": "Organization",
+//     "name": "codcupon",
+//     "url": "https://codcupon.ro"
+//   }
+// },
