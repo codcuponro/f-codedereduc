@@ -111,8 +111,8 @@ const Store = async ({ params }) => {
       "@context": "https://schema.org",
       "@type": "Event",
       "name": "Black Friday Deals",
-      "startDate": "2025-11-29T09:00",
-      "endDate": "2025-11-30T23:59",
+      "startDate": "2025-11-29T09:00:00+02:00",
+      "endDate": "2025-11-30T23:59:00+02:00",
       "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
       "eventStatus": "https://schema.org/EventScheduled",
       "location": {
