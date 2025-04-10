@@ -124,10 +124,6 @@ const Store = async ({ params }) => {
       }
     } 
   })
-  
-  if (events?.length) {
-    jsonLd.push(...events);
-  }
 
   const jsonLd = [
     {
@@ -189,6 +185,10 @@ const Store = async ({ params }) => {
       }))
     }
   ]
+
+  if (events?.length) {
+    jsonLd.push(...events);
+  }
 
   return (
     <>
