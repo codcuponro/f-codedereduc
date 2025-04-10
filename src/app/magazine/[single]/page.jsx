@@ -89,7 +89,6 @@ const Store = async ({ params }) => {
   ]
 
   const events = activeCoupon?.map((item) => {
-    console.log("🚀 ~ Store ~ jsonLd:", jsonLd)
     return {
       "@context": "https://schema.org",
       "@type": "Event",
