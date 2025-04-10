@@ -88,6 +88,48 @@ const Store = async ({ params }) => {
     },
   ]
 
+  const events = activeCoupon?.map((item) => {
+    console.log("🚀 ~ Store ~ jsonLd:", jsonLd)
+    return {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": item?.Title,
+      "startDate": "2025-11-29T09:00:00+02:00",
+      "endDate": "2025-11-30T23:59:00+02:00",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "VirtualLocation",
+        "url": "https://codcupon.ro/"
+      },
+      "image": [
+        "https://codcupon.ro/images/black-friday-banner.jpg"
+      ],
+      "description": item?.Title,
+      "organizer": {
+        "@type": "Organization",
+        "name": "codcupon",
+        "url": "https://codcupon.ro"
+      },
+      "performer": {
+        "@type": "Organization",
+        "name": "Top Romanian Stores"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://codcupon.ro/magazine",
+        "price": "0",
+        "priceCurrency": "RON",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2025-11-29T09:00"
+      }
+    } 
+  })
+  
+  if (events?.length) {
+    jsonLd.push(...events);
+  }
+
   const jsonLd = [
     {
       "@context": "https://schema.org",
@@ -109,108 +151,6 @@ const Store = async ({ params }) => {
     },
     {
       "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "Cod reducere Cupio 2+1 GRATIS, obtineti al treilea produs CADOU",
-      "startDate": "2025-11-29T09:00:00+02:00",
-      "endDate": "2025-11-30T23:59:00+02:00",
-      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "location": {
-        "@type": "VirtualLocation",
-        "url": "https://codcupon.ro/"
-      },
-      "image": [
-        "https://codcupon.ro/images/black-friday-banner.jpg"
-      ],
-      "description": "Massive discounts from top Romanian stores for Black Friday!",
-      "organizer": {
-        "@type": "Organization",
-        "name": "codcupon",
-        "url": "https://codcupon.ro"
-      },
-      "performer": {
-        "@type": "Organization",
-        "name": "Top Romanian Stores"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://codcupon.ro/magazine",
-        "price": "0",
-        "priceCurrency": "RON",
-        "availability": "https://schema.org/InStock",
-        "validFrom": "2025-11-29T09:00"
-      }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "Cod reducere Cupio -7% la toate produsele fara discount",
-      "startDate": "2025-11-29T09:00:00+02:00",
-      "endDate": "2025-11-30T23:59:00+02:00",
-      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "location": {
-        "@type": "VirtualLocation",
-        "url": "https://codcupon.ro/"
-      },
-      "image": [
-        "https://codcupon.ro/images/black-friday-banner.jpg"
-      ],
-      "description": "Massive discounts from top Romanian stores for Black Friday!",
-      "organizer": {
-        "@type": "Organization",
-        "name": "codcupon",
-        "url": "https://codcupon.ro"
-      },
-      "performer": {
-        "@type": "Organization",
-        "name": "Top Romanian Stores"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://codcupon.ro/magazine",
-        "price": "0",
-        "priceCurrency": "RON",
-        "availability": "https://schema.org/InStock",
-        "validFrom": "2025-11-29T09:00"
-      }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "Livrare gratuita Cupio la comenzi de min 79 lei",
-      "startDate": "2025-11-29T09:00:00+02:00",
-      "endDate": "2025-11-30T23:59:00+02:00",
-      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "location": {
-        "@type": "VirtualLocation",
-        "url": "https://codcupon.ro/"
-      },
-      "image": [
-        "https://codcupon.ro/images/black-friday-banner.jpg"
-      ],
-      "description": "Massive discounts from top Romanian stores for Black Friday!",
-      "organizer": {
-        "@type": "Organization",
-        "name": "codcupon",
-        "url": "https://codcupon.ro"
-      },
-      "performer": {
-        "@type": "Organization",
-        "name": "Top Romanian Stores"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://codcupon.ro/magazine",
-        "price": "0",
-        "priceCurrency": "RON",
-        "availability": "https://schema.org/InStock",
-        "validFrom": "2025-11-29T09:00"
-      }
-    },   
-    {
-      "@context": "https://schema.org",
       "@type": "Product",
       "name": singleStore?.Name,
       "description": "Exclusive coupon with discount.",
@@ -220,7 +160,7 @@ const Store = async ({ params }) => {
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": singleStore?.Rating || 5,
-        "reviewCount" : 187
+        "reviewCount": 187
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
