@@ -121,7 +121,7 @@ const Store = async ({ params }) => {
       },
       "offers": {
         "@type": "Offer",
-        "url": `https://codcupon.ro/magazine/${singleStore?.Slug}`,
+        "url": `https://codcupon.ro/${singleStore?.Slug}`,
         "price": "0",
         "priceCurrency": "RON",
         "availability": "https://schema.org/InStock",
