@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
       </div>
       <Nav />
-      <Image src="/images/footer-shap-1.png" alt='' width={160} height={160} className='absolute right-0 top-10' />
+      <Image src="/images/footer-shap-1.png" alt='' width={160} height={160} className='absolute right-0 top-10 hidden md:block' />
       <Image src="/images/footer-shape-2.png" alt='' width={160} height={160} className='absolute left-0 bottom-0 hidden md:block' />
     </footer>
   )
