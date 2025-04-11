@@ -7,10 +7,10 @@ import { FiFacebook } from "react-icons/fi";
 import { TbWorldWww } from "react-icons/tb";
 import { formatDate, getActiveAndDisabledCoupons, getCurrentMonthYear, getSortedData, getUniqueCategories } from '@/utils';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
-import { getAllCategories, getSingleStore } from "../../../services"
-import TOC from "../../../templates/stores/toc"
-import IconImage from "../../../components/icon-image"
-import PopularSearch from "../../../templates/stores/popular-search"
+import { getAllCategories, getSingleStore } from "../../services"
+import TOC from "../../templates/stores/toc"
+import IconImage from "../../components/icon-image"
+import PopularSearch from "../../templates/stores/popular-search"
 
 import CouponList from '@/components/card/coupon-list'
 import CategoryButton from '@/components/card/category-button'

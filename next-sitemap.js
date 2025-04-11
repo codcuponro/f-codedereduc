@@ -94,7 +94,7 @@ async function generateSitemap() {
       </url>
       ${stores?.data?.map((item) => `
         <url>
-          <loc>${SITE_URL}/magazine/${item?.Slug}</loc>
+          <loc>${SITE_URL}/${item?.Slug}</loc>
           <lastmod>${item?.updatedAt}</lastmod>
           <priority>0.80</priority>
         </url>

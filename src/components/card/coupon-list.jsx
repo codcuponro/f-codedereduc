@@ -11,7 +11,7 @@ const CouponList = ({ logo, item }) => {
         <div className={`border border-[#DEE2E6] overflow-hidden rounded-lg`}>
             <div className='flex flex-row gap-3 sm:gap-4 sm:justify-center items-center md:gap-[27px]'>
                 {
-                    logo ? <Link href={"/magazine/" + item?.store?.Slug || "#"} target='_blank' className='md:border-r flex justify-center items-start p-4 sm:p-0 sm:items-center'>
+                    logo ? <Link href={"/"+item?.store?.Slug || "#"} target='_blank' className='md:border-r flex justify-center items-start p-4 sm:p-0 sm:items-center'>
                         <Image src={item?.Icon?.url || item?.store?.Icon?.url || "/images/fallback.png"} alt='' width={125} height={125} className='scale-y-105 w-[110px] rounded-lg sm:rounded-none sm:w-[170px] md:w-[125px]' />
                     </Link>
                         : <p className={`font-extrabold min-w-[110px] text-[34px] flex flex-col pl-[30px] py-[26px] leading-8 ${disabled ? 'text-[#505050]' : 'text-primary'}`} >
