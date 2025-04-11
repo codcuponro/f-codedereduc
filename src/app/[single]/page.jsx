@@ -144,7 +144,7 @@ const Store = async ({ params }) => {
         },
         {
           "@type": "ListItem",
-          "position": 2,
+          "position": 3,
           "name": singleStore?.Name,
           "item": `https://codcupon.ro/${singleStore?.Slug}`
         }
