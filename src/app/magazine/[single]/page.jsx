@@ -52,6 +52,7 @@ const Store = async ({ params }) => {
     slug: param,
     locale,
   })
+  console.log("🚀 ~ Store ~ singleStore:", singleStore)
 
   const { activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(singleStore?.coupons_and_deals)
   const sortedCoupon = getSortedData(activeCoupon)
@@ -102,7 +103,7 @@ const Store = async ({ params }) => {
         "url": "https://codcupon.ro/"
       },
       "image": [
-        "https://codcupon.ro/images/black-friday-banner.jpg"
+        "https://www.codcupon.ro/logo.svg"
       ],
       "description": item?.Title,
       "organizer": {
@@ -112,11 +113,11 @@ const Store = async ({ params }) => {
       },
       "performer": {
         "@type": "Organization",
-        "name": "Top Romanian Stores"
+        "name": singleStore?.Name
       },
       "offers": {
         "@type": "Offer",
-        "url": "https://codcupon.ro/magazine",
+        "url": `https://codcupon.ro/magazine/${singleStore?.Slug}`,
         "price": "0",
         "priceCurrency": "RON",
         "availability": "https://schema.org/InStock",
@@ -148,7 +149,7 @@ const Store = async ({ params }) => {
       "@context": "https://schema.org",
       "@type": "Product",
       "name": singleStore?.Name,
-      "description": "Exclusive coupon with discount.",
+      "description": singleStore?.Excerpt || "Exclusive coupon with discount.",
       "brand": {
         "@type": "Organization",
       },
@@ -164,7 +165,7 @@ const Store = async ({ params }) => {
           "@type": "Offer",
           "name": singleStore?.Name,
           "description": coupon.Title,
-          "url": 'https://www.codcupon.ro/magazine/' + singleStore?.Name,
+          "url": `https://www.codcupon.ro/magazine/${singleStore?.Slug}`,
           "priceCurrency": "RON",
           "price": "0",
           "availability": "https://schema.org/InStock",
@@ -189,6 +190,7 @@ const Store = async ({ params }) => {
   if (events?.length) {
     jsonLd.push(...events);
   }
+    console.log("🚀 ~ Store ~ jsonLd:", jsonLd)
 
   return (
     <>
