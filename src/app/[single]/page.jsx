@@ -17,6 +17,7 @@ import CategoryButton from '@/components/card/category-button'
 import Faqs from '@/components/faqs/faqs'
 import Breadcrumb from '@/components/breadcrumb'
 import Rating from '@/components/rating'
+import { notFound } from 'next/navigation';
 
 export async function generateMetadata({ params }) {
   const param = await params.single
@@ -52,6 +53,10 @@ const Store = async ({ params }) => {
     slug: param,
     locale,
   })
+
+  if (!singleStore) {
+    notFound();
+  }
 
   const { activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(singleStore?.coupons_and_deals)
   const sortedCoupon = getSortedData(activeCoupon)
