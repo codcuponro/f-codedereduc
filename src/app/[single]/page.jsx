@@ -159,7 +159,7 @@ const Store = async ({ params }) => {
       "@context": "https://schema.org",
       "@type": "Product",
       "name": singleStore?.Name,
-      "description": singleStore?.Excerpt || "Exclusive coupon with discount.",
+      "description": singleStore?.Excerpt,
       "brand": {
         "@type": "Organization",
       },
