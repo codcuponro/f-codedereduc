@@ -141,6 +141,12 @@ const Store = async ({ params }) => {
           "position": 2,
           "name": "magazine",
           "item": "https://codcupon.ro/magazine"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": singleStore?.Name,
+          "item": `https://codcupon.ro/${singleStore?.Slug}`
         }
       ]
     },
