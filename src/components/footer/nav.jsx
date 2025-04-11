@@ -10,7 +10,7 @@ const Nav = async ({t}) => {
     
     return (
         <>
-            <div className='container mx-auto px-4 lg:px-0 grid gap-8 grid-cols-2 md:grid-cols-5 lg:grid-cols-6'>
+            <div className='container mx-auto z-[10] relative px-4 lg:px-0 grid gap-8 grid-cols-2 md:grid-cols-5 lg:grid-cols-6'>
                 <div className='lg:col-span-2 gap-14 col-span-2 md:col-span-auto'>
                     <Link href="/">
                         <Image src="/logo.svg" alt='logo' width={160} height={40} className='w-[160px]' />
