@@ -52,7 +52,6 @@ const Store = async ({ params }) => {
     slug: param,
     locale,
   })
-  console.log("🚀 ~ Store ~ singleStore:", singleStore)
 
   const { activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(singleStore?.coupons_and_deals)
   const sortedCoupon = getSortedData(activeCoupon)
@@ -103,7 +102,7 @@ const Store = async ({ params }) => {
         "url": "https://codcupon.ro/"
       },
       "image": [
-        "https://www.codcupon.ro/logo.svg"
+        singleStore?.Icon?.url
       ],
       "description": item?.Title,
       "organizer": {
@@ -190,7 +189,6 @@ const Store = async ({ params }) => {
   if (events?.length) {
     jsonLd.push(...events);
   }
-    console.log("🚀 ~ Store ~ jsonLd:", jsonLd)
 
   return (
     <>
