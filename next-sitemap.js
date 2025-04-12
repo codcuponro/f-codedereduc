@@ -63,12 +63,12 @@ async function generateSitemap() {
           <priority>1.00</priority>
       </url>
       <url>
-          <loc>${SITE_URL}/politica-fisierele-cookies</loc>
+          <loc>${SITE_URL}/fisiere-cookies</loc>
           <lastmod>${getFormattedDateTime()}</lastmod>
           <priority>1.00</priority>
       </url>
       <url>
-          <loc>${SITE_URL}/confindentialiate</loc>
+          <loc>${SITE_URL}/politica-confidentialitate</loc>
           <lastmod>${getFormattedDateTime()}</lastmod>
           <priority>1.00</priority>
       </url>
@@ -84,6 +84,11 @@ async function generateSitemap() {
       </url>
       <url>
           <loc>${SITE_URL}/magazine</loc>
+          <lastmod>${getFormattedDateTime()}</lastmod>
+          <priority>1.00</priority>
+      </url>
+      <url>
+          <loc>${SITE_URL}/contact</loc>
           <lastmod>${getFormattedDateTime()}</lastmod>
           <priority>1.00</priority>
       </url>

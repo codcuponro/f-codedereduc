@@ -39,7 +39,7 @@ export async function generateMetadata({ params }) {
       ],
     },
     alternates: {
-      canonical: `https://www.codcupon.ro/magazine/${param}`,
+      canonical: `https://www.codcupon.ro/${param}`,
     },
   }
 }
