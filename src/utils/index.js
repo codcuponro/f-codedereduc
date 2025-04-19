@@ -1,6 +1,6 @@
 export const removeProtocol = (url) => {
     if (!url) return "#";
-    const u = url.replace(/^(https?:\/\/)/, '');    
+    const u = url.replace(/^(https?:\/\/)/, '');
     return u.charAt(0).toUpperCase() + u.slice(1);
 };
 
@@ -38,8 +38,8 @@ export function getSortedData(data, order = 'desc') {
     }
 
     const sortedData = data.sort((a, b) => {
-        return order === 'asc' 
-            ? new Date(a.createdAt) - new Date(b.createdAt) 
+        return order === 'asc'
+            ? new Date(a.createdAt) - new Date(b.createdAt)
             : new Date(b.createdAt) - new Date(a.createdAt);
     });
 
@@ -67,23 +67,32 @@ const getDaySuffix = (day) => {
 };
 
 
-export async function getActiveAndDisabledCoupons(coupons) {  
+export async function getActiveAndDisabledCoupons(coupons) {
     const { activeCoupon, disableCoupon } = coupons?.reduce(
-      (acc, item) => {
-        const isExpired = item.ExpireDate < new Date().toISOString().split('T')[0];
-        isExpired ? acc.disableCoupon.push(item) : acc.activeCoupon.push(item);
-        return acc;
-      },
-      { activeCoupon: [], disableCoupon: [] }
+        (acc, item) => {
+            const isExpired = item.ExpireDate < new Date().toISOString().split('T')[0];
+            isExpired ? acc.disableCoupon.push(item) : acc.activeCoupon.push(item);
+            return acc;
+        },
+        { activeCoupon: [], disableCoupon: [] }
     );
-  
+
     return { activeCoupon, disableCoupon };
-  }
+}
 
 
-  export const removeQueryParams = () => {
+export const removeQueryParams = () => {
     const url = new URL(window.location);
     url.search = ""; // Clears all query parameters
     window.history.replaceState({}, document.title, url);
-  }
+}
 
+
+export const shuffleArray = (array) => {
+    const shuffled = [...array]; // Create a copy to avoid mutating the original
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]; // Swap
+    }
+    return shuffled;
+};

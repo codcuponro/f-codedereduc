@@ -5,6 +5,7 @@ import FavoritesCoupons from "@/templates/home-page/favorites-coupons";
 import FavoriteStores from "@/templates/home-page/favorites-stores";
 import HowItWorks from "@/templates/home-page/how-it-works";
 import TopCategories from "@/templates/home-page/top-categories";
+import { shuffleArray } from "@/utils";
 
 export default async function Home(props) {
   const params = props?.params?.locale
@@ -31,9 +32,12 @@ export default async function Home(props) {
       getHomPage(params)
     ]);
 
+    
+    const shuffledCoupons = shuffleArray(exclusiveCoupon);
+
   return (
     <>
-      <LandingPageSlider data={exclusiveCoupon} />
+      <LandingPageSlider data={shuffledCoupons} />
       <FavoritesCoupons data={favoritesCoupon} />
       <FavoriteStores data={favStores?.slice(0, 10)} />
       <CouponsAndDeals data={couponsAndDeals?.slice(0, 15)} />

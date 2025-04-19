@@ -127,7 +127,7 @@ const Store = async ({ params }) => {
         "availability": "https://schema.org/InStock",
         "validFrom": "2025-11-29T09:00"
       }
-    } 
+    }
   })
 
   const jsonLd = [
@@ -271,36 +271,52 @@ const Store = async ({ params }) => {
               <div className='mt-[30px]'>
                 <h3 className='text-xl text-dark font-semibold mb-5 '>Contact</h3>
                 <ul>
-                  <li className='text-sm !flex gap-1'>
-                    <i>
-                      <LuMapPin className='w-4' />
-                    </i>
-                    <address className='-mt-1'>{singleStore?.Social?.Address}</address>
-                  </li>
-                  <li className='text-sm !flex gap-1 mt-2'>
-                    <i>
-                      <AiOutlinePhone className='w-4' />
-                    </i>
-                    <span className='-mt-[3px]'>Telefon: <a href={`tel:${singleStore?.Social?.Telephone}`} target='_blank' className='underline'>{singleStore?.Social?.Telephone}</a></span>
-                  </li>
-                  <li className='text-sm !flex gap-1 mt-2'>
-                    <i>
-                      <FaRegEnvelope className='w-4' />
-                    </i>
-                    <span className='-mt-[3px]'>Email: <a href={`mailto:${singleStore?.Social?.Website}`} target='_blank' className='underline'>{singleStore?.Social?.Email}</a></span>
-                  </li>
-                  <li className='text-sm !flex gap-1 mt-2'>
-                    <i>
-                      <TbWorldWww className='w-4' />
-                    </i>
-                    <span className='-mt-[3px]'>Website: <a href={`https://${singleStore?.Social?.Website}`} target='_blank' className='underline'>{singleStore?.Social?.Website}</a></span>
-                  </li>
-                  <li className='text-sm !flex gap-1 mt-2'>
-                    <i>
-                      <FiFacebook className='w-4' />
-                    </i>
-                    <span className='-mt-[3px]'>Facebook: <a href={`https://facebook.com${singleStore?.Social?.Facebook}`} target='_blank' className='underline'>{singleStore?.Social?.Facebook}</a></span>
-                  </li>
+                  {
+                    singleStore?.Social?.Address &&
+                    <li className='text-sm !flex gap-1'>
+                      <i>
+                        <LuMapPin className='w-4' />
+                      </i>
+                      <address className='-mt-1'>{singleStore?.Social?.Address}</address>
+                    </li>
+                  }
+
+                  {
+                    singleStore?.Social?.Telephone &&
+                    <li className='text-sm !flex gap-1 mt-2'>
+                      <i>
+                        <AiOutlinePhone className='w-4' />
+                      </i>
+                      <span className='-mt-[3px]'>Telefon: <a href={`tel:${singleStore?.Social?.Telephone}`} target='_blank' className='underline'>{singleStore?.Social?.Telephone}</a></span>
+                    </li>
+                  }
+                  {
+                    singleStore?.Social?.Email &&
+                    <li className='text-sm !flex gap-1 mt-2'>
+                      <i>
+                        <FaRegEnvelope className='w-4' />
+                      </i>
+                      <span className='-mt-[3px]'>Email: <a href={`mailto:${singleStore?.Social?.Email}`} target='_blank' className='underline'>{singleStore?.Social?.Email}</a></span>
+                    </li>
+                  }
+                  {
+                    singleStore?.Social?.Website &&
+                    <li className='text-sm !flex gap-1 mt-2'>
+                      <i>
+                        <TbWorldWww className='w-4' />
+                      </i>
+                      <span className='-mt-[3px]'>Website: <a href={`https://${singleStore?.Social?.Website}`} target='_blank' className='underline'>{singleStore?.Social?.Website}</a></span>
+                    </li>
+                  }
+                  {
+                    singleStore?.Social?.Facebook &&
+                    <li className='text-sm !flex gap-1 mt-2'>
+                      <i>
+                        <FiFacebook className='w-4' />
+                      </i>
+                      <span className='-mt-[3px]'>Facebook: <a href={`https://facebook.com${singleStore?.Social?.Facebook}`} target='_blank' className='underline'>{singleStore?.Social?.Facebook}</a></span>
+                    </li>
+                  }
                 </ul>
               </div>
               <PopularSearch />

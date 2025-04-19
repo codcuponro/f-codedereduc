@@ -57,7 +57,14 @@ async function getCategories() {
     }
   })
   const categories = await Request(`/categories?${cparams}`);
-  return categories?.data
+  // Sort alphabetically by 'name' (or use the correct key like 'title')
+  const sorted = categories?.data?.sort((a, b) => {
+    const nameA = a.Name.toLowerCase();
+    const nameB = b.Name.toLowerCase();
+    return nameA.localeCompare(nameB);
+  });
+
+  return sorted;
 }
 
 
@@ -105,7 +112,7 @@ async function getExclusiveCoupon() {
       }
     },
     pagination: {
-      limit: 6
+      limit: 20
     }
   })
   const exParamsCoupon = await Request(`/coupons-and-deals?${exparams}`);

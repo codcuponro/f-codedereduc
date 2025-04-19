@@ -6,6 +6,8 @@ import { usePathname } from 'next/navigation';
 
 const CouponButton = (props) => {
     const { label, title, disabled, data } = props
+    const completeURL = data?.CouponUrl?.length > 6 ? data?.CouponUrl : data?.store?.AffiliateLink
+
     const { openModal, ModalComponent } = useModal();
     const path = usePathname()
 
@@ -15,7 +17,7 @@ const CouponButton = (props) => {
 
     const handleRoute = () => {
         // const providerURL = data.CouponUrl || data?.store?.AffiliateLink;
-        const completeURL = data?.store?.AffiliateLink || "#"
+        // const completeURL = data?.store?.AffiliateLink || "#"
         if (!label) {
             window.open(completeURL || "#", "_blank");
         } else {
