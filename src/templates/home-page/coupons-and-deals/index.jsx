@@ -17,7 +17,7 @@ const {activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(data)
         className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-5'
       >
         {
-          activeCoupon?.map((item, idx) => (
+          activeCoupon?.slice(0, 15)?.map((item, idx) => (
             <CouponCard key={idx} data={item} />
           ))
         }

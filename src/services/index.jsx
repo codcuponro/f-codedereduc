@@ -74,7 +74,7 @@ async function getCouponAndDeals() {
       'Icon', "categories.Icon", "store.Icon", "store.Social"
     ],
     pagination: {
-      limit: 15
+      limit: 100
     },
     sort: ["createdAt:desc"] 
   })
@@ -93,7 +93,7 @@ async function getFavoritesCoupon() {
       }
     },
     pagination: {
-      limit: 10
+      limit: 20
     },
     sort: ["createdAt:desc"] 
   })

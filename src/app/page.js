@@ -34,13 +34,14 @@ export default async function Home(props) {
 
     
     const shuffledCoupons = shuffleArray(exclusiveCoupon);
+    console.log("🚀 ~ Home ~ couponsAndDeals:", couponsAndDeals.length)
 
   return (
     <>
       <LandingPageSlider data={shuffledCoupons} />
       <FavoritesCoupons data={favoritesCoupon} />
       <FavoriteStores data={favStores?.slice(0, 10)} />
-      <CouponsAndDeals data={couponsAndDeals?.slice(0, 15)} />
+      <CouponsAndDeals data={couponsAndDeals} />
       <TopCategories data={categories} />
       <HowItWorks data={homePage} />
       <script
