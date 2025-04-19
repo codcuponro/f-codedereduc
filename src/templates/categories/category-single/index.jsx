@@ -8,6 +8,7 @@ import { Pagination } from "@mui/material";
 import Image from "next/image";
 
 const CategorySingleTemp = ({ params, data, categories, coupons }) => {
+    console.log("🚀 ~ CategorySingleTemp ~ data:", data)
     const [hoveredIdx, setHoveredIdx] = useState(null);
     const [page, setPage] = useState(1);
     const itemsPerPage = 10;
@@ -34,7 +35,7 @@ const CategorySingleTemp = ({ params, data, categories, coupons }) => {
             <div className="flex flex-col sm:flex-row items-start gap-8">
                 <div className="max-w-[634px]">
                     <h2 className="text-dark font-semibold leading-9 mb-[10px] text-[28px]">
-                        {categoryTitle}
+                        {data?.Name}
                     </h2>
                     <p className='font-medium'>{data?.Excerpt}</p>
                 </div>
