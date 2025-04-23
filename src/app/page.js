@@ -34,7 +34,6 @@ export default async function Home(props) {
 
     
     const shuffledCoupons = shuffleArray(exclusiveCoupon);
-    console.log("🚀 ~ Home ~ couponsAndDeals:", couponsAndDeals.length)
 
   return (
     <>
