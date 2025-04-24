@@ -30,7 +30,6 @@ export async function generateMetadata({ params }) {
   }
 }
 
-
 const Store = async ({ params }) => {
   const param = await params.single
   const locale = await params.locale
@@ -40,15 +39,15 @@ const Store = async ({ params }) => {
     locale,
   })
 
-  const { category } = await getSingleCategory({ slug: param, locale })
+  // const { category } = await getSingleCategory({ slug: param, locale })
 
   if (singleStore) {
     return <CouponSingle singleStore={singleStore} param={param}/>
   }
 
-  if (category){
-    return <SingleCategoryTemp category={category} params={param}/>
-  }
+  // if (category){
+  //   return <SingleCategoryTemp category={category} params={param}/>
+  // }
 
   if (!singleStore) {
     notFound();
