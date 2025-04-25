@@ -3,6 +3,12 @@ import { getActiveAndDisabledCoupons, getUniqueCategories } from '@/utils';
 import { getFavorites50Coupon } from '@/services';
 import Top50Coupons from "@/templates/top-50-coupons"
 
+export const metadata = {
+  alternates: {
+    canonical: `https://www.codcupon.ro/top-coduri-reducere`,
+  }
+}
+
 const Top50CouponsAndDeals = async (props) => {
   const params = props?.params?.locale
   const favoritesCoupon = await getFavorites50Coupon(params);

@@ -2,6 +2,13 @@ import StoresTemp from '@/templates/stores'
 import React from 'react'
 import { getAllStore, getStores } from "../../services"
 
+export const metadata = {
+  alternates: {
+    canonical: `https://www.codcupon.ro/magazine`,
+  }
+}
+
+
 const Store = async (props) => {
   const params = props?.params?.locale
   const [

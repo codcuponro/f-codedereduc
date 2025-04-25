@@ -2,6 +2,12 @@ import CategoriesTemp from '@/templates/categories'
 import React from 'react'
 import {getAllCategories} from "../../services"
 
+export const metadata = {
+  alternates: {
+    canonical: `https://www.codcupon.ro/categorii`,
+  }
+}
+
 const Categories = async (props) => {
   const params = props?.params?.locale
   const categoriesData = await getAllCategories(params)
