@@ -1,7 +1,7 @@
 const fs = require("fs");
 const qs = require("qs")
 
-const SITE_URL = "https://codcupon.ro";
+const SITE_URL = "https://www.codcupon.ro";
 const Request = async (endpoint, options = {}) => {
     const url = `https://king-prawn-app-tflmf.ondigitalocean.app/api${endpoint}`;
     try {
