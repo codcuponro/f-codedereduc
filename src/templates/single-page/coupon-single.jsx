@@ -19,6 +19,7 @@ import Rating from '@/components/rating'
 
 
 const CouponSingle = async ({singleStore, param}) => {
+
     const { activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(singleStore?.coupons_and_deals)
     const sortedCoupon = getSortedData(activeCoupon)
     const categories = getUniqueCategories(singleStore?.coupons_and_deals)
@@ -176,7 +177,7 @@ const CouponSingle = async ({singleStore, param}) => {
               {/* <p>{singleStore?.Excerpt}</p> */}
               <p className='mt-[10px] font-medium'>Aici gasesti cele mai noi coduri de reducere {singleStore?.Name}, Vouchere si oferte alese cu grija si verificate de echipa CodCupon.</p>
               <Rating totalRating={singleStore?.Rating} />
-              <p className='text-xs font-medium mt-2.5'>Ultima actualizare de <Link href="/despre-noi" className='underline'>{singleStore?.author?.Name}</Link> la <span className='capitalize'>{formatDate(singleStore?.updatedAt)}</span></p>
+              <p className='text-xs font-medium mt-2.5'>Ultima actualizare de <Link href="/despre-noi" className='underline'>{singleStore?.author?.Name}</Link> la <span className='capitalize'>{formatDate(singleStore?.createdAt)}</span></p>
             </div>
           </div>
 
