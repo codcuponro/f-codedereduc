@@ -15,7 +15,7 @@ export default async function Home(props) {
     "name": "codcupon",
     "url": "https://codcupon.ro/",
     "logo": "https://www.codcupon.ro/logo.svg",
-    "sameAs": "https://codcupon.ro/contact"
+    "sameAs": "https://codcupon.ro/Contact"
   }
   const [
     favoritesCoupon,

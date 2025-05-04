@@ -244,7 +244,7 @@ async function getContactPage() {
   const params = qs.stringify({
     populate: '*',
   });
-  const pageResponse = await Request(`/contact?${params}`);
+  const pageResponse = await Request(`/Contact?${params}`);
   return pageResponse?.data
 }
 

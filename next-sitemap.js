@@ -78,7 +78,7 @@ async function generateSitemap() {
           <priority>1.00</priority>
       </url>
       <url>
-          <loc>${SITE_URL}/categorii</loc>
+          <loc>${SITE_URL}/Catégories</loc>
           <lastmod>${getFormattedDateTime()}</lastmod>
           <priority>1.00</priority>
       </url>
@@ -88,7 +88,7 @@ async function generateSitemap() {
           <priority>1.00</priority>
       </url>
       <url>
-          <loc>${SITE_URL}/contact</loc>
+          <loc>${SITE_URL}/Contact</loc>
           <lastmod>${getFormattedDateTime()}</lastmod>
           <priority>1.00</priority>
       </url>
@@ -106,7 +106,7 @@ async function generateSitemap() {
       `).join("")}
       ${categories?.data?.map((item) => `
         <url>
-          <loc>${SITE_URL}/categorii/${item?.Slug}</loc>
+          <loc>${SITE_URL}/Catégories/${item?.Slug}</loc>
           <lastmod>${item?.updatedAt}</lastmod>
           <priority>0.80</priority>
         </url>

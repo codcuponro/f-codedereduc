@@ -13,8 +13,8 @@ export async function generateMetadata({ params }) {
     .join(' ');
 
   return {
-    title: `Cod reducere ${name}, Vouchere si Oferte ${getCurrentMonthYear()} - CodCupon.ro`,
-    description: `Aici gasesti cele mai noi coduri de reducere ${name}, Vouchere si oferte alese cu grija si verificate de echipa CodCupon`,
+    title: `Code promo ${name}, Vouchere si Oferte ${getCurrentMonthYear()} - CodCupon.ro`,
+    description: `Ici, vous trouverez les tout derniers codes de réduction ${name}, vouchers et offres soigneusement sélectionnés et vérifiés par l’équipe CodedeReduc.`,
     openGraph: {
       images: [
         {

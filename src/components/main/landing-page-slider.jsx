@@ -36,7 +36,7 @@ const LandingPageSlider = ({ data }) => {
                                     </div>
                                     <div>
                                         <Link href={item?.store?.Slug || "#"} className='font-bold text-[#111928] text-sm mb-1' aria-label={item?.store?.Name}>
-                                            <p>{item?.CouponsType === "Promotion" ? "Promotie" : "Cod reducere"}{" "}{item?.store?.Name}</p>
+                                            <p>{item?.CouponsType === "Promotion" ? "Promotion" : "Code promo"}{" "}{item?.store?.Name}</p>
                                         </Link>
                                         <p className='text-[#111928] font-medium sm:text-xl lg:text-2xl line-clamp-2' aria-label={item?.Title}>
                                             <Link href={item?.store?.Slug || "#"}>{item?.Title}</Link>

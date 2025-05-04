@@ -24,12 +24,12 @@ const Faqs = ({name, coupon, allCoupon}) => {
 
     const faqsList = [
         {
-            question:  `Cate vouchere si oferte sunt disponibile pentru ${name}?`,
+            question:  `Combien de bons et d’offres sont disponibles pour ${name}?`,
             answer: `In acest moment, sunt active ${coupon?.length} vouchere si oferte pe care le puteti folosi pe site-ul celor de la ${name}.`
         },
         {
             question: `Cum folosesc codul de reducere ${name}?`,
-            answer: `Pentru a folosi codul de reducere ${name}, adauga produsele dorite in cos, apoi apasa pe cosul de cumparaturi sau butonul de checkout. Copiaza codul de reducere din aceasta pagina si adauga-l in campul Cod promotional si apasa pe butonul Aplica.`
+            answer: `Pentru a folosi codul de reducere ${name}, adauga produsele dorite in cos, apoi apasa pe cosul de cumparaturi sau butonul de checkout. Copiez le code de reducere din aceasta pagina si adauga-l in campul Cod promotional si apasa pe butonul Aplica.`
         },
         {
             question: `De ce codul de reducere ${name} nu functioneaza?`,
@@ -37,7 +37,7 @@ const Faqs = ({name, coupon, allCoupon}) => {
         },
         {
             question: `Cand o sa fie ${name} Black Friday ${currentYear}?`,
-            answer:    `In mod obisnuit, ${name} Black Friday are loc in ultima vineri din luna Noiembrie, dar aceasta nu este o regula bine definita, ${name} poate decide sa inceapa Black Friday mai devreme. Aboneaza-te la newsletetter-ul nostru si vei fi primul care va afla cand are loc ${name} Black Friday.`
+            answer:    `In mod obisnuit, ${name} Black Friday are loc in ultima vineri din luna Noiembrie, dar aceasta nu este o regula bine definita, ${name} poate decide sa inceapa Black Friday mai devreme. Abonne-toi la newsletetter-ul nostru si vei fi primul care va afla cand are loc ${name} Black Friday.`
         },
     ]
 
@@ -52,7 +52,7 @@ const Faqs = ({name, coupon, allCoupon}) => {
 
     return (
         <section>
-            <h2 className='text-2xl text-dark font-semibold mb-5'>Intrebari frecvente {name}</h2>
+            <h2 className='text-2xl text-dark font-semibold mb-5'>Foire aux questions {name}</h2>
             <ul className='flex flex-col gap-5'>
                 {
                     faqsList?.map((item, idx) => (

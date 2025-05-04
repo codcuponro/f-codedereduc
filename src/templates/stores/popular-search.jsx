@@ -7,7 +7,7 @@ const PopularSearch = async () => {
     return (
         <>
             <div className='mt-[30px]'>
-                <h3 className='text-xl text-dark font-semibold mb-5 '>Cautari populare</h3>
+                <h3 className='text-xl text-dark font-semibold mb-5 '>Recherches populaires</h3>
                 <nav className='text-sm text-dark flex flex-col gap-1.5'>
                     {
                         data?.PopularSearch?.map((item, idx) => (

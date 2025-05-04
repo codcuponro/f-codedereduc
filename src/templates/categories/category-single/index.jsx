@@ -16,8 +16,8 @@ const CategorySingleTemp = ({ params, data, categories, coupons }) => {
     const categoryTitle = params?.replace(/-/g, " ");
     
     const breadcrumbPath = useMemo(() => [
-        { label: "Categorii", href: "/categorii" },
-        { label: categoryTitle, href: `/categorii/${params}` }
+        { label: "Catégories", href: "/Catégories" },
+        { label: categoryTitle, href: `/Catégories/${params}` }
     ], [params, categoryTitle]);
 
 
@@ -93,10 +93,10 @@ const CategorySingleTemp = ({ params, data, categories, coupons }) => {
 
                 {/* Sidebar */}
                 <aside className="w-[286px]">
-                    <h3 className="text-xl text-dark font-semibold mb-5">Categorii</h3>
+                    <h3 className="text-xl text-dark font-semibold mb-5">Catégories</h3>
                     <div className="flex flex-wrap gap-2.5 mt-2.5">
                         {categories?.map((item, idx) => (
-                            <a key={idx} href={`/categorii/${item?.Slug}`} className="no-underline">
+                            <a key={idx} href={`/Catégories/${item?.Slug}`} className="no-underline">
                                 <button
                                     className={`font-medium flex text-sm sm:text-base group items-center rounded-full px-2.5 py-[3px] gap-1 
                                         ${item?.Slug === params

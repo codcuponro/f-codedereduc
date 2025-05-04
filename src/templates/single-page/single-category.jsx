@@ -11,7 +11,7 @@ const SingleCategoryTemp = async ({category, params}) => {
         "@type": "ListItem",
         "position": idx + 1,
         "name": item?.Name || "",
-        "item": `https://codcupon.ro/categorii/${item?.Slug}`
+        "item": `https://codcupon.ro/Catégories/${item?.Slug}`
       }
     })
 
@@ -22,7 +22,7 @@ const SingleCategoryTemp = async ({category, params}) => {
         "name": "codcupon",
         "url": "https://codcupon.ro/",
         "logo": "https://www.codcupon.ro/logo.svg",
-        "sameAs": "https://codcupon.ro/contact"
+        "sameAs": "https://codcupon.ro/Contact"
       },
       {
         "@context": "https://schema.org",

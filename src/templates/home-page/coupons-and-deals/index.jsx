@@ -9,7 +9,7 @@ const {activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(data)
   return (
     <section className='container mx-auto px-4 lg:px-0'>
       <Title
-        title={`Coduri reducere si oferte noi`}
+        title={`Codes de réduction et nouvelles offres`}
         hideButton
       />
       <div

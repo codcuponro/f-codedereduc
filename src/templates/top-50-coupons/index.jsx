@@ -39,7 +39,7 @@ const Top50Coupons = ({ activeCoupon, categories }) => {
 
                     {/* Sidebar */}
                     <aside className='lg:w-[286px]'>
-                        <h3 className='text-xl text-dark font-semibold mb-5'>Categorii</h3>
+                        <h3 className='text-xl text-dark font-semibold mb-5'>Catégories</h3>
                         <CategoryList categories={categories} />
                         <PopularSearch />
                     </aside>

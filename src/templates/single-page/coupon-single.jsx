@@ -38,12 +38,12 @@ const CouponSingle = async ({singleStore, param}) => {
 
     const faqsList = [
       {
-        question: `Cate vouchere si oferte sunt disponibile pentru ${singleStore?.Name}?`,
+        question: `Combien de bons et d’offres sont disponibles pour ${singleStore?.Name}?`,
         answer: `In acest moment, sunt active ${activeCoupon?.length} vouchere si oferte pe care le puteti folosi pe site-ul celor de la ${singleStore?.Name}.`
       },
       {
         question: `Cum folosesc codul de reducere ${singleStore?.Name}?`,
-        answer: `Pentru a folosi codul de reducere ${singleStore?.Name}, adauga produsele dorite in cos, apoi apasa pe cosul de cumparaturi sau butonul de checkout. Copiaza codul de reducere din aceasta pagina si adauga-l in campul Cod promotional si apasa pe butonul Aplica.`
+        answer: `Pentru a folosi codul de reducere ${singleStore?.Name}, adauga produsele dorite in cos, apoi apasa pe cosul de cumparaturi sau butonul de checkout. Copiez le code de reducere din aceasta pagina si adauga-l in campul Cod promotional si apasa pe butonul Aplica.`
       },
       {
         question: `De ce codul de reducere ${singleStore?.Name} nu functioneaza?`,
@@ -51,7 +51,7 @@ const CouponSingle = async ({singleStore, param}) => {
       },
       {
         question: `Cand o sa fie ${singleStore?.Name} Black Friday ${currentYear}?`,
-        answer: `In mod obisnuit, ${singleStore?.Name} Black Friday are loc in ultima vineri din luna Noiembrie, dar aceasta nu este o regula bine definita, ${singleStore?.Name} poate decide sa inceapa Black Friday mai devreme. Aboneaza-te la newsletetter-ul nostru si vei fi primul care va afla cand are loc ${singleStore?.Name} Black Friday.`
+        answer: `In mod obisnuit, ${singleStore?.Name} Black Friday are loc in ultima vineri din luna Noiembrie, dar aceasta nu este o regula bine definita, ${singleStore?.Name} poate decide sa inceapa Black Friday mai devreme. Abonne-toi la newsletetter-ul nostru si vei fi primul care va afla cand are loc ${singleStore?.Name} Black Friday.`
       },
     ]
 
@@ -174,17 +174,17 @@ const CouponSingle = async ({singleStore, param}) => {
           <div className='flex flex-row items-start gap-2 sm:gap-[30px]'>
             <IconImage singleStore={singleStore} />
             <div className='max-w-[70%]'>
-              <h1 className='text-dark font-semibold text-xl md:text-[28px]'>Cod reducere {singleStore?.Name}, Vouchere si Oferte <span className='capitalize'>{getCurrentMonthYear()}</span>  </h1>
+              <h1 className='text-dark font-semibold text-xl md:text-[28px]'>Code promo {singleStore?.Name}, Vouchere si Oferte <span className='capitalize'>{getCurrentMonthYear()}</span>  </h1>
               {/* <p>{singleStore?.Excerpt}</p> */}
               <p className='mt-[10px] font-medium'>Aici gasesti cele mai noi coduri de reducere {singleStore?.Name}, Vouchere si oferte alese cu grija si verificate de echipa CodCupon.</p>
               <Rating totalRating={singleStore?.Rating} />
-              <p className='text-xs font-medium mt-2.5'>Ultima actualizare de <Link href="/despre-noi" className='underline'>{singleStore?.author?.Name}</Link> la <span className='capitalize'>{formatDate(singleStore?.publishedAt)}</span></p>
+              <p className='text-xs font-medium mt-2.5'> Dernière mise à jour par <Link href="/despre-noi" className='underline'>{singleStore?.author?.Name}</Link> le <span className='capitalize'>{formatDate(singleStore?.publishedAt)}</span></p>
             </div>
           </div>
 
           <div className='mt-[30px]'>
             {
-              activeCoupon?.length > 0 && <h2 className='text-xl text-dark font-semibold mb-5'>{activeCoupon?.length} Coduri Reducere si Oferte Active</h2>
+              activeCoupon?.length > 0 && <h2 className='text-xl text-dark font-semibold mb-5'>{activeCoupon?.length} codes de réduction et offres actives</h2>
             }
             <div className='flex flex-col lg:flex-row gap-[50px]'>
               <div className='flex-1'>
@@ -198,7 +198,7 @@ const CouponSingle = async ({singleStore, param}) => {
                 </div>
                 {
                   disableCoupon?.length > 0 && <>
-                    <h3 className={`text-xl text-dark font-semibold mb-5 ${activeCoupon?.length > 0 && "mt-10"}`}>{disableCoupon?.length} Coduri Reducere si Oferte Expirate</h3>
+                    <h3 className={`text-xl text-dark font-semibold mb-5 ${activeCoupon?.length > 0 && "mt-10"}`}>{disableCoupon?.length} codes promo et offres expirées</h3>
                     <div className='flex flex-col gap-[25px]'>
                       {
                         disableCoupon?.map((item, idx) => (
@@ -220,7 +220,7 @@ const CouponSingle = async ({singleStore, param}) => {
               </div>
 
               <aside className='w-[286px]'>
-                <p className='text-xl text-dark font-semibold mb-5 '>Categorii</p>
+                <p className='text-xl text-dark font-semibold mb-5 '>Catégories</p>
                 <div
                   style={{ marginTop: '10px' }}
                   className='flex flex-wrap gap-2.5'
