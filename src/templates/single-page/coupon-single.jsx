@@ -38,22 +38,22 @@ const CouponSingle = async ({singleStore, param}) => {
 
     const faqsList = [
       {
-        question: `Combien de bons et d’offres sont disponibles pour ${singleStore?.Name}?`,
-        answer: `In acest moment, sunt active ${activeCoupon?.length} vouchere si oferte pe care le puteti folosi pe site-ul celor de la ${singleStore?.Name}.`
+          question:  `Combien de bons et d’offres sont disponibles pour ${singleStore?.Name}?`,
+          answer: `Actuellement, ${activeCoupon?.length} codes promo et offres sont disponibles et utilisables sur le site de ${singleStore?.Name}.`
       },
       {
-        question: `Cum folosesc codul de reducere ${singleStore?.Name}?`,
-        answer: `Pentru a folosi codul de reducere ${singleStore?.Name}, adauga produsele dorite in cos, apoi apasa pe cosul de cumparaturi sau butonul de checkout. Copiez le code de reducere din aceasta pagina si adauga-l in campul Cod promotional si apasa pe butonul Aplica.`
+          question: `Comment utiliser le code de réduction ${singleStore?.Name}?`,
+          answer: `Pour utiliser le code de réduction ${singleStore?.Name}, il suffit d’ajouter les produits souhaités à votre panier, d’accéder à la page de paiement, puis de copier et coller le code dans le champ prévu à cet effet avant de l’appliquer. Cette procédure garantit que la remise est bien déduite de votre total.`
       },
       {
-        question: `De ce codul de reducere ${singleStore?.Name} nu functioneaza?`,
-        answer: `De regula, pe <a href="/">CodCupon.ro</a> veti gasi doar coduri de reducere active, insa in cazul in care comerciantul a dezactivat acest cod, el nu va functiona. `
+          question: `Pourquoi le code de réduction ${singleStore?.Name} ne fonctionne-t-il pas ?`,
+          answer: ` En règle générale, sur <a href="/">CodedeReduc.fr</a>, vous ne trouverez que des codes de réduction actifs ; cependant, si le commerçant a désactivé un code, celui-ci ne fonctionnera pas. `
       },
       {
-        question: `Cand o sa fie ${singleStore?.Name} Black Friday ${currentYear}?`,
-        answer: `In mod obisnuit, ${singleStore?.Name} Black Friday are loc in ultima vineri din luna Noiembrie, dar aceasta nu este o regula bine definita, ${singleStore?.Name} poate decide sa inceapa Black Friday mai devreme. Abonne-toi la newsletetter-ul nostru si vei fi primul care va afla cand are loc ${singleStore?.Name} Black Friday.`
+          question: `Quand aura lieu le Black Friday ${currentYear} chez ${singleStore?.Name} ?`,
+          answer:    `« En général, le Black Friday de ${singleStore?.Name} a lieu le dernier vendredi du mois de novembre, mais ce n’est pas une règle gravée dans le marbre : ${singleStore?.Name} peut choisir de lancer son Black Friday plus tôt. Abonnez-vous à notre newsletter pour être les premiers informés de la date du Black Friday de ${singleStore?.Name}. »`
       },
-    ]
+  ]
 
     const events = activeCoupon?.map((item) => {
       return {
