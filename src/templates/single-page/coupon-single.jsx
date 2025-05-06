@@ -66,7 +66,7 @@ const CouponSingle = async ({singleStore, param}) => {
         "eventStatus": "https://schema.org/EventScheduled",
         "location": {
           "@type": "VirtualLocation",
-          "url": "https://codcupon.ro/"
+          "url": "https://codedereduc.ro/"
         },
         "image": [
           singleStore?.Icon?.url
@@ -74,8 +74,8 @@ const CouponSingle = async ({singleStore, param}) => {
         "description": item?.Title,
         "organizer": {
           "@type": "Organization",
-          "name": "codcupon",
-          "url": "https://codcupon.ro"
+          "name": "codedereduc",
+          "url": "https://codedereduc.ro"
         },
         "performer": {
           "@type": "Organization",
@@ -83,7 +83,7 @@ const CouponSingle = async ({singleStore, param}) => {
         },
         "offers": {
           "@type": "Offer",
-          "url": `https://codcupon.ro/${singleStore?.Slug}`,
+          "url": `https://codedereduc.ro/${singleStore?.Slug}`,
           "price": "0",
           "priceCurrency": "RON",
           "availability": "https://schema.org/InStock",
@@ -101,19 +101,19 @@ const CouponSingle = async ({singleStore, param}) => {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://codcupon.ro/"
+            "item": "https://codedereduc.ro/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "magazine",
-            "item": "https://codcupon.ro/magazine"
+            "item": "https://codedereduc.ro/magazine"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": singleStore?.Name,
-            "item": `https://codcupon.ro/${singleStore?.Slug}`
+            "item": `https://codedereduc.ro/${singleStore?.Slug}`
           }
         ]
       },
@@ -137,7 +137,7 @@ const CouponSingle = async ({singleStore, param}) => {
             "@type": "Offer",
             "name": singleStore?.Name,
             "description": coupon.Title,
-            "url": `https://www.codcupon.ro/${singleStore?.Slug}`,
+            "url": `https://www.codedereduc.ro/${singleStore?.Slug}`,
             "priceCurrency": "RON",
             "price": "0",
             "availability": "https://schema.org/InStock",
@@ -176,7 +176,7 @@ const CouponSingle = async ({singleStore, param}) => {
             <div className='max-w-[70%]'>
               <h1 className='text-dark font-semibold text-xl md:text-[28px]'>Code promo {singleStore?.Name}, Vouchere si Oferte <span className='capitalize'>{getCurrentMonthYear()}</span>  </h1>
               {/* <p>{singleStore?.Excerpt}</p> */}
-              <p className='mt-[10px] font-medium'>Aici gasesti cele mai noi coduri de reducere {singleStore?.Name}, Vouchere si oferte alese cu grija si verificate de echipa CodCupon.</p>
+              <p className='mt-[10px] font-medium'>Aici gasesti cele mai noi coduri de reducere {singleStore?.Name}, Vouchere si oferte alese cu grija si verificate de echipa codedereduc.</p>
               <Rating totalRating={singleStore?.Rating} />
               <p className='text-xs font-medium mt-2.5'> Dernière mise à jour par <Link href="/despre-noi" className='underline'>{singleStore?.author?.Name}</Link> le <span className='capitalize'>{formatDate(singleStore?.publishedAt)}</span></p>
             </div>

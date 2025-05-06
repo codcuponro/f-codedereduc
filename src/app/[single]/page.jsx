@@ -13,19 +13,19 @@ export async function generateMetadata({ params }) {
     .join(' ');
 
   return {
-    title: `Code promo ${name}, Vouchere si Oferte ${getCurrentMonthYear()} - CodCupon.ro`,
+    title: `Code promo ${name}, Vouchere si Oferte ${getCurrentMonthYear()} - codedereduc.ro`,
     description: `Ici, vous trouverez les tout derniers codes de réduction ${name}, vouchers et offres soigneusement sélectionnés et vérifiés par l’équipe CodedeReduc.`,
     openGraph: {
       images: [
         {
-          url: "https://codcupon.nyc3.digitaloceanspaces.com/f98c281be600e40254e4b5755891c682.webp" || "../../public/og-image.webp",
+          url: "https://codedereduc.nyc3.digitaloceanspaces.com/f98c281be600e40254e4b5755891c682.webp" || "../../public/og-image.webp",
           width: 1200,
           height: 630
         },
       ],
     },
     alternates: {
-      canonical: `https://www.codcupon.ro/${param}`,
+      canonical: `https://www.codedereduc.ro/${param}`,
     },
   }
 }

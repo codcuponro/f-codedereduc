@@ -6,8 +6,8 @@
     return [
       {
         source: '/:path*',
-        has: [{ type: 'host', value: 'codcupon.ro' }],
-        destination: 'https://www.codcupon.ro/:path*',
+        has: [{ type: 'host', value: 'codedereduc.ro' }],
+        destination: 'https://www.codedereduc.ro/:path*',
         permanent: true,
       },
     ];

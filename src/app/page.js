@@ -12,10 +12,10 @@ export default async function Home(props) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "codcupon",
-    "url": "https://codcupon.ro/",
-    "logo": "https://www.codcupon.ro/logo.svg",
-    "sameAs": "https://codcupon.ro/Contact"
+    "name": "codedereduc",
+    "url": "https://codedereduc.ro/",
+    "logo": "https://www.codedereduc.ro/logo.svg",
+    "sameAs": "https://codedereduc.ro/Contact"
   }
   const [
     favoritesCoupon,

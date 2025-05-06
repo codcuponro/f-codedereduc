@@ -4,7 +4,7 @@ import {getContactPage} from "../../services"
 
 export const metadata = {
     alternates: {
-      canonical: `https://www.codcupon.ro/Contact`,
+      canonical: `https://www.codedereduc.ro/Contact`,
     }
 }
 

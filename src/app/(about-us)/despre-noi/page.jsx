@@ -4,7 +4,7 @@ import {getAboutPage} from "../../../services"
 
 export const metadata = {
   alternates: {
-    canonical: `https://www.codcupon.ro/despre-noi`,
+    canonical: `https://www.codedereduc.ro/despre-noi`,
   }
 }
 

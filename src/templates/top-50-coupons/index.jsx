@@ -28,7 +28,7 @@ const Top50Coupons = ({ activeCoupon, categories }) => {
                             Top Coduri si Vouchere Reducere  <span className='capitalize'><span className='capitalize'>{getCurrentMonthYear()}</span></span>
                         </h2>
                         <p className='font-medium'>
-                        Aici gasesti cele mai bune coduri de reducere, vouchere si cupoane din <span className='capitalize'>{getCurrentMonthYear()}</span> la magazinele din Romania. <a href="/despre-noi" className='underline'>Echipa CodCupon</a> le-a ales si verificat manual pe fiecare in parte, ca tu sa beneficiezi de cele mai mari reduceri disponibile.
+                        Aici gasesti cele mai bune coduri de reducere, vouchere si cupoane din <span className='capitalize'>{getCurrentMonthYear()}</span> la magazinele din Romania. <a href="/despre-noi" className='underline'>Echipa codedereduc</a> le-a ales si verificat manual pe fiecare in parte, ca tu sa beneficiezi de cele mai mari reduceri disponibile.
                         </p>
                     </div>
                 </div>

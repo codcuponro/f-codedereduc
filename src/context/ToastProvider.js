@@ -29,7 +29,7 @@ const ToastProvider = ({ children }) => {
 
     return (
         <>
-            <GoogleAnalytics measurementId="G-FHC2S49REF" />
+            <GoogleAnalytics measurementId="G-92GNDWV7E3" />
             <ToastContext.Provider value={showToast}>
                 {children}
                 <Snackbar open={toast.open} autoHideDuration={3000} onClose={closeToast}>

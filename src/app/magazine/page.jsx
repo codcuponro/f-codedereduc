@@ -4,7 +4,7 @@ import { getAllStore, getStores } from "../../services"
 
 export const metadata = {
   alternates: {
-    canonical: `https://www.codcupon.ro/magazine`,
+    canonical: `https://www.codedereduc.ro/magazine`,
   }
 }
 
@@ -24,7 +24,7 @@ const Store = async (props) => {
       "@type": "ListItem",
       "position": idx+1,
       "name": item?.Name || "",
-      "item": `https://codcupon.ro/magazine/${item?.Slug}`
+      "item": `https://codedereduc.ro/magazine/${item?.Slug}`
     }
   })
 
@@ -32,10 +32,10 @@ const Store = async (props) => {
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "codcupon",
-      "url": "https://codcupon.ro/",
-      "logo": "https://www.codcupon.ro/logo.svg",
-      "sameAs": "https://codcupon.ro/Contact"
+      "name": "codedereduc",
+      "url": "https://codedereduc.ro/",
+      "logo": "https://www.codedereduc.ro/logo.svg",
+      "sameAs": "https://codedereduc.ro/Contact"
     },
     {
       "@context": "https://schema.org",
