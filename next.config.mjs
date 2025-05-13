@@ -1,6 +1,6 @@
  const nextConfig = {
   images: {
-    domains: ["codcupon.nyc3.digitaloceanspaces.com"],
+    domains: ["codcupon.nyc3.digitaloceanspaces.com", "codedereduc-space.nyc3.digitaloceanspaces.com"],
   },
   async redirects() {
     return [
