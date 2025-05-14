@@ -162,7 +162,6 @@ const CouponSingle = async ({singleStore, param}) => {
     if (events?.length) {
       jsonLd.push(...events);
     }
-    console.log("🚀 ~ CouponSingle ~ singleStore:", singleStore)
 
     return (
       <>
