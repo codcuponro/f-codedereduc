@@ -291,7 +291,7 @@ const CouponSingle = async ({singleStore, param}) => {
             <Breadcrumb path={breadcrumbPath} />
           </div>
         </section>
-      </section>
+      </>
     )
 }
 
