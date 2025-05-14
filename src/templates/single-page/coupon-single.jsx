@@ -165,12 +165,12 @@ const CouponSingle = async ({singleStore, param}) => {
     console.log("🚀 ~ CouponSingle ~ singleStore:", singleStore)
 
     return (
-      <>
+      <section className='bg-[#eef0f5]'>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <section className='container mx-auto px-4 lg:px-0 mt-5 mb:my-[50px]'>
+        <section className='container mx-auto px-4 lg:px-0 pt-5 mb:py-[50px]'>
           <div className='flex flex-row items-start gap-2 sm:gap-[30px]'>
             <IconImage singleStore={singleStore} />
             <div className='max-w-[70%]'>
@@ -287,11 +287,11 @@ const CouponSingle = async ({singleStore, param}) => {
               </aside>
             </div>
           </div>
-          <div className='mt-16 mb-10'>
+          <div className='mt-16 pb-10'>
             <Breadcrumb path={breadcrumbPath} />
           </div>
         </section>
-      </>
+      </section>
     )
 }
 

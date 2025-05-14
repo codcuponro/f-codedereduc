@@ -16,7 +16,7 @@ export const constData = {
       "footer": {
         "footer_title" : "Abonnez-vous dès maintenant pour recevoir chaque semaine les meilleurs codes promo",
         "email_placeholder" : "Entrez votre adresse e-mail",
-        "subscribe_btn_label" : "Abonați-vă",
+        "subscribe_btn_label" : "C'est parti",
         "resources_title" : "Ressources",
         "Company_title" : "Entreprise",
         "quick_links_title" : "Recherches populaires",

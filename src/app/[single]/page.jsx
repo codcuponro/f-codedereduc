@@ -42,7 +42,9 @@ const Store = async ({ params }) => {
   // const { category } = await getSingleCategory({ slug: param, locale })
 
   if (singleStore) {
-    return <CouponSingle singleStore={singleStore} param={param}/>
+    return (
+      <CouponSingle singleStore={singleStore} param={param}/>
+    )
   }
 
   // if (category){
