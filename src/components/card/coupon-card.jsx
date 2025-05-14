@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const CouponCard = ({ data }) => {
   return (
-    <div className='border rounded-lg flex flex-col justify-between overflow-hidden'>
+    <div className='border rounded-lg flex bg-[#f9fafc] flex-col justify-between overflow-hidden'>
       <div>
         <figure className='border-b'>
           <Link href={data?.store?.Slug || "#"} target='_blank'>
@@ -19,7 +19,7 @@ const CouponCard = ({ data }) => {
           title={data?.CouponCode}
           data={data}
         />
-        <Link href={data?.store?.Slug || "#"} className='bg-[#F3F4F6] px-2.5 text-xs w-fit line-clamp-1 text-dark font-bold py-1 rounded-full mt-[12px]'>
+        <Link href={data?.store?.Slug || "#"} className='bg-[#eef0f5] px-2.5 text-xs w-fit line-clamp-1 text-dark font-bold py-1 rounded-full mt-[12px]'>
           {data?.CouponsType === "Promotion" ? "Promotie" : "Cod reducere"}{" "}{data?.store?.Name}
         </Link>
       </div>
