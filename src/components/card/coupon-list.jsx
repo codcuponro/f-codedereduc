@@ -8,7 +8,7 @@ const CouponList = ({ logo, item }) => {
     const disabled = isExpired(item?.ExpireDate);
     
     return (
-        <div className={`border border-[#f9fafc] overflow-hidden rounded-lg`}>
+        <div className={`border border-[#DEE2E6] bg-[#f9fafc] overflow-hidden rounded-lg`}>
             <div className='flex flex-row gap-3 sm:gap-4 sm:justify-center items-center md:gap-[27px]'>
                 {
                     logo ? <Link href={"/"+item?.store?.Slug || "#"} target='_blank' className='md:border-r flex justify-center items-start p-4 sm:p-0 sm:items-center'>
