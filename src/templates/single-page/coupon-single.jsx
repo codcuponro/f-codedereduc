@@ -165,7 +165,7 @@ const CouponSingle = async ({singleStore, param}) => {
     console.log("🚀 ~ CouponSingle ~ singleStore:", singleStore)
 
     return (
-      <section className='bg-[#eef0f5]'>
+      <>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -36,7 +36,7 @@ export default async function Home(props) {
     const shuffledCoupons = shuffleArray(exclusiveCoupon);
 
   return (
-    <div className="bg-[#eef0f5]">
+    <>
       <LandingPageSlider data={shuffledCoupons} />
       <FavoritesCoupons data={favoritesCoupon} />
       <FavoriteStores data={favStores?.slice(0, 10)} />
@@ -47,6 +47,6 @@ export default async function Home(props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-    </div>
+    </>
   );
 }
