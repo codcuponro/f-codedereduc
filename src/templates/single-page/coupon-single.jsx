@@ -28,7 +28,7 @@ const CouponSingle = async ({singleStore, param}) => {
     const breadcrumbPath = [
       {
         label: 'Magazine',
-        href: '/magazine'
+        href: '/magasins'
       },
       {
         label: param?.replace(/-/g, ' '),
@@ -107,7 +107,7 @@ const CouponSingle = async ({singleStore, param}) => {
             "@type": "ListItem",
             "position": 2,
             "name": "magazine",
-            "item": "https://codedereduc.ro/magazine"
+            "item": "https://codedereduc.ro/magasins"
           },
           {
             "@type": "ListItem",
@@ -219,7 +219,7 @@ const CouponSingle = async ({singleStore, param}) => {
               </div>
 
               <aside className='w-[286px]'>
-                <p className='text-xl text-dark font-semibold mb-5 '>Catégories</p>
+                <p className='text-xl text-dark font-semibold mb-5 '>Categories</p>
                 <div
                   style={{ marginTop: '10px' }}
                   className='flex flex-wrap gap-2.5'

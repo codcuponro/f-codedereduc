@@ -11,7 +11,7 @@ const FavoriteStores = ({ data }) => {
         <Title
           title={constData?.fav_stores_title}
           buttonLabel={constData?.fav_stores_btn_label}
-          buttonHref="/magazine"
+          buttonHref="/magasins"
           white
           hideButton
         />
@@ -29,7 +29,7 @@ const FavoriteStores = ({ data }) => {
         <Title
           title={constData?.fav_stores_title}
           buttonLabel={constData?.fav_stores_btn_label}
-          buttonHref="/magazine"
+          buttonHref="/magasins"
           white
           hideHeading
         />

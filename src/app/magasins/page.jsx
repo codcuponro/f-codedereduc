@@ -4,7 +4,7 @@ import { getAllStore, getStores } from "../../services"
 
 export const metadata = {
   alternates: {
-    canonical: `https://www.codedereduc.ro/magazine`,
+    canonical: `https://www.codedereduc.ro/magasins`,
   }
 }
 
@@ -24,7 +24,7 @@ const Store = async (props) => {
       "@type": "ListItem",
       "position": idx+1,
       "name": item?.Name || "",
-      "item": `https://codedereduc.ro/magazine/${item?.Slug}`
+      "item": `https://codedereduc.ro/magasins/${item?.Slug}`
     }
   })
 

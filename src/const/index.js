@@ -9,9 +9,9 @@ export const constData = {
       "fav_stores_btn_label" : "Tous les magasins",
       "top_coupons_and_deals_btn_label" : "Toate codurile de reducere si ofertele",
       "top_coupons_and_deals_title" : "Codes de réduction et nouvelles offres",
-      "top_categories_title" : "Top des catégories",
+      "top_categories_title" : "Top des categories",
       "promotion": "Oferta",
-      "top_categories_btn_label" : "Toutes les catégories",
+      "top_categories_btn_label" : "Toutes les categories",
       "how_its_works_title" : "Comment ça marche ?",
       "footer": {
         "footer_title" : "Abonnez-vous dès maintenant pour recevoir chaque semaine les meilleurs codes promo",

@@ -5,7 +5,7 @@ import Top50Coupons from "@/templates/top-50-coupons"
 
 export const metadata = {
   alternates: {
-    canonical: `https://www.codedereduc.ro/top-coduri-reducere`,
+    canonical: `https://www.codedereduc.ro/top-codes-promo`,
   }
 }
 

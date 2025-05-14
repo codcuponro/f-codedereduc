@@ -2,468 +2,342 @@
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
      <url>
           <loc>https://www.codedereduc.ro/despre-noi</loc>
-          <lastmod>2025-04-26T07:44:17+05:00</lastmod>
+          <lastmod>2025-05-14T17:25:13+05:00</lastmod>
           <priority>1.00</priority>
       </url>
       <url>
           <loc>https://www.codedereduc.ro/</loc>
-          <lastmod>2025-04-26T07:44:17+05:00</lastmod>
+          <lastmod>2025-05-14T17:25:13+05:00</lastmod>
           <priority>1.00</priority>
       </url>
       <url>
           <loc>https://www.codedereduc.ro/fisiere-cookies</loc>
-          <lastmod>2025-04-26T07:44:17+05:00</lastmod>
+          <lastmod>2025-05-14T17:25:13+05:00</lastmod>
           <priority>1.00</priority>
       </url>
       <url>
           <loc>https://www.codedereduc.ro/politica-confidentialitate</loc>
-          <lastmod>2025-04-26T07:44:17+05:00</lastmod>
+          <lastmod>2025-05-14T17:25:13+05:00</lastmod>
           <priority>1.00</priority>
       </url>
       <url>
           <loc>https://www.codedereduc.ro/termeni-si-conditii</loc>
-          <lastmod>2025-04-26T07:44:17+05:00</lastmod>
+          <lastmod>2025-05-14T17:25:13+05:00</lastmod>
           <priority>1.00</priority>
       </url>
       <url>
-          <loc>https://www.codedereduc.ro/Catégories</loc>
-          <lastmod>2025-04-26T07:44:17+05:00</lastmod>
+          <loc>https://www.codedereduc.ro/categories</loc>
+          <lastmod>2025-05-14T17:25:13+05:00</lastmod>
           <priority>1.00</priority>
       </url>
       <url>
-          <loc>https://www.codedereduc.ro/magazine</loc>
-          <lastmod>2025-04-26T07:44:17+05:00</lastmod>
+          <loc>https://www.codedereduc.ro/magasins</loc>
+          <lastmod>2025-05-14T17:25:13+05:00</lastmod>
           <priority>1.00</priority>
       </url>
       <url>
           <loc>https://www.codedereduc.ro/Contact</loc>
-          <lastmod>2025-04-26T07:44:17+05:00</lastmod>
+          <lastmod>2025-05-14T17:25:13+05:00</lastmod>
           <priority>1.00</priority>
       </url>
       <url>
-          <loc>https://www.codedereduc.ro/top-coduri-reducere</loc>
-          <lastmod>2025-04-26T07:44:17+05:00</lastmod>
+          <loc>https://www.codedereduc.ro/top-codes-promo</loc>
+          <lastmod>2025-05-14T17:25:13+05:00</lastmod>
           <priority>1.00</priority>
       </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/epantofi</loc>
-          <lastmod>2025-04-03T16:20:09.377Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
           <loc>https://www.codedereduc.ro/temu</loc>
-          <lastmod>2025-04-04T16:52:23.231Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/libris</loc>
-          <lastmod>2025-04-01T12:56:30.168Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/flanco</loc>
-          <lastmod>2025-04-03T16:01:52.020Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/pepita</loc>
-          <lastmod>2025-04-24T07:16:17.600Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/dy-fashion</loc>
-          <lastmod>2025-04-03T16:46:08.200Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/videt</loc>
-          <lastmod>2025-04-03T14:55:31.031Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/cupio</loc>
-          <lastmod>2025-04-03T16:14:11.208Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/floria</loc>
-          <lastmod>2025-04-09T08:15:15.759Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/nike</loc>
-          <lastmod>2025-04-24T07:34:22.751Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/maxi-pet</loc>
-          <lastmod>2025-04-03T16:51:15.725Z</lastmod>
+          <lastmod>2025-05-13T11:34:59.642Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
           <loc>https://www.codedereduc.ro/uber</loc>
-          <lastmod>2025-04-07T16:31:01.977Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/fabio-pizza</loc>
-          <lastmod>2025-04-15T09:02:56.897Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/spring-farma</loc>
-          <lastmod>2025-04-01T10:24:33.660Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/sinsay</loc>
-          <lastmod>2025-04-01T13:04:50.681Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/dr-max</loc>
-          <lastmod>2025-04-01T10:19:08.539Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/spy-shop</loc>
-          <lastmod>2025-04-03T15:15:07.133Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/automobilus</loc>
-          <lastmod>2025-04-09T20:21:56.721Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/gymbeam</loc>
-          <lastmod>2025-04-15T11:24:55.373Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/startco</loc>
-          <lastmod>2025-04-03T16:56:36.889Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/modivo</loc>
-          <lastmod>2025-04-01T13:21:17.237Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/sezamo</loc>
-          <lastmod>2025-04-03T15:25:32.087Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/bookzone</loc>
-          <lastmod>2025-04-15T09:18:31.778Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/trendyol</loc>
-          <lastmod>2025-04-15T11:25:18.116Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/about-you-outlet</loc>
-          <lastmod>2025-04-01T13:23:13.234Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/dormia</loc>
-          <lastmod>2025-04-11T08:53:25.692Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/eyerim</loc>
-          <lastmod>2025-04-03T15:35:05.841Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/hm</loc>
-          <lastmod>2025-04-15T09:19:02.331Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/answear</loc>
-          <lastmod>2025-04-16T10:31:48.818Z</lastmod>
+          <lastmod>2025-05-13T11:35:19.753Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
           <loc>https://www.codedereduc.ro/garmin</loc>
-          <lastmod>2025-04-02T09:32:40.434Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/car-hero</loc>
-          <lastmod>2025-04-01T10:48:34.858Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/ccc</loc>
-          <lastmod>2025-04-03T15:44:05.950Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/minunea-naturii</loc>
-          <lastmod>2025-04-08T16:41:56.217Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/fashion-days</loc>
-          <lastmod>2025-04-11T12:55:21.295Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/my-protein</loc>
-          <lastmod>2025-04-16T13:55:09.909Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/axa-romania</loc>
-          <lastmod>2025-04-01T10:57:19.497Z</lastmod>
-          <priority>0.80</priority>
-        </url>
-      
-        <url>
-          <loc>https://www.codedereduc.ro/la-fantana</loc>
-          <lastmod>2025-04-01T12:56:08.477Z</lastmod>
+          <lastmod>2025-05-14T10:50:48.981Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
           <loc>https://www.codedereduc.ro/bolt</loc>
-          <lastmod>2025-04-04T16:51:53.460Z</lastmod>
+          <lastmod>2025-05-13T11:50:30.698Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/lensa</loc>
-          <lastmod>2025-04-03T14:46:55.005Z</lastmod>
+          <loc>https://www.codedereduc.ro/sephora</loc>
+          <lastmod>2025-05-13T11:34:21.152Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/carturesti</loc>
-          <lastmod>2025-04-03T15:59:42.742Z</lastmod>
+          <loc>https://www.codedereduc.ro/nike</loc>
+          <lastmod>2025-05-14T10:50:00.442Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/kit-unghii</loc>
-          <lastmod>2025-04-01T10:21:07.530Z</lastmod>
+          <loc>https://www.codedereduc.ro/dyson</loc>
+          <lastmod>2025-05-13T11:07:36.621Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/intimax</loc>
-          <lastmod>2025-04-08T16:44:03.514Z</lastmod>
+          <loc>https://www.codedereduc.ro/my-protein</loc>
+          <lastmod>2025-05-13T11:33:12.750Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/cropp</loc>
-          <lastmod>2025-04-19T18:35:11.818Z</lastmod>
+          <loc>https://www.codedereduc.ro/zooplus</loc>
+          <lastmod>2025-05-13T11:35:37.772Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codedereduc.ro/carvertical</loc>
+          <lastmod>2025-05-13T11:07:20.689Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codedereduc.ro/footshop</loc>
+          <lastmod>2025-05-13T11:08:16.548Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codedereduc.ro/marionnaud</loc>
+          <lastmod>2025-05-13T11:32:54.945Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codedereduc.ro/hm</loc>
+          <lastmod>2025-05-13T11:32:38.836Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codedereduc.ro/pepita</loc>
+          <lastmod>2025-05-13T11:33:36.314Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codedereduc.ro/sinsay</loc>
+          <lastmod>2025-05-13T11:34:43.750Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codedereduc.ro/electrolux</loc>
+          <lastmod>2025-05-13T11:07:56.155Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codedereduc.ro/rowenta</loc>
+          <lastmod>2025-05-13T11:33:55.216Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codedereduc.ro/axa-romania</loc>
+          <lastmod>2025-05-13T11:31:55.391Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codedereduc.ro/notino</loc>
+          <lastmod>2025-05-13T11:06:37.000Z</lastmod>
           <priority>0.80</priority>
         </url>
       
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/cadouri-si-flori</loc>
+          <loc>https://www.codedereduc.ro/categories/cadouri-si-flori</loc>
           <lastmod>2025-04-09T07:57:10.529Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/animale</loc>
+          <loc>https://www.codedereduc.ro/categories/animale</loc>
           <lastmod>2025-04-04T07:40:31.980Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/carti</loc>
+          <loc>https://www.codedereduc.ro/categories/carti</loc>
           <lastmod>2025-04-04T07:58:16.485Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/auto-moto</loc>
+          <loc>https://www.codedereduc.ro/categories/auto-moto</loc>
           <lastmod>2025-04-04T07:51:59.300Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/adult</loc>
+          <loc>https://www.codedereduc.ro/categories/jucarii</loc>
+          <lastmod>2025-05-07T15:40:48.221Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codedereduc.ro/categories/adult</loc>
           <lastmod>2025-04-09T07:57:31.948Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/casa-si-gradina</loc>
+          <loc>https://www.codedereduc.ro/categories/casa-si-gradina</loc>
           <lastmod>2025-04-04T07:53:32.952Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/fashion</loc>
+          <loc>https://www.codedereduc.ro/categories/fashion</loc>
           <lastmod>2025-04-04T07:56:36.064Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/gaming</loc>
+          <loc>https://www.codedereduc.ro/categories/gaming</loc>
           <lastmod>2025-04-04T08:07:34.569Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/imbracaminte</loc>
+          <loc>https://www.codedereduc.ro/categories/imbracaminte</loc>
           <lastmod>2025-04-04T08:08:19.854Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/incaltaminte</loc>
+          <loc>https://www.codedereduc.ro/categories/incaltaminte</loc>
           <lastmod>2025-04-04T08:08:49.254Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/optica</loc>
+          <loc>https://www.codedereduc.ro/categories/optica</loc>
           <lastmod>2025-04-04T08:09:19.257Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/Farmacie</loc>
+          <loc>https://www.codedereduc.ro/categories/Farmacie</loc>
           <lastmod>2025-04-04T08:16:41.244Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/copii-si-bebelusi</loc>
+          <loc>https://www.codedereduc.ro/categories/copii-si-bebelusi</loc>
           <lastmod>2025-04-04T08:18:02.632Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/sport</loc>
+          <loc>https://www.codedereduc.ro/categories/sport</loc>
           <lastmod>2025-04-04T08:19:32.087Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/suplimente</loc>
+          <loc>https://www.codedereduc.ro/categories/suplimente</loc>
           <lastmod>2025-04-04T08:20:10.587Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/delivery</loc>
+          <loc>https://www.codedereduc.ro/categories/delivery</loc>
           <lastmod>2025-04-15T09:08:48.115Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/accesorii</loc>
+          <loc>https://www.codedereduc.ro/categories/accesorii</loc>
           <lastmod>2025-04-04T08:22:04.214Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/asigurari</loc>
+          <loc>https://www.codedereduc.ro/categories/asigurari</loc>
           <lastmod>2025-04-04T08:22:15.691Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/beauty-si-cosmetice</loc>
+          <loc>https://www.codedereduc.ro/categories/beauty-si-cosmetice</loc>
           <lastmod>2025-04-04T08:22:26.355Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/bijuterii</loc>
+          <loc>https://www.codedereduc.ro/categories/bijuterii</loc>
           <lastmod>2025-04-04T08:23:49.196Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/calatorii-si-vacante</loc>
+          <loc>https://www.codedereduc.ro/categories/calatorii-si-vacante</loc>
           <lastmod>2025-04-04T08:24:02.008Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/electrocasnice</loc>
+          <loc>https://www.codedereduc.ro/categories/electrocasnice</loc>
           <lastmod>2025-04-04T08:27:22.685Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/electronice-si-it</loc>
+          <loc>https://www.codedereduc.ro/categories/electronice-si-it</loc>
           <lastmod>2025-04-04T08:27:40.771Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/servicii</loc>
+          <loc>https://www.codedereduc.ro/categories/servicii</loc>
           <lastmod>2025-04-04T08:28:54.333Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/supermarket-si-alimente</loc>
+          <loc>https://www.codedereduc.ro/categories/supermarket-si-alimente</loc>
           <lastmod>2025-04-04T08:29:30.658Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/transport</loc>
+          <loc>https://www.codedereduc.ro/categories/transport</loc>
           <lastmod>2025-04-04T15:56:14.040Z</lastmod>
           <priority>0.80</priority>
         </url>
       
         <url>
-          <loc>https://www.codedereduc.ro/Catégories/evenimente-si-divertisment</loc>
+          <loc>https://www.codedereduc.ro/categories/evenimente-si-divertisment</loc>
           <lastmod>2025-04-04T17:01:00.442Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codedereduc.ro/categories/sanatate</loc>
+          <lastmod>2025-04-30T09:21:28.743Z</lastmod>
+          <priority>0.80</priority>
+        </url>
+      
+        <url>
+          <loc>https://www.codedereduc.ro/categories/hobby</loc>
+          <lastmod>2025-05-07T15:40:22.135Z</lastmod>
           <priority>0.80</priority>
         </url>
       

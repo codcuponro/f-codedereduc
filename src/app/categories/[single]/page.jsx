@@ -6,7 +6,7 @@ export async function generateMetadata({ params }) {
   const param = await params.single
   return {
     alternates: {
-      canonical: `https://www.codedereduc.ro/Catégories/${param}`,
+      canonical: `https://www.codedereduc.ro/categories/${param}`,
     },
   }
 }
@@ -24,7 +24,7 @@ const SingleCategory = async ({ params }) => {
       "@type": "ListItem",
       "position": idx+1,
       "name": item?.Name || "",
-      "item": `https://codedereduc.ro/Catégories/${item?.Slug}`
+      "item": `https://codedereduc.ro/categories/${item?.Slug}`
     }
   })
 

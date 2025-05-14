@@ -4,7 +4,7 @@ import {getAllCategories} from "../../services"
 
 export const metadata = {
   alternates: {
-    canonical: `https://www.codedereduc.ro/Catégories`,
+    canonical: `https://www.codedereduc.ro/categories`,
   }
 }
 
@@ -17,7 +17,7 @@ const Categories = async (props) => {
       "@type": "ListItem",
       "position": idx+1,
       "name": item?.Name || "",
-      "item": `https://codedereduc.ro/Catégories/${item?.Slug}`
+      "item": `https://codedereduc.ro/categories/${item?.Slug}`
     }
   })
 

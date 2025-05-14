@@ -3,7 +3,7 @@ const qs = require("qs")
 
 const SITE_URL = "https://www.codedereduc.ro";
 const Request = async (endpoint, options = {}) => {
-    const url = `https://king-prawn-app-tflmf.ondigitalocean.app/api${endpoint}`;
+    const url = `https://codedereduc-app-cahbj.ondigitalocean.app/api${endpoint}`;
     try {
         const response = await fetch(url, {
             method: 'GET',
@@ -78,12 +78,12 @@ async function generateSitemap() {
           <priority>1.00</priority>
       </url>
       <url>
-          <loc>${SITE_URL}/Catégories</loc>
+          <loc>${SITE_URL}/categories</loc>
           <lastmod>${getFormattedDateTime()}</lastmod>
           <priority>1.00</priority>
       </url>
       <url>
-          <loc>${SITE_URL}/magazine</loc>
+          <loc>${SITE_URL}/magasins</loc>
           <lastmod>${getFormattedDateTime()}</lastmod>
           <priority>1.00</priority>
       </url>
@@ -93,7 +93,7 @@ async function generateSitemap() {
           <priority>1.00</priority>
       </url>
       <url>
-          <loc>${SITE_URL}/top-coduri-reducere</loc>
+          <loc>${SITE_URL}/top-codes-promo</loc>
           <lastmod>${getFormattedDateTime()}</lastmod>
           <priority>1.00</priority>
       </url>
@@ -106,7 +106,7 @@ async function generateSitemap() {
       `).join("")}
       ${categories?.data?.map((item) => `
         <url>
-          <loc>${SITE_URL}/Catégories/${item?.Slug}</loc>
+          <loc>${SITE_URL}/categories/${item?.Slug}</loc>
           <lastmod>${item?.updatedAt}</lastmod>
           <priority>0.80</priority>
         </url>

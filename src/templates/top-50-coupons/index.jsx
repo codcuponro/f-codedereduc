@@ -6,7 +6,7 @@ import CouponsList from './couponsList'
 import { getCurrentMonthYear } from '@/utils';
 
 const breadcrumbPath = [
-    { label: 'Top Coduri Reducere', href: '/top-coduri-reducere' }
+    { label: 'Top Coduri Reducere', href: '/top-codes-promo' }
 ];
 // Memoized Category Button List
 const CategoryList = memo(({ categories }) => (
@@ -39,7 +39,7 @@ const Top50Coupons = ({ activeCoupon, categories }) => {
 
                     {/* Sidebar */}
                     <aside className='lg:w-[286px]'>
-                        <h3 className='text-xl text-dark font-semibold mb-5'>Catégories</h3>
+                        <h3 className='text-xl text-dark font-semibold mb-5'>/categories</h3>
                         <CategoryList categories={categories} />
                         <PopularSearch />
                     </aside>
