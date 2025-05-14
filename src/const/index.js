@@ -1,6 +1,6 @@
 export const constData = {
       "search_placeholder": "Recherchez un magasin",
-      "no_result_found": "Niciun magazin gasit",
+      "no_result_found": "Niciun magazin gasit - Aucun magasin trouvé",
       "loading_text": "Încărcare",
       "fav_coupon_title" : "Top des codes de réduction et des coupons",
       "fav_coupon_btn_label" : "Top codes promo",
