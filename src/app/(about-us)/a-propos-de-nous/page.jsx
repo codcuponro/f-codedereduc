@@ -13,7 +13,7 @@ const AboutUs = async (props) => {
   const pageData  = await getAboutPage(params)
   return (
     <>
-      <AboutTemp data={pageData} title="Despre noi"/>
+      <AboutTemp data={pageData} title="A propos de nous"/>
     </>
   )
 }

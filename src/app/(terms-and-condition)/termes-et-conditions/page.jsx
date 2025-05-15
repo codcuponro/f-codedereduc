@@ -14,7 +14,7 @@ const AboutUs = async (props) => {
   const pageData  = await getTermAndConditionPage(params)
   return (
     <>
-      <AboutTemp data={pageData} title="Termeni si Conditii"/>
+      <AboutTemp data={pageData} title="Termes et conditions"/>
     </>
   )
 }

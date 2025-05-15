@@ -12,7 +12,7 @@ const AboutUs = async () => {
   const pageData  = await getPrivacyPage()
   return (
     <>
-      <AboutTemp data={pageData} title="Politică confidențialitate"/>
+      <AboutTemp data={pageData} title="Politique de confidentialite"/>
     </>
   )
 }
