@@ -8,7 +8,6 @@ import { Pagination } from "@mui/material";
 import Image from "next/image";
 
 const CategorySingleTemp = ({ params, data, categories, coupons }) => {
-    console.log("🚀 ~ CategorySingleTemp ~ data:", data)
     const [hoveredIdx, setHoveredIdx] = useState(null);
     const [page, setPage] = useState(1);
     const itemsPerPage = 10;
@@ -16,7 +15,7 @@ const CategorySingleTemp = ({ params, data, categories, coupons }) => {
     const categoryTitle = params?.replace(/-/g, " ");
     
     const breadcrumbPath = useMemo(() => [
-        { label: "/categories", href: "/categories" },
+        { label: "Catégories", href: "/categories" },
         { label: categoryTitle, href: `/categories/${params}` }
     ], [params, categoryTitle]);
 
@@ -93,7 +92,7 @@ const CategorySingleTemp = ({ params, data, categories, coupons }) => {
 
                 {/* Sidebar */}
                 <aside className="w-[286px]">
-                    <h3 className="text-xl text-dark font-semibold mb-5">Categories</h3>
+                    <h3 className="text-xl text-dark font-semibold mb-5">Catégories</h3>
                     <div className="flex flex-wrap gap-2.5 mt-2.5">
                         {categories?.map((item, idx) => (
                             <a key={idx} href={`/categories/${item?.Slug}`} className="no-underline">
