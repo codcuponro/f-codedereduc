@@ -4,7 +4,7 @@ import {getPrivacyPage} from "../../../services"
 
 export const metadata = {
   alternates: {
-    canonical: `https://www.codedereduc.ro/politica-confidentialitate`,
+    canonical: `https://www.codedereduc.fr/politica-confidentialitate`,
   }
 }
 

@@ -5,7 +5,7 @@ import {getTermAndConditionPage} from "../../../services"
 
 export const metadata = {
   alternates: {
-    canonical: `https://www.codedereduc.ro/termeni-si-conditii`,
+    canonical: `https://www.codedereduc.fr/termeni-si-conditii`,
   }
 }
 

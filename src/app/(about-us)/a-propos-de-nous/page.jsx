@@ -1,10 +1,9 @@
 import AboutTemp from '@/templates/about'
-import React from 'react'
 import {getAboutPage} from "../../../services"
 
 export const metadata = {
   alternates: {
-    canonical: `https://www.codedereduc.ro/despre-noi`,
+    canonical: `https://www.codedereduc.fr/despre-noi`,
   }
 }
 

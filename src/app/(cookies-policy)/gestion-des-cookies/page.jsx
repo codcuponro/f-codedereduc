@@ -3,7 +3,7 @@ import {getCookiePolicy} from "../../../services"
 
 export const metadata = {
   alternates: {
-    canonical: `https://www.codedereduc.ro/fisiere-cookies`,
+    canonical: `https://www.codedereduc.fr/fisiere-cookies`,
   }
 }
 

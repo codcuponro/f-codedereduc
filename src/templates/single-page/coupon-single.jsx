@@ -173,9 +173,10 @@ const CouponSingle = async ({singleStore, param}) => {
           <div className='flex flex-row items-start gap-2 sm:gap-[30px]'>
             <IconImage singleStore={singleStore} />
             <div className='max-w-[70%]'>
-              <h1 className='text-dark font-semibold text-xl md:text-[28px]'>Code promo {singleStore?.Name}, Vouchere si Oferte <span className='capitalize'>{getCurrentMonthYear()}</span>  </h1>
+              <h1 className='text-dark font-semibold text-xl md:text-[28px]'>Code promo {singleStore?.Name} <span className='capitalize'>{getCurrentMonthYear()}</span></h1>
+
               {/* <p>{singleStore?.Excerpt}</p> */}
-              <p className='mt-[10px] font-medium'>Aici gasesti cele mai noi coduri de reducere {singleStore?.Name}, Vouchere si oferte alese cu grija si verificate de echipa codedereduc.</p>
+              <p className='mt-[10px] font-medium'>Ici, vous trouverez les tout derniers codes de réduction {singleStore?.Name}, vouchers et offres soigneusement sélectionnés et vérifiés par l’équipe CodedeReduc.</p>
               <Rating totalRating={singleStore?.Rating} />
               <p className='text-xs font-medium mt-2.5'> Dernière mise à jour par <Link href="/despre-noi" className='underline'>{singleStore?.author?.Name}</Link> le <span className='capitalize'>{formatDate(singleStore?.publishedAt)}</span></p>
             </div>

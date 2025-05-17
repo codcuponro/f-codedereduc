@@ -25,7 +25,7 @@ export async function generateMetadata({ params }) {
       ],
     },
     alternates: {
-      canonical: `https://www.codedereduc.ro/${param}`,
+      canonical: `https://www.codedereduc.fr/${param}`,
     },
   }
 }

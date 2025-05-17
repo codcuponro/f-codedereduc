@@ -4,7 +4,7 @@ import {getAllCategories} from "../../services"
 
 export const metadata = {
   alternates: {
-    canonical: `https://www.codedereduc.ro/categories`,
+    canonical: `https://www.codedereduc.fr/categories`,
   }
 }
 
@@ -17,7 +17,7 @@ const Categories = async (props) => {
       "@type": "ListItem",
       "position": idx+1,
       "name": item?.Name || "",
-      "item": `https://codedereduc.ro/categories/${item?.Slug}`
+      "item": `https://codedereduc.fr/categories/${item?.Slug}`
     }
   })
 
@@ -26,9 +26,9 @@ const Categories = async (props) => {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "codedereduc",
-      "url": "https://codedereduc.ro/",
-      "logo": "https://www.codedereduc.ro/logo.svg",
-      "sameAs": "https://codedereduc.ro/Contact"
+      "url": "https://codedereduc.fr/",
+      "logo": "https://www.codedereduc.fr/logo.svg",
+      "sameAs": "https://codedereduc.fr/Contact"
     },
     {
       "@context": "https://schema.org",
