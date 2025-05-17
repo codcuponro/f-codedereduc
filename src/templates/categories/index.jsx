@@ -6,7 +6,7 @@ import CategoryIconCard from './category-icon-card';
 const CategoriesTemp = ({ data }) => {
   const breadcrumbPath = [
     {
-      label: 'categories',
+      label: 'Catégories',
       href: '/categories'
     }
   ]
