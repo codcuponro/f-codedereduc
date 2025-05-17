@@ -76,7 +76,7 @@ async function getCouponAndDeals() {
     pagination: {
       limit: 100
     },
-    sort: ["createdAt:desc"] 
+    sort: ["createdAt:desc"]
   })
   const couponAndDeals = await Request(`/coupons-and-deals?${cdparams}`);
   return couponAndDeals?.data
@@ -95,7 +95,7 @@ async function getFavoritesCoupon() {
     pagination: {
       limit: 20
     },
-    sort: ["createdAt:desc"] 
+    sort: ["createdAt:desc"]
   })
   const favoritesCoupon = await Request(`/coupons-and-deals?${fcdparams}`);
   return favoritesCoupon?.data
@@ -194,7 +194,9 @@ async function getAllCategories() {
     }
   })
   const categories = await Request(`/categories?${params}`);
-  return categories?.data?.sort((a, b) => a.Name.localeCompare(b.Name));
+  return categories?.data?.sort((a, b) =>
+    a.Name.localeCompare(b.Name, undefined, { sensitivity: 'base' })
+  );
 }
 
 
