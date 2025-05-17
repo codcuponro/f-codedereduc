@@ -11,7 +11,7 @@ const SingleCategoryTemp = async ({category, params}) => {
         "@type": "ListItem",
         "position": idx + 1,
         "name": item?.Name || "",
-        "item": `https://codedereduc.ro/categories/${item?.Slug}`
+        "item": `https://codedereduc.fr/${item?.Slug}`
       }
     })
 
@@ -20,9 +20,9 @@ const SingleCategoryTemp = async ({category, params}) => {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "codedereduc",
-        "url": "https://codedereduc.ro/",
-        "logo": "https://www.codedereduc.ro/logo.svg",
-        "sameAs": "https://codedereduc.ro/Contact"
+        "url": "https://codedereduc.fr/",
+        "logo": "https://www.codedereduc.fr/logo.svg",
+        "sameAs": "https://codedereduc.fr/Contact"
       },
       {
         "@context": "https://schema.org",

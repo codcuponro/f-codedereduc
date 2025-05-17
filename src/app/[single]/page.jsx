@@ -39,7 +39,7 @@ const Store = async ({ params }) => {
     locale,
   })
 
-  // const { category } = await getSingleCategory({ slug: param, locale })
+  const { category } = await getSingleCategory({ slug: param, locale })
 
   if (singleStore) {
     return (
@@ -47,9 +47,9 @@ const Store = async ({ params }) => {
     )
   }
 
-  // if (category){
-  //   return <SingleCategoryTemp category={category} params={param}/>
-  // }
+  if (category){
+    return <SingleCategoryTemp category={category} params={param}/>
+  }
 
   if (!singleStore) {
     notFound();

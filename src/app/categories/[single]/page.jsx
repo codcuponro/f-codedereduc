@@ -6,7 +6,7 @@ export async function generateMetadata({ params }) {
   const param = await params.single
   return {
     alternates: {
-      canonical: `https://www.codedereduc.fr/categories/${param}`,
+      canonical: `https://www.codedereduc.fr/${param}`,
     },
   }
 }

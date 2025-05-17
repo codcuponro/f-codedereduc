@@ -66,7 +66,7 @@ const CouponSingle = async ({singleStore, param}) => {
         "eventStatus": "https://schema.org/EventScheduled",
         "location": {
           "@type": "VirtualLocation",
-          "url": "https://codedereduc.ro/"
+          "url": "https://codedereduc.fr/"
         },
         "image": [
           singleStore?.Icon?.url
@@ -83,7 +83,7 @@ const CouponSingle = async ({singleStore, param}) => {
         },
         "offers": {
           "@type": "Offer",
-          "url": `https://codedereduc.ro/${singleStore?.Slug}`,
+          "url": `https://codedereduc.fr/${singleStore?.Slug}`,
           "price": "0",
           "priceCurrency": "RON",
           "availability": "https://schema.org/InStock",
@@ -101,19 +101,19 @@ const CouponSingle = async ({singleStore, param}) => {
             "@type": "ListItem",
             "position": 1,
             "name": "Accueil",
-            "item": "https://codedereduc.ro/"
+            "item": "https://codedereduc.fr/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "magazine",
-            "item": "https://codedereduc.ro/magasins"
+            "item": "https://codedereduc.fr/magasins"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": singleStore?.Name,
-            "item": `https://codedereduc.ro/${singleStore?.Slug}`
+            "item": `https://codedereduc.fr/${singleStore?.Slug}`
           }
         ]
       },
@@ -137,7 +137,7 @@ const CouponSingle = async ({singleStore, param}) => {
             "@type": "Offer",
             "name": singleStore?.Name,
             "description": coupon.Title,
-            "url": `https://www.codedereduc.ro/${singleStore?.Slug}`,
+            "url": `https://www.codedereduc.fr/${singleStore?.Slug}`,
             "priceCurrency": "RON",
             "price": "0",
             "availability": "https://schema.org/InStock",

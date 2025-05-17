@@ -24,7 +24,7 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: `https://www.codedereduc.ro`
+    canonical: `https://www.codedereduc.fr`
   },
 };
 
@@ -34,7 +34,7 @@ export default async function RootLayout({
 }) {
 
   return (
-    <html lang="ro">
+    <html lang="fr">
       <body
         className={`${manrope.className} antialiased`}
       >

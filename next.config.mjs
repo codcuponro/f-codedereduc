@@ -7,7 +7,7 @@
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'codedereduc.ro' }],
-        destination: 'https://www.codedereduc.ro/:path*',
+        destination: 'https://www.codedereduc.fr/:path*',
         permanent: true,
       },
     ];
