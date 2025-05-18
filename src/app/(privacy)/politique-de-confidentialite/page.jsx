@@ -4,7 +4,7 @@ import {getPrivacyPage} from "../../../services"
 
 export const metadata = {
   alternates: {
-    canonical: `https://www.codcupon.ro/politica-confidentialitate`,
+    canonical: `https://www.codedereduc.fr/politica-confidentialitate`,
   }
 }
 
@@ -12,7 +12,7 @@ const AboutUs = async () => {
   const pageData  = await getPrivacyPage()
   return (
     <>
-      <AboutTemp data={pageData} title="Politică confidențialitate"/>
+      <AboutTemp data={pageData} title="Politique de confidentialite"/>
     </>
   )
 }

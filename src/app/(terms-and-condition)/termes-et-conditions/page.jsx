@@ -5,7 +5,7 @@ import {getTermAndConditionPage} from "../../../services"
 
 export const metadata = {
   alternates: {
-    canonical: `https://www.codcupon.ro/termeni-si-conditii`,
+    canonical: `https://www.codedereduc.fr/termeni-si-conditii`,
   }
 }
 
@@ -14,7 +14,7 @@ const AboutUs = async (props) => {
   const pageData  = await getTermAndConditionPage(params)
   return (
     <>
-      <AboutTemp data={pageData} title="Termeni si Conditii"/>
+      <AboutTemp data={pageData} title="Termes et conditions"/>
     </>
   )
 }

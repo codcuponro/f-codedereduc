@@ -1,7 +1,5 @@
 "use client"
 import React, { useState } from 'react'
-import { IoIosRemoveCircleOutline } from "react-icons/io";
-import { AiOutlinePlusCircle } from "react-icons/ai";
 
 const Faqs = ({name, coupon, allCoupon}) => {
     const [openFaq, setOpenFaq] = useState(null)
@@ -24,35 +22,35 @@ const Faqs = ({name, coupon, allCoupon}) => {
 
     const faqsList = [
         {
-            question:  `Cate vouchere si oferte sunt disponibile pentru ${name}?`,
-            answer: `In acest moment, sunt active ${coupon?.length} vouchere si oferte pe care le puteti folosi pe site-ul celor de la ${name}.`
+            question:  `Combien de bons et d’offres sont disponibles pour ${name}?`,
+            answer: `Actuellement, ${coupon?.length} codes promo et offres sont disponibles et utilisables sur le site de ${name}.`
         },
         {
-            question: `Cum folosesc codul de reducere ${name}?`,
-            answer: `Pentru a folosi codul de reducere ${name}, adauga produsele dorite in cos, apoi apasa pe cosul de cumparaturi sau butonul de checkout. Copiaza codul de reducere din aceasta pagina si adauga-l in campul Cod promotional si apasa pe butonul Aplica.`
+            question: `Comment utiliser le code de réduction ${name}?`,
+            answer: `Pour utiliser le code de réduction ${name}, il suffit d’ajouter les produits souhaités à votre panier, d’accéder à la page de paiement, puis de copier et coller le code dans le champ prévu à cet effet avant de l’appliquer. Cette procédure garantit que la remise est bien déduite de votre total.`
         },
         {
-            question: `De ce codul de reducere ${name} nu functioneaza?`,
-            answer: `De regula, pe <a href="/">CodCupon.ro</a> veti gasi doar coduri de reducere active, insa in cazul in care comerciantul a dezactivat acest cod, el nu va functiona. `
+            question: `Pourquoi le code de réduction ${name} ne fonctionne-t-il pas ?`,
+            answer: ` En règle générale, sur <a href="/">CodedeReduc.fr</a>, vous ne trouverez que des codes de réduction actifs ; cependant, si le commerçant a désactivé un code, celui-ci ne fonctionnera pas. `
         },
         {
-            question: `Cand o sa fie ${name} Black Friday ${currentYear}?`,
-            answer:    `In mod obisnuit, ${name} Black Friday are loc in ultima vineri din luna Noiembrie, dar aceasta nu este o regula bine definita, ${name} poate decide sa inceapa Black Friday mai devreme. Aboneaza-te la newsletetter-ul nostru si vei fi primul care va afla cand are loc ${name} Black Friday.`
+            question: `Quand aura lieu le Black Friday 2025 chez ${name} ?`,
+            answer:    `« En général, le Black Friday de ${name} a lieu le dernier vendredi du mois de novembre, mais ce n’est pas une règle gravée dans le marbre : ${name} peut choisir de lancer son Black Friday plus tôt. Abonnez-vous à notre newsletter pour être les premiers informés de la date du Black Friday de ${name}. »`
         },
     ]
 
     if(aTitles.length > 0){
         faqsList.push(
             {
-                question: `Care este ultimul voucher ${name} adaugat?  `,
-                answer: `Ultimul voucher ${name} adaugat este “${ Titles[0] || aTitles[0]}”. Acesta ofera clientilor ${DiscountValue[0] || aDiscountValue[0]} reducere.`
+                question: `Quel est le dernier coupon ajouté pour ${name} ? `,
+                answer: `Le dernier coupon ajouté pour ${name} est “${ Titles[0] || aTitles[0]}”. Celui-ci offre aux clients une réduction de  ${DiscountValue[0] || aDiscountValue[0]}.`
             },
         )
     }
 
     return (
         <section>
-            <h2 className='text-2xl text-dark font-semibold mb-5'>Intrebari frecvente {name}</h2>
+            <h2 className='text-2xl text-dark font-semibold mb-5'>Foire aux questions {name}</h2>
             <ul className='flex flex-col gap-5'>
                 {
                     faqsList?.map((item, idx) => (

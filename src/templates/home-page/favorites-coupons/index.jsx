@@ -12,7 +12,7 @@ const FavoritesCoupons = async ({data}) => {
       <Title
         title={constData?.fav_coupon_title}
         buttonLabel={constData?.fav_coupon_btn_label}
-        buttonHref="/top-coduri-reducere"
+        buttonHref="/top-codes-promo"
         hideButton
         h1
       />
@@ -31,7 +31,7 @@ const FavoritesCoupons = async ({data}) => {
         <Title
           title={constData?.fav_coupon_title}
           buttonLabel={constData?.fav_coupon_btn_label}
-          buttonHref="/top-coduri-reducere"
+          buttonHref="/top-codes-promo"
           hideHeading
         />
       </div>

@@ -32,7 +32,7 @@ const CouponModel = ({ data }) => {
                 >
                     <div className='relative z-[-1]'>
                         <button className='h-[60px] flex justify-center z-[2] relative text-center items-center p-[8.5px] px-3 mt-3 rounded-[6px] flex-col w-full bg-[#0BC157] border-[2px] border-[#00A142] group-hover:bg-white'>
-                            <span className='text-[10px] text-pure group-hover:text-[#00A142]'>{copied ? "Copiaza din nou" : "Faceți clic pentru a copia"}</span>
+                            <span className='text-[10px] text-pure group-hover:text-[#00A142]'>{copied ? "Copier à nouveau" : "Cliquez pour copier"}</span>
                             <span className='text-xl text-white uppercase font-bold leading-6 group-hover:text-[#00A142]'>
                                 {copied ? "Cod copiat" : constData?.copy_code}
                             </span>
@@ -42,7 +42,7 @@ const CouponModel = ({ data }) => {
                 </button>
             </div>
             <p className='font-medium text-sm text-center flex justify-center gap-1.5 mt-8'>
-                Continua la {data?.store?.AffiliateLink && <Link href={data?.store?.AffiliateLink || "#"} target='_blank' className="text-primary underline flex">{data?.store?.Name}
+                Continuer {data?.store?.AffiliateLink && <Link href={data?.store?.AffiliateLink || "#"} target='_blank' className="text-primary underline flex">{data?.store?.Name}
                 <Image src="/svg/link.svg" alt='' width={18} height={18}/>
                 </Link>}
             </p>

@@ -23,13 +23,13 @@ const CouponList = ({ logo, item }) => {
                 <div className={`flex flex-col py-4 flex-1 justify-between pr-3 md:pr-[30px] sm:flex-row sm:items-center gap-4 ${logo && '!pl-0'}`}>
                     <div className='flex flex-col text-left md:justify-start md:items-start'>
                         <button className='bg-[#eef0f5] px-2.5 w-fit text-xs text-dark font-bold py-1 rounded-full'>
-                            { item?.CouponsType === "Promotion" ? "Promotie" : "Cod reducere"}{" "}{item?.store?.Name}
+                            { item?.CouponsType === "Promotion" ? "Promotion" : "Code promo"}{" "}{item?.store?.Name}
                         </button>
                         <h3 className='font-medium sm:text-lg md:text-[22px] md:leading-[30px] mt-2.5'>{item?.Title}</h3>
                     </div>
                     <div className='hidden sm:block'>
                         <CouponButton
-                            label={item?.CouponsType !== "Promotion" && "Copiaza codul"}
+                            label={item?.CouponsType !== "Promotion" && "Copiez le code"}
                             title={item?.CouponCode}
                             data={item}
                             disabled={disabled}
@@ -39,7 +39,7 @@ const CouponList = ({ logo, item }) => {
             </div>
             <div className='pl-2 pr-1 -mt-3 pb-2 sm:hidden'>
                 <CouponButton
-                    label={item?.CouponsType !== "Promotion" && "Copiaza codul"}
+                    label={item?.CouponsType !== "Promotion" && "Copiez le code"}
                     title={item?.CouponCode}
                     data={item}
                     disabled={disabled}

@@ -80,7 +80,7 @@ const Nav = async ({t}) => {
                             <Link href={footerRes?.Linkedin || `#`} aria-label={"linkedin"}><FaLinkedinIn /></Link>
                         </li>
                     </ul>
-                    <p className='text-white/70 mt-[25px]'>© 2025 Codcupon</p>
+                    <p className='text-white/70 mt-[25px]'>© 2025 codedereduc</p>
                 </div>
             </div>
         </>

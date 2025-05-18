@@ -13,19 +13,19 @@ export async function generateMetadata({ params }) {
     .join(' ');
 
   return {
-    title: `Cod reducere ${name}, Vouchere si Oferte ${getCurrentMonthYear()} - CodCupon.ro`,
-    description: `Aici gasesti cele mai noi coduri de reducere ${name}, Vouchere si oferte alese cu grija si verificate de echipa CodCupon`,
+    title: `Code promo ${name}, Vouchere si Oferte ${getCurrentMonthYear()} - codedereduc.ro`,
+    description: `Ici, vous trouverez les tout derniers codes de réduction ${name}, vouchers et offres soigneusement sélectionnés et vérifiés par l’équipe CodedeReduc.`,
     openGraph: {
       images: [
         {
-          url: "https://codcupon.nyc3.digitaloceanspaces.com/f98c281be600e40254e4b5755891c682.webp" || "../../public/og-image.webp",
+          url: "https://codedereduc.nyc3.digitaloceanspaces.com/f98c281be600e40254e4b5755891c682.webp" || "../../public/og-image.webp",
           width: 1200,
           height: 630
         },
       ],
     },
     alternates: {
-      canonical: `https://www.codcupon.ro/${param}`,
+      canonical: `https://www.codedereduc.fr/${param}`,
     },
   }
 }
@@ -39,15 +39,17 @@ const Store = async ({ params }) => {
     locale,
   })
 
-  // const { category } = await getSingleCategory({ slug: param, locale })
+  const { category } = await getSingleCategory({ slug: param, locale })
 
   if (singleStore) {
-    return <CouponSingle singleStore={singleStore} param={param}/>
+    return (
+      <CouponSingle singleStore={singleStore} param={param}/>
+    )
   }
 
-  // if (category){
-  //   return <SingleCategoryTemp category={category} params={param}/>
-  // }
+  if (category){
+    return <SingleCategoryTemp category={category} params={param}/>
+  }
 
   if (!singleStore) {
     notFound();

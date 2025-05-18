@@ -12,19 +12,19 @@ import Head from "next/head";
 const manrope = Manrope({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "CodCupon - Coduri reducere, Vouchere si Oferte",
-  description: "Descopera reduceri fabuloase! Echipa CodCupon verifica coduri de reducere de la 1000+ magazine din Romania pentru a te ajuta sa economisesti.",
+  title: "codedereduc - Coduri reducere, Vouchere si Oferte",
+  description: "Descopera reduceri fabuloase! Echipa codedereduc verifica coduri de reducere de la 1000+ magazine din Romania pentru a te ajuta sa economisesti.",
   openGraph: {
     images: [
       {
-        url: "https://codcupon.nyc3.digitaloceanspaces.com/f98c281be600e40254e4b5755891c682.webp" || "../../public/og-image.webp",
+        url: "https://codedereduc.nyc3.digitaloceanspaces.com/f98c281be600e40254e4b5755891c682.webp" || "../../public/og-image.webp",
         width: 1200,
         height: 630
       },
     ],
   },
   alternates: {
-    canonical: `https://www.codcupon.ro`
+    canonical: `https://www.codedereduc.fr`
   },
 };
 
@@ -34,7 +34,7 @@ export default async function RootLayout({
 }) {
 
   return (
-    <html lang="ro">
+    <html lang="fr">
       <body
         className={`${manrope.className} antialiased`}
       >

@@ -18,7 +18,7 @@ const TOC = () => {
 
     return (
         <div className='mt-[30px]'>
-            <h3 className='text-xl text-dark font-semibold mb-5'>Rezumat</h3>
+            <h3 className='text-xl text-dark font-semibold mb-5'>Résumé</h3>
             <ul className='text-sm text-dark flex flex-col gap-1.5'>
                 {toc.map((item, index) => {
                     const HeadingTag = item.level.toLowerCase();

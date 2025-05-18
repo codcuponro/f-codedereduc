@@ -20,7 +20,7 @@ export default function StoreList({ stores = [] }) {
 
     return (
         <div className="container mx-auto px-4 lg:px-0">
-            <Title title="Toate Magazinele" />
+            <Title title="Tous les magasins" />
 
             {/* Alphabet Selector */}
             <div className="flex flex-wrap gap-2 mt-10 mb-9">

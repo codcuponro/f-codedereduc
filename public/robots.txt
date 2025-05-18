@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
-Sitemap: https://codcupon.ro/sitemap.xml
+Sitemap: https://codedereduc.fr/sitemap.xml

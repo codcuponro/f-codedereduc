@@ -10,7 +10,7 @@ const TopCategories =  ({data}) => {
       <Title
         title={constData?.top_categories_title}
         buttonLabel={constData?.top_categories_btn_label}
-        buttonHref="/categorii"
+        buttonHref="/categories"
         hideButton
       />
       <div
@@ -27,7 +27,7 @@ const TopCategories =  ({data}) => {
         <Title
           title={constData?.top_categories_title}
           buttonLabel={constData?.top_categories_btn_label}
-          buttonHref="/categorii"
+          buttonHref="/categories"
           hideHeading
         />
       </div>

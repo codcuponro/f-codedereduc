@@ -6,8 +6,8 @@ import CategoryIconCard from './category-icon-card';
 const CategoriesTemp = ({ data }) => {
   const breadcrumbPath = [
     {
-      label: 'Categorii',
-      href: '/categorii'
+      label: 'Catégories',
+      href: '/categories'
     }
   ]
   return (
@@ -15,7 +15,7 @@ const CategoriesTemp = ({ data }) => {
       <section className='mt-6 mb-10'>
         <div className='container mx-auto px-4 lg:px-0 '>
           <Title
-            title="Categorii"
+            title="Catégories"
           />
           <div style={{ marginTop: '35px' }}
             className='grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 md:gap-5'
