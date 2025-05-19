@@ -1,7 +1,7 @@
 const fs = require("fs");
 const qs = require("qs")
 
-const SITE_URL = "https://www.codedereduc.ro";
+const SITE_URL = "https://www.codedereduc.fr";
 const Request = async (endpoint, options = {}) => {
     const url = `https://codedereduc-app-cahbj.ondigitalocean.app/api${endpoint}`;
     try {
