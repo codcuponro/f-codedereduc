@@ -12,7 +12,7 @@ import Head from "next/head";
 const manrope = Manrope({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "codedereduc - Coduri reducere, Vouchere si Oferte",
+  title: "Codes promo, coupons et offres : tout est ici - CodedeReduc",
   description: "Descopera reduceri fabuloase! Echipa codedereduc verifica coduri de reducere de la 1000+ magazine din Romania pentru a te ajuta sa economisesti.",
   openGraph: {
     images: [
