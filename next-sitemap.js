@@ -53,7 +53,7 @@ async function generateSitemap() {
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
      <url>
-          <loc>${SITE_URL}/despre-noi</loc>
+          <loc>${SITE_URL}/a-propos-de-nous</loc>
           <lastmod>${getFormattedDateTime()}</lastmod>
           <priority>1.00</priority>
       </url>
@@ -63,17 +63,17 @@ async function generateSitemap() {
           <priority>1.00</priority>
       </url>
       <url>
-          <loc>${SITE_URL}/fisiere-cookies</loc>
+          <loc>${SITE_URL}/gestion-des-cookies</loc>
           <lastmod>${getFormattedDateTime()}</lastmod>
           <priority>1.00</priority>
       </url>
       <url>
-          <loc>${SITE_URL}/politica-confidentialitate</loc>
+          <loc>${SITE_URL}/politique-de-confidentialite</loc>
           <lastmod>${getFormattedDateTime()}</lastmod>
           <priority>1.00</priority>
       </url>
       <url>
-          <loc>${SITE_URL}/termeni-si-conditii</loc>
+          <loc>${SITE_URL}/termes-et-conditions</loc>
           <lastmod>${getFormattedDateTime()}</lastmod>
           <priority>1.00</priority>
       </url>
