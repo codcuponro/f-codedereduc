@@ -7,13 +7,12 @@ import ToastProvider from "@/context/ToastProvider"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React from "react";
-import Head from "next/head";
 
 const manrope = Manrope({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "Codes promo, coupons et offres : tout est ici - CodedeReduc",
-  description: "Descopera reduceri fabuloase! Echipa codedereduc verifica coduri de reducere de la 1000+ magazine din Romania pentru a te ajuta sa economisesti.",
+  title: "Codes promo, coupons et offres : tout est ici | CodedeReduc",
+  description: "CodedeReduc propose des codes de réduction et des coupons vérifiés pour la majorité des boutiques en ligne en France.",
   openGraph: {
     images: [
       {

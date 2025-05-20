@@ -21,6 +21,8 @@ import Rating from '@/components/rating'
 const CouponSingle = async ({singleStore, param}) => {
 
     const { activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(singleStore?.coupons_and_deals)
+    const dateLateUpdate = formatDate(activeCoupon[0].publishedAt)
+    
     const sortedCoupon = getSortedData(activeCoupon)
     const categories = getUniqueCategories(singleStore?.coupons_and_deals)
     const currentYear = new Date().getFullYear();
@@ -163,6 +165,8 @@ const CouponSingle = async ({singleStore, param}) => {
       jsonLd.push(...events);
     }
 
+    
+
     return (
       <>
         <script
@@ -178,7 +182,7 @@ const CouponSingle = async ({singleStore, param}) => {
               {/* <p>{singleStore?.Excerpt}</p> */}
               <p className='mt-[10px] font-medium'>Ici, vous trouverez les tout derniers codes de réduction {singleStore?.Name}, vouchers et offres soigneusement sélectionnés et vérifiés par l’équipe CodedeReduc.</p>
               <Rating totalRating={singleStore?.Rating} />
-              <p className='text-xs font-medium mt-2.5'> Dernière mise à jour par <Link href="/despre-noi" className='underline'>{singleStore?.author?.Name}</Link> le <span className='capitalize'>{formatDate(singleStore?.publishedAt)}</span></p>
+              <p className='text-xs font-medium mt-2.5'> Dernière mise à jour par <Link href="/despre-noi" className='underline'>{singleStore?.author?.Name}</Link> le <span className='capitalize'>{dateLateUpdate}</span></p>
             </div>
           </div>
 

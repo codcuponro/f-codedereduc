@@ -51,7 +51,7 @@ export function getSortedData(data, order = 'desc') {
 export const formatDate = (dateString) => {
     const date = new Date(dateString);
     const options = { day: "numeric", month: "long", year: "numeric" };
-    const formattedDate = date.toLocaleDateString("ro-RO", options);
+    const formattedDate = date.toLocaleDateString("fe-FR", options);
     return formattedDate;
 };
 

@@ -5,6 +5,7 @@ import {getTermAndConditionPage} from "../../../services"
 
 export const metadata = {
   alternates: {
+    title: 'Termes et conditions | CodedeReduc',
     canonical: `https://www.codedereduc.fr/termeni-si-conditii`,
   }
 }

@@ -3,6 +3,7 @@ import {getAboutPage} from "../../../services"
 
 export const metadata = {
   alternates: {
+    title: 'A propos de nous | CodedeReduc',
     canonical: `https://www.codedereduc.fr/despre-noi`,
   }
 }

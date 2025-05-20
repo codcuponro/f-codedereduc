@@ -4,6 +4,7 @@ import { getAllStore, getStores } from "../../services"
 
 export const metadata = {
   alternates: {
+    title: 'Magasins | CodedeReduc.fr',
     canonical: `https://www.codedereduc.fr/magasins`,
   }
 }

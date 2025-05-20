@@ -4,6 +4,7 @@ import {getAllCategories} from "../../services"
 
 export const metadata = {
   alternates: {
+    title: 'Catégories | CodedeReduc',
     canonical: `https://www.codedereduc.fr/categories`,
   }
 }
