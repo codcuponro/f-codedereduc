@@ -19,11 +19,13 @@ import Rating from '@/components/rating'
 
 
 const CouponSingle = async ({singleStore, param}) => {
+console.log("🚀 ~ CouponSingle ~ singleStore:", singleStore)
 
     const { activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(singleStore?.coupons_and_deals)
     
     const sortedCoupon = getSortedData(activeCoupon)
-    const dateLateUpdate = formatDate(sortedCoupon[0].publishedAt)
+    const dateLateUpdate = formatDate(sortedCoupon[0]?.publishedAt || singleStore?.updatedAt)
+    // console.log("🚀 ~ CouponSingle ~ dateLateUpdate:", dateLateUpdate)
     const categories = getUniqueCategories(singleStore?.coupons_and_deals)
     const currentYear = new Date().getFullYear();
 
