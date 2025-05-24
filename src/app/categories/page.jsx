@@ -18,7 +18,7 @@ const Categories = async (props) => {
       "@type": "ListItem",
       "position": idx+1,
       "name": item?.Name || "",
-      "item": `https://codedereduc.fr/categories/${item?.Slug}`
+      "item": `https://codedereduc.fr/${item?.Slug}`
     }
   })
 
