@@ -19,7 +19,6 @@ import Rating from '@/components/rating'
 
 
 const CouponSingle = async ({singleStore, param}) => {
-console.log("🚀 ~ CouponSingle ~ singleStore:", singleStore)
 
     const { activeCoupon, disableCoupon } = await getActiveAndDisabledCoupons(singleStore?.coupons_and_deals)
     
